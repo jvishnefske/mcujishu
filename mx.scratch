@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-<ProjectName>/home/j/src/stm32/blink3/\blink3</ProjectName>
+<ProjectName>/home/j/src/stm32/mcujishu/\mcujishu</ProjectName>
 <ProjectNature>C</ProjectNature> 
 <CMSIS>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/CMSIS</CMSIS>
 <HAL_Driver>/home/j/STM32Cube/Repository//STM32Cube_FW_F1_V1.6.1/Drivers/CMSIS</HAL_Driver>
@@ -22,7 +22,7 @@
 
 <configs>
   <config>
-    <name>blink3</name>				
+    <name>mcujishu</name>				
     <device>STM32F103RBTx</device>		 
     <heapSize>0x200</heapSize>
     <stackSize>0x400</stackSize>
@@ -32,7 +32,7 @@
     <usedDebug>true</usedDebug>
     	<debugprobe>jtag</debugprobe>
     <optimization>6</optimization>
-    <icfloc>0</icfloc>
+    <icfloc>1</icfloc>
     <Adefines>
         <define></define>
     </Adefines>   
@@ -170,6 +170,12 @@
 							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.c</name>
 						</file>
 						<file>
+							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c</name>
+						</file>
+						<file>
+							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c</name>
+						</file>
+						<file>
 							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.c</name>
 						</file>
 						<file>
@@ -177,6 +183,12 @@
 						</file>
 						<file>
 							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c</name>
+						</file>
+						<file>
+							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c</name>
+						</file>
+						<file>
+							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c</name>
 						</file>
 						<file>
 							<name>/home/j/STM32Cube/Repository/STM32Cube_FW_F1_V1.6.1/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c</name>

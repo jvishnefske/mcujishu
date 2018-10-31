@@ -31,13 +31,13 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: blink3.elf
+all: mcujishu.elf
 
 # Tool invocations
-blink3.elf: $(OBJS) $(USER_OBJS) ../STM32F103RBTx_FLASH.ld
+mcujishu.elf: $(OBJS) $(USER_OBJS) ../STM32F103RBTx_FLASH.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F103RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "blink3.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F103RBTx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "mcujishu.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -49,8 +49,8 @@ clean:
 
 post-build:
 	-@echo 'Generating binary and Printing size information:'
-	arm-none-eabi-objcopy -O binary "blink3.elf" "blink3.bin"
-	arm-none-eabi-size "blink3.elf"
+	arm-none-eabi-objcopy -O binary "mcujishu.elf" "mcujishu.bin"
+	arm-none-eabi-size "mcujishu.elf"
 	-@echo ' '
 
 .PHONY: all clean dependents

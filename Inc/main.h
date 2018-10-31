@@ -59,14 +59,22 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define GPIO_SW3_Pin GPIO_PIN_0
-#define GPIO_SW3_GPIO_Port GPIOC
 #define SW3_Pin GPIO_PIN_0
 #define SW3_GPIO_Port GPIOA
 #define SW4_Pin GPIO_PIN_1
 #define SW4_GPIO_Port GPIOA
+#define CS_TP_Pin GPIO_PIN_4
+#define CS_TP_GPIO_Port GPIOA
 #define GPIO_led4_Pin GPIO_PIN_2
 #define GPIO_led4_GPIO_Port GPIOB
+#define CS_LCD_Pin GPIO_PIN_9
+#define CS_LCD_GPIO_Port GPIOC
+#define BL_EN_Pin GPIO_PIN_12
+#define BL_EN_GPIO_Port GPIOC
+#define CS_DF_Pin GPIO_PIN_6
+#define CS_DF_GPIO_Port GPIOB
+#define CS_SD_Pin GPIO_PIN_7
+#define CS_SD_GPIO_Port GPIOB
 
 /* ########################## Assert Selection ############################## */
 /**
