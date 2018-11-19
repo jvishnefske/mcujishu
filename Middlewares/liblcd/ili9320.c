@@ -1,9 +1,7 @@
 //#include "stm32f10x_conf.h"
 #include "ili9320.h"
-
-#if 0
 #include "ili9320_font.h"
-
+#if 0
 #define ili9320_WriteData(x)\
 {GPIOB->ODR=((GPIOB->ODR&0x00ff)|(x<<8));\
 GPIOC->ODR=((GPIOC->ODR&0xff00)|(x>>8));}
@@ -64,8 +62,13 @@ void ili9320_Initializtion()
 	for (i = 50000; i > 0; i--)
 		;
 	DeviceCode = ili9320_ReadRegister(0x0000);
+	char buf[100];
+	sprintf(buf,"\n\rdevice code %x", DeviceCode); //0x9324
+	puts(buf);
+
 	if (DeviceCode == 0x9325 || DeviceCode == 0x9328)
 	{
+
 		ili9320_WriteRegister(0x00e7, 0x0010);
 		ili9320_WriteRegister(0x0000, 0x0001);  			//start internal osc
 		ili9320_WriteRegister(0x0001, 0x0100);
@@ -152,7 +155,7 @@ void ili9320_Initializtion()
 		ili9320_WriteRegister(0x0020, 0x0000);
 		ili9320_WriteRegister(0x0021, 0x0000);
 	}
-	else if (DeviceCode == 0x9320)
+	else if (DeviceCode == 0x9320||DeviceCode == 0x9324)
 	{
 		ili9320_WriteRegister(0x00, 0x0000);
 		ili9320_WriteRegister(0x01, 0x0100);	//Driver Output Contral.
@@ -796,7 +799,7 @@ void ili9320_VLine(u16 x0, u16 y0, u16 h, u16 color)
  * ˵    ������ʾ��Χ�޶�Ϊ����ʾ��ascii��
  * ���÷�����ili9320_PutChar(10,10,'a',0x0000,0xffff);
  ****************************************************************************/
-#if 0
+
 void ili9320_PutChar(u16 x, u16 y, u8 c, u16 charColor, u16 bkColor)
 {
 	u16 i = 0;
@@ -820,7 +823,7 @@ void ili9320_PutChar(u16 x, u16 y, u8 c, u16 charColor, u16 bkColor)
 		}
 	}
 }
-#endif
+
 /****************************************************************************
  * ��    �ƣ�void ili9320_Test()
  * ��    �ܣ�����Һ����

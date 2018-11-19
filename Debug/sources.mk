@@ -16,9 +16,10 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Drivers/STM32F1xx_HAL_Driver \
-Middlewares/FatFs \
 Middlewares/FreeRTOS \
+Middlewares/FreeRTOS-Plus-CLI \
 Middlewares/USB_Device_Library \
+Middlewares/liblcd \
 Src \
 startup \
 

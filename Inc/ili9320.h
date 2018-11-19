@@ -5,23 +5,25 @@ typedef uint8_t u8;
 typedef uint16_t u16;
 typedef uint32_t u32;
 
-#define Set_nWr 	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_SET);
-#define Clr_nWr 	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_RESET);
+#define Set_nWr 	HAL_GPIO_WritePin(lcd_wr_GPIO_Port, lcd_wr_Pin, GPIO_PIN_SET);
+#define Clr_nWr 	HAL_GPIO_WritePin(lcd_wr_GPIO_Port, lcd_wr_Pin, GPIO_PIN_RESET);
 
 #define Set_Cs  	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_SET);
 #define Clr_Cs  	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_RESET);
 
-#define Set_Rs  	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_SET);
-#define Clr_Rs  	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_RESET);
+#define Set_Rs  	HAL_GPIO_WritePin(lcd_rs_GPIO_Port, lcd_rs_Pin, GPIO_PIN_SET);
+#define Clr_Rs  	HAL_GPIO_WritePin(lcd_rs_GPIO_Port, lcd_rs_Pin, GPIO_PIN_RESET);
 
-#define Set_nRd 	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_SET);
-#define Clr_nRd 	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_RESET);
+#define Set_nRd 	HAL_GPIO_WritePin(lcd_rd_GPIO_Port, lcd_rd_Pin, GPIO_PIN_SET);
+#define Clr_nRd 	HAL_GPIO_WritePin(lcd_rd_GPIO_Port, lcd_rd_Pin, GPIO_PIN_RESET);
 
+#if 0
 #define Set_Rst 	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_SET);
 #define Clr_Rst 	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_RESET);
+#endif
 
-#define Lcd_Light_ON   	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_SET);
-#define Lcd_Light_OFF  	HAL_GPIO_WritePin(lcd_cs_GPIO_Port, lcd_cs_Pin, GPIO_PIN_RESET);
+#define Lcd_Light_ON   	HAL_GPIO_WritePin(BL_EN_GPIO_Port, BL_EN_Pin, GPIO_PIN_SET);
+#define Lcd_Light_OFF  	HAL_GPIO_WritePin(BL_EN_GPIO_Port, BL_EN_Pin, GPIO_PIN_RESET);
 
 
 u16 CheckController(void);

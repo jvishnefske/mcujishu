@@ -84,6 +84,7 @@
 
 /* USER CODE BEGIN Includes */   	      
 /* Section where include file can be added */
+#define configCOMMAND_INT_MAX_OUTPUT_SIZE 128
 /* USER CODE END Includes */ 
 
 /* Ensure stdint is only used by the compiler, and not the assembler. */

@@ -54,6 +54,7 @@
 /* USER CODE BEGIN Includes */     
 #include "iwdg.h"
 #include "gpio.h"
+#include "usart.h"
 #include "ili9320.h"
 /* USER CODE END Includes */
 
@@ -169,17 +170,27 @@ void StartBlinkTask(void const * argument)
 	(void) argument;
 
 	//enable blacklight
+	//	puts("starting idle task.");
+	//	HAL_UART_Transmit(&huart1, (uint8_t*) "heoo", len,10);
+	uint8_t DeviceCode=0x001;
 
-	HAL_GPIO_WritePin(BL_EN_GPIO_Port, BL_EN_Pin, GPIO_PIN_SET);
+	putchar('\n');
+	printf("c");
+	printf("def code %u", DeviceCode);
+
+	ili9320_BackLight(1);
+	//HAL_GPIO_WritePin(BL_EN_GPIO_Port, BL_EN_Pin, GPIO_PIN_SET);
 	Lcd_Configuration();
-
 	ili9320_Initializtion();
+	ili9320_Test();
+	ili9320_Clear(100);
 	u16 x0=10,y0=10,h=10,color=0x333;
 
 	ili9320_VLine( x0, y0, h, color);
-	ili9320_Test();
+	ili9320_DrawPicture(1,1,2,2,(uint16_t[]){20,30,40,50});
 	for (;;)
 	{
+		static uint16_t color=0;
 		//printf("how much is possible to transmit over the usart?");
 		//putchar('.');
 		//char * my_string =  "hello";
@@ -187,8 +198,12 @@ void StartBlinkTask(void const * argument)
 		//HAL_UART_Transmit(&huart1, (uint8_t *)my_string, (uint16_t) strlen(my_string),timeout );
 		//osDelay(200);
 		updateLed();
+		//ili9320_SetPoint(color%320, (color/320)%240, color);
+		ili9320_VLine( x0, y0, 100 , ili9320_BGR2RGB(color));
+		//ili9320_Clear(color);
 
 		osThreadYield();
+		color++;
 	}
 }
 
