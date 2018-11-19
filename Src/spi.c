@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
+  * File Name          : SPI.c
+  * Description        : This file provides code for the configuration
+  *                      of the SPI instances.
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -47,99 +47,107 @@
   ******************************************************************************
   */
 
-/* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H__
-#define __MAIN_H__
-
 /* Includes ------------------------------------------------------------------*/
+#include "spi.h"
 
-/* USER CODE BEGIN Includes */
+#include "gpio.h"
 
-/* USER CODE END Includes */
+/* USER CODE BEGIN 0 */
 
-/* Private define ------------------------------------------------------------*/
+/* USER CODE END 0 */
 
-#define lcd0_Pin GPIO_PIN_0
-#define lcd0_GPIO_Port GPIOC
-#define lcd1_Pin GPIO_PIN_1
-#define lcd1_GPIO_Port GPIOC
-#define lcd2_Pin GPIO_PIN_2
-#define lcd2_GPIO_Port GPIOC
-#define lcd3_Pin GPIO_PIN_3
-#define lcd3_GPIO_Port GPIOC
-#define sw3_Pin GPIO_PIN_0
-#define sw3_GPIO_Port GPIOA
-#define sw4_Pin GPIO_PIN_1
-#define sw4_GPIO_Port GPIOA
-#define led1_Pin GPIO_PIN_2
-#define led1_GPIO_Port GPIOA
-#define led3_Pin GPIO_PIN_3
-#define led3_GPIO_Port GPIOA
-#define CS_TP_Pin GPIO_PIN_4
-#define CS_TP_GPIO_Port GPIOA
-#define lcd4_Pin GPIO_PIN_4
-#define lcd4_GPIO_Port GPIOC
-#define lcd5_Pin GPIO_PIN_5
-#define lcd5_GPIO_Port GPIOC
-#define led2_Pin GPIO_PIN_2
-#define led2_GPIO_Port GPIOB
-#define lcd10_Pin GPIO_PIN_10
-#define lcd10_GPIO_Port GPIOB
-#define lcd11_Pin GPIO_PIN_11
-#define lcd11_GPIO_Port GPIOB
-#define lcd12_Pin GPIO_PIN_12
-#define lcd12_GPIO_Port GPIOB
-#define lcd13_Pin GPIO_PIN_13
-#define lcd13_GPIO_Port GPIOB
-#define lcd14_Pin GPIO_PIN_14
-#define lcd14_GPIO_Port GPIOB
-#define lcd15_Pin GPIO_PIN_15
-#define lcd15_GPIO_Port GPIOB
-#define lcd6_Pin GPIO_PIN_6
-#define lcd6_GPIO_Port GPIOC
-#define lcd7_Pin GPIO_PIN_7
-#define lcd7_GPIO_Port GPIOC
-#define lcd_rs_Pin GPIO_PIN_8
-#define lcd_rs_GPIO_Port GPIOC
-#define lcd_cs_Pin GPIO_PIN_9
-#define lcd_cs_GPIO_Port GPIOC
-#define lcd_wr_Pin GPIO_PIN_10
-#define lcd_wr_GPIO_Port GPIOC
-#define lcd_rd_Pin GPIO_PIN_11
-#define lcd_rd_GPIO_Port GPIOC
-#define BL_EN_Pin GPIO_PIN_12
-#define BL_EN_GPIO_Port GPIOC
-#define CS_DF_Pin GPIO_PIN_6
-#define CS_DF_GPIO_Port GPIOB
-#define CS_SD_Pin GPIO_PIN_7
-#define CS_SD_GPIO_Port GPIOB
-#define lcd8_Pin GPIO_PIN_8
-#define lcd8_GPIO_Port GPIOB
-#define lcd9_Pin GPIO_PIN_9
-#define lcd9_GPIO_Port GPIOB
+SPI_HandleTypeDef hspi1;
 
-/* ########################## Assert Selection ############################## */
-/**
-  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
-  *        HAL drivers code
-  */
-/* #define USE_FULL_ASSERT    1U */
+/* SPI1 init function */
+void MX_SPI1_Init(void)
+{
 
-/* USER CODE BEGIN Private defines */
-#define FALSE 0
-#define TRUE 1
-/* USER CODE END Private defines */
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
 
-#ifdef __cplusplus
- extern "C" {
-#endif
-void _Error_Handler(char *, int);
-
-#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
-#ifdef __cplusplus
 }
-#endif
 
-#endif /* __MAIN_H__ */
+void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+{
+
+  GPIO_InitTypeDef GPIO_InitStruct;
+  if(spiHandle->Instance==SPI1)
+  {
+  /* USER CODE BEGIN SPI1_MspInit 0 */
+
+  /* USER CODE END SPI1_MspInit 0 */
+    /* SPI1 clock enable */
+    __HAL_RCC_SPI1_CLK_ENABLE();
+  
+    /**SPI1 GPIO Configuration    
+    PA5     ------> SPI1_SCK
+    PA6     ------> SPI1_MISO
+    PA7     ------> SPI1_MOSI 
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_7;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_6;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN SPI1_MspInit 1 */
+
+  /* USER CODE END SPI1_MspInit 1 */
+  }
+}
+
+void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
+{
+
+  if(spiHandle->Instance==SPI1)
+  {
+  /* USER CODE BEGIN SPI1_MspDeInit 0 */
+
+  /* USER CODE END SPI1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_SPI1_CLK_DISABLE();
+  
+    /**SPI1 GPIO Configuration    
+    PA5     ------> SPI1_SCK
+    PA6     ------> SPI1_MISO
+    PA7     ------> SPI1_MOSI 
+    */
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7);
+
+  /* USER CODE BEGIN SPI1_MspDeInit 1 */
+
+  /* USER CODE END SPI1_MspDeInit 1 */
+  }
+} 
+
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

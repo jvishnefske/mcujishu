@@ -1,0 +1,922 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ili9320_api.c"
+  12              		.text
+  13              		.align	1
+  14              		.global	GUI_Color565
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	GUI_Color565:
+  21              		@ args = 0, pretend = 0, frame = 16
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23              		@ link register save eliminated.
+  24 0000 80B4     		push	{r7}
+  25 0002 85B0     		sub	sp, sp, #20
+  26 0004 00AF     		add	r7, sp, #0
+  27 0006 7860     		str	r0, [r7, #4]
+  28 0008 7B68     		ldr	r3, [r7, #4]
+  29 000a DB08     		lsrs	r3, r3, #3
+  30 000c DBB2     		uxtb	r3, r3
+  31 000e 03F01F03 		and	r3, r3, #31
+  32 0012 FB73     		strb	r3, [r7, #15]
+  33 0014 7B68     		ldr	r3, [r7, #4]
+  34 0016 9B0A     		lsrs	r3, r3, #10
+  35 0018 DBB2     		uxtb	r3, r3
+  36 001a 03F03F03 		and	r3, r3, #63
+  37 001e BB73     		strb	r3, [r7, #14]
+  38 0020 7B68     		ldr	r3, [r7, #4]
+  39 0022 DB0C     		lsrs	r3, r3, #19
+  40 0024 DBB2     		uxtb	r3, r3
+  41 0026 03F01F03 		and	r3, r3, #31
+  42 002a 7B73     		strb	r3, [r7, #13]
+  43 002c 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+  44 002e 9BB2     		uxth	r3, r3
+  45 0030 DB02     		lsls	r3, r3, #11
+  46 0032 9AB2     		uxth	r2, r3
+  47 0034 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+  48 0036 9BB2     		uxth	r3, r3
+  49 0038 5B01     		lsls	r3, r3, #5
+  50 003a 9BB2     		uxth	r3, r3
+  51 003c 1344     		add	r3, r3, r2
+  52 003e 9AB2     		uxth	r2, r3
+  53 0040 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+  54 0042 9BB2     		uxth	r3, r3
+  55 0044 1344     		add	r3, r3, r2
+  56 0046 9BB2     		uxth	r3, r3
+  57 0048 1846     		mov	r0, r3
+  58 004a 1437     		adds	r7, r7, #20
+  59 004c BD46     		mov	sp, r7
+  60              		@ sp needed
+  61 004e 80BC     		pop	{r7}
+  62 0050 7047     		bx	lr
+  64              		.align	1
+  65              		.global	GUI_Text
+  66              		.syntax unified
+  67              		.thumb
+  68              		.thumb_func
+  69              		.fpu softvfp
+  71              	GUI_Text:
+  72              		@ args = 8, pretend = 0, frame = 24
+  73              		@ frame_needed = 1, uses_anonymous_args = 0
+  74 0052 90B5     		push	{r4, r7, lr}
+  75 0054 89B0     		sub	sp, sp, #36
+  76 0056 02AF     		add	r7, sp, #8
+  77 0058 BA60     		str	r2, [r7, #8]
+  78 005a 1A46     		mov	r2, r3
+  79 005c 0346     		mov	r3, r0	@ movhi
+  80 005e FB81     		strh	r3, [r7, #14]	@ movhi
+  81 0060 0B46     		mov	r3, r1	@ movhi
+  82 0062 BB81     		strh	r3, [r7, #12]	@ movhi
+  83 0064 1346     		mov	r3, r2	@ movhi
+  84 0066 FB80     		strh	r3, [r7, #6]	@ movhi
+  85 0068 0023     		movs	r3, #0
+  86 006a FB75     		strb	r3, [r7, #23]
+  87 006c 14E0     		b	.L4
+  88              	.L5:
+  89 006e FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+  90 0070 9BB2     		uxth	r3, r3
+  91 0072 DB00     		lsls	r3, r3, #3
+  92 0074 9AB2     		uxth	r2, r3
+  93 0076 FB89     		ldrh	r3, [r7, #14]	@ movhi
+  94 0078 1344     		add	r3, r3, r2
+  95 007a 98B2     		uxth	r0, r3
+  96 007c BB68     		ldr	r3, [r7, #8]
+  97 007e 5A1C     		adds	r2, r3, #1
+  98 0080 BA60     		str	r2, [r7, #8]
+  99 0082 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 100 0084 3C8D     		ldrh	r4, [r7, #40]
+ 101 0086 B989     		ldrh	r1, [r7, #12]
+ 102 0088 BB8D     		ldrh	r3, [r7, #44]
+ 103 008a 0093     		str	r3, [sp]
+ 104 008c 2346     		mov	r3, r4
+ 105 008e FFF7FEFF 		bl	ili9320_PutChar
+ 106 0092 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 107 0094 0133     		adds	r3, r3, #1
+ 108 0096 FB75     		strb	r3, [r7, #23]
+ 109              	.L4:
+ 110 0098 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 111 009a 9BB2     		uxth	r3, r3
+ 112 009c FA88     		ldrh	r2, [r7, #6]
+ 113 009e 9A42     		cmp	r2, r3
+ 114 00a0 E5D8     		bhi	.L5
+ 115 00a2 00BF     		nop
+ 116 00a4 1C37     		adds	r7, r7, #28
+ 117 00a6 BD46     		mov	sp, r7
+ 118              		@ sp needed
+ 119 00a8 90BD     		pop	{r4, r7, pc}
+ 121              		.align	1
+ 122              		.global	GUI_Line
+ 123              		.syntax unified
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.fpu softvfp
+ 128              	GUI_Line:
+ 129              		@ args = 4, pretend = 0, frame = 40
+ 130              		@ frame_needed = 1, uses_anonymous_args = 0
+ 131 00aa 90B5     		push	{r4, r7, lr}
+ 132 00ac 8BB0     		sub	sp, sp, #44
+ 133 00ae 00AF     		add	r7, sp, #0
+ 134 00b0 0446     		mov	r4, r0
+ 135 00b2 0846     		mov	r0, r1
+ 136 00b4 1146     		mov	r1, r2
+ 137 00b6 1A46     		mov	r2, r3
+ 138 00b8 2346     		mov	r3, r4	@ movhi
+ 139 00ba FB80     		strh	r3, [r7, #6]	@ movhi
+ 140 00bc 0346     		mov	r3, r0	@ movhi
+ 141 00be BB80     		strh	r3, [r7, #4]	@ movhi
+ 142 00c0 0B46     		mov	r3, r1	@ movhi
+ 143 00c2 7B80     		strh	r3, [r7, #2]	@ movhi
+ 144 00c4 1346     		mov	r3, r2	@ movhi
+ 145 00c6 3B80     		strh	r3, [r7]	@ movhi
+ 146 00c8 BA88     		ldrh	r2, [r7, #4]
+ 147 00ca 3B88     		ldrh	r3, [r7]
+ 148 00cc 9A42     		cmp	r2, r3
+ 149 00ce 19D1     		bne	.L7
+ 150 00d0 FA88     		ldrh	r2, [r7, #6]
+ 151 00d2 7B88     		ldrh	r3, [r7, #2]
+ 152 00d4 9A42     		cmp	r2, r3
+ 153 00d6 02D8     		bhi	.L8
+ 154 00d8 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 155 00da FB84     		strh	r3, [r7, #38]	@ movhi
+ 156 00dc 0DE0     		b	.L10
+ 157              	.L8:
+ 158 00de 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 159 00e0 FB84     		strh	r3, [r7, #38]	@ movhi
+ 160 00e2 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 161 00e4 7B80     		strh	r3, [r7, #2]	@ movhi
+ 162 00e6 08E0     		b	.L10
+ 163              	.L11:
+ 164 00e8 3A8F     		ldrh	r2, [r7, #56]
+ 165 00ea B988     		ldrh	r1, [r7, #4]
+ 166 00ec FB8C     		ldrh	r3, [r7, #38]
+ 167 00ee 1846     		mov	r0, r3
+ 168 00f0 FFF7FEFF 		bl	ili9320_SetPoint
+ 169 00f4 FB8C     		ldrh	r3, [r7, #38]
+ 170 00f6 0133     		adds	r3, r3, #1
+ 171 00f8 FB84     		strh	r3, [r7, #38]	@ movhi
+ 172              	.L10:
+ 173 00fa FA8C     		ldrh	r2, [r7, #38]
+ 174 00fc 7B88     		ldrh	r3, [r7, #2]
+ 175 00fe 9A42     		cmp	r2, r3
+ 176 0100 F2D9     		bls	.L11
+ 177 0102 3EE1     		b	.L6
+ 178              	.L7:
+ 179 0104 BA88     		ldrh	r2, [r7, #4]
+ 180 0106 3B88     		ldrh	r3, [r7]
+ 181 0108 9A42     		cmp	r2, r3
+ 182 010a 04D9     		bls	.L13
+ 183 010c BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 184 010e 3B88     		ldrh	r3, [r7]	@ movhi
+ 185 0110 D31A     		subs	r3, r2, r3
+ 186 0112 3B84     		strh	r3, [r7, #32]	@ movhi
+ 187 0114 03E0     		b	.L14
+ 188              	.L13:
+ 189 0116 3A88     		ldrh	r2, [r7]	@ movhi
+ 190 0118 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 191 011a D31A     		subs	r3, r2, r3
+ 192 011c 3B84     		strh	r3, [r7, #32]	@ movhi
+ 193              	.L14:
+ 194 011e FA88     		ldrh	r2, [r7, #6]
+ 195 0120 7B88     		ldrh	r3, [r7, #2]
+ 196 0122 9A42     		cmp	r2, r3
+ 197 0124 19D1     		bne	.L15
+ 198 0126 BA88     		ldrh	r2, [r7, #4]
+ 199 0128 3B88     		ldrh	r3, [r7]
+ 200 012a 9A42     		cmp	r2, r3
+ 201 012c 02D8     		bhi	.L16
+ 202 012e BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 203 0130 BB84     		strh	r3, [r7, #36]	@ movhi
+ 204 0132 0DE0     		b	.L18
+ 205              	.L16:
+ 206 0134 3B88     		ldrh	r3, [r7]	@ movhi
+ 207 0136 BB84     		strh	r3, [r7, #36]	@ movhi
+ 208 0138 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 209 013a 3B80     		strh	r3, [r7]	@ movhi
+ 210 013c 08E0     		b	.L18
+ 211              	.L19:
+ 212 013e 3A8F     		ldrh	r2, [r7, #56]
+ 213 0140 B98C     		ldrh	r1, [r7, #36]
+ 214 0142 FB88     		ldrh	r3, [r7, #6]
+ 215 0144 1846     		mov	r0, r3
+ 216 0146 FFF7FEFF 		bl	ili9320_SetPoint
+ 217 014a BB8C     		ldrh	r3, [r7, #36]
+ 218 014c 0133     		adds	r3, r3, #1
+ 219 014e BB84     		strh	r3, [r7, #36]	@ movhi
+ 220              	.L18:
+ 221 0150 BA8C     		ldrh	r2, [r7, #36]
+ 222 0152 3B88     		ldrh	r3, [r7]
+ 223 0154 9A42     		cmp	r2, r3
+ 224 0156 F2D9     		bls	.L19
+ 225 0158 13E1     		b	.L6
+ 226              	.L15:
+ 227 015a FA88     		ldrh	r2, [r7, #6]
+ 228 015c 7B88     		ldrh	r3, [r7, #2]
+ 229 015e 9A42     		cmp	r2, r3
+ 230 0160 0CD9     		bls	.L20
+ 231 0162 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 232 0164 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 233 0166 D31A     		subs	r3, r2, r3
+ 234 0168 7B84     		strh	r3, [r7, #34]	@ movhi
+ 235 016a 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 236 016c FB84     		strh	r3, [r7, #38]	@ movhi
+ 237 016e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 238 0170 7B80     		strh	r3, [r7, #2]	@ movhi
+ 239 0172 3B88     		ldrh	r3, [r7]	@ movhi
+ 240 0174 BB84     		strh	r3, [r7, #36]	@ movhi
+ 241 0176 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 242 0178 3B80     		strh	r3, [r7]	@ movhi
+ 243 017a 07E0     		b	.L21
+ 244              	.L20:
+ 245 017c 7A88     		ldrh	r2, [r7, #2]	@ movhi
+ 246 017e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 247 0180 D31A     		subs	r3, r2, r3
+ 248 0182 7B84     		strh	r3, [r7, #34]	@ movhi
+ 249 0184 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 250 0186 FB84     		strh	r3, [r7, #38]	@ movhi
+ 251 0188 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 252 018a BB84     		strh	r3, [r7, #36]	@ movhi
+ 253              	.L21:
+ 254 018c 7A8C     		ldrh	r2, [r7, #34]
+ 255 018e 3B8C     		ldrh	r3, [r7, #32]
+ 256 0190 9A42     		cmp	r2, r3
+ 257 0192 19D1     		bne	.L22
+ 258 0194 13E0     		b	.L23
+ 259              	.L26:
+ 260 0196 FB8C     		ldrh	r3, [r7, #38]
+ 261 0198 0133     		adds	r3, r3, #1
+ 262 019a FB84     		strh	r3, [r7, #38]	@ movhi
+ 263 019c BA8C     		ldrh	r2, [r7, #36]
+ 264 019e 3B88     		ldrh	r3, [r7]
+ 265 01a0 9A42     		cmp	r2, r3
+ 266 01a2 03D9     		bls	.L24
+ 267 01a4 BB8C     		ldrh	r3, [r7, #36]
+ 268 01a6 013B     		subs	r3, r3, #1
+ 269 01a8 BB84     		strh	r3, [r7, #36]	@ movhi
+ 270 01aa 02E0     		b	.L25
+ 271              	.L24:
+ 272 01ac BB8C     		ldrh	r3, [r7, #36]
+ 273 01ae 0133     		adds	r3, r3, #1
+ 274 01b0 BB84     		strh	r3, [r7, #36]	@ movhi
+ 275              	.L25:
+ 276 01b2 3A8F     		ldrh	r2, [r7, #56]
+ 277 01b4 B98C     		ldrh	r1, [r7, #36]
+ 278 01b6 FB8C     		ldrh	r3, [r7, #38]
+ 279 01b8 1846     		mov	r0, r3
+ 280 01ba FFF7FEFF 		bl	ili9320_SetPoint
+ 281              	.L23:
+ 282 01be FA8C     		ldrh	r2, [r7, #38]
+ 283 01c0 7B88     		ldrh	r3, [r7, #2]
+ 284 01c2 9A42     		cmp	r2, r3
+ 285 01c4 E7D9     		bls	.L26
+ 286 01c6 DCE0     		b	.L6
+ 287              	.L22:
+ 288 01c8 3A8F     		ldrh	r2, [r7, #56]
+ 289 01ca B98C     		ldrh	r1, [r7, #36]
+ 290 01cc FB8C     		ldrh	r3, [r7, #38]
+ 291 01ce 1846     		mov	r0, r3
+ 292 01d0 FFF7FEFF 		bl	ili9320_SetPoint
+ 293 01d4 BA8C     		ldrh	r2, [r7, #36]
+ 294 01d6 3B88     		ldrh	r3, [r7]
+ 295 01d8 9A42     		cmp	r2, r3
+ 296 01da 69D2     		bcs	.L27
+ 297 01dc 7A8C     		ldrh	r2, [r7, #34]
+ 298 01de 3B8C     		ldrh	r3, [r7, #32]
+ 299 01e0 9A42     		cmp	r2, r3
+ 300 01e2 32D9     		bls	.L28
+ 301 01e4 3B8C     		ldrh	r3, [r7, #32]	@ movhi
+ 302 01e6 5B00     		lsls	r3, r3, #1
+ 303 01e8 9AB2     		uxth	r2, r3
+ 304 01ea 7B8C     		ldrh	r3, [r7, #34]	@ movhi
+ 305 01ec D31A     		subs	r3, r2, r3
+ 306 01ee 9BB2     		uxth	r3, r3
+ 307 01f0 FB83     		strh	r3, [r7, #30]	@ movhi
+ 308 01f2 3B8C     		ldrh	r3, [r7, #32]	@ movhi
+ 309 01f4 5B00     		lsls	r3, r3, #1
+ 310 01f6 9BB2     		uxth	r3, r3
+ 311 01f8 7B81     		strh	r3, [r7, #10]	@ movhi
+ 312 01fa 3A8C     		ldrh	r2, [r7, #32]
+ 313 01fc 7B8C     		ldrh	r3, [r7, #34]
+ 314 01fe D31A     		subs	r3, r2, r3
+ 315 0200 9BB2     		uxth	r3, r3
+ 316 0202 5B00     		lsls	r3, r3, #1
+ 317 0204 9BB2     		uxth	r3, r3
+ 318 0206 3B81     		strh	r3, [r7, #8]	@ movhi
+ 319 0208 1AE0     		b	.L29
+ 320              	.L32:
+ 321 020a FB8C     		ldrh	r3, [r7, #38]
+ 322 020c 0133     		adds	r3, r3, #1
+ 323 020e FB84     		strh	r3, [r7, #38]	@ movhi
+ 324 0210 B7F91E30 		ldrsh	r3, [r7, #30]
+ 325 0214 002B     		cmp	r3, #0
+ 326 0216 05DA     		bge	.L30
+ 327 0218 FA8B     		ldrh	r2, [r7, #30]
+ 328 021a 7B89     		ldrh	r3, [r7, #10]
+ 329 021c 1344     		add	r3, r3, r2
+ 330 021e 9BB2     		uxth	r3, r3
+ 331 0220 FB83     		strh	r3, [r7, #30]	@ movhi
+ 332 0222 07E0     		b	.L31
+ 333              	.L30:
+ 334 0224 BB8C     		ldrh	r3, [r7, #36]
+ 335 0226 0133     		adds	r3, r3, #1
+ 336 0228 BB84     		strh	r3, [r7, #36]	@ movhi
+ 337 022a FA8B     		ldrh	r2, [r7, #30]
+ 338 022c 3B89     		ldrh	r3, [r7, #8]
+ 339 022e 1344     		add	r3, r3, r2
+ 340 0230 9BB2     		uxth	r3, r3
+ 341 0232 FB83     		strh	r3, [r7, #30]	@ movhi
+ 342              	.L31:
+ 343 0234 3A8F     		ldrh	r2, [r7, #56]
+ 344 0236 B98C     		ldrh	r1, [r7, #36]
+ 345 0238 FB8C     		ldrh	r3, [r7, #38]
+ 346 023a 1846     		mov	r0, r3
+ 347 023c FFF7FEFF 		bl	ili9320_SetPoint
+ 348              	.L29:
+ 349 0240 FA8C     		ldrh	r2, [r7, #38]
+ 350 0242 7B88     		ldrh	r3, [r7, #2]
+ 351 0244 9A42     		cmp	r2, r3
+ 352 0246 E0D3     		bcc	.L32
+ 353 0248 9BE0     		b	.L6
+ 354              	.L28:
+ 355 024a 7B8C     		ldrh	r3, [r7, #34]	@ movhi
+ 356 024c 5B00     		lsls	r3, r3, #1
+ 357 024e 9AB2     		uxth	r2, r3
+ 358 0250 3B8C     		ldrh	r3, [r7, #32]	@ movhi
+ 359 0252 D31A     		subs	r3, r2, r3
+ 360 0254 9BB2     		uxth	r3, r3
+ 361 0256 BB83     		strh	r3, [r7, #28]	@ movhi
+ 362 0258 7B8C     		ldrh	r3, [r7, #34]	@ movhi
+ 363 025a 5B00     		lsls	r3, r3, #1
+ 364 025c 9BB2     		uxth	r3, r3
+ 365 025e FB81     		strh	r3, [r7, #14]	@ movhi
+ 366 0260 7A8C     		ldrh	r2, [r7, #34]
+ 367 0262 3B8C     		ldrh	r3, [r7, #32]
+ 368 0264 D31A     		subs	r3, r2, r3
+ 369 0266 9BB2     		uxth	r3, r3
+ 370 0268 5B00     		lsls	r3, r3, #1
+ 371 026a 9BB2     		uxth	r3, r3
+ 372 026c BB81     		strh	r3, [r7, #12]	@ movhi
+ 373 026e 1AE0     		b	.L34
+ 374              	.L37:
+ 375 0270 BB8C     		ldrh	r3, [r7, #36]
+ 376 0272 0133     		adds	r3, r3, #1
+ 377 0274 BB84     		strh	r3, [r7, #36]	@ movhi
+ 378 0276 B7F91C30 		ldrsh	r3, [r7, #28]
+ 379 027a 002B     		cmp	r3, #0
+ 380 027c 05DA     		bge	.L35
+ 381 027e BA8B     		ldrh	r2, [r7, #28]
+ 382 0280 FB89     		ldrh	r3, [r7, #14]
+ 383 0282 1344     		add	r3, r3, r2
+ 384 0284 9BB2     		uxth	r3, r3
+ 385 0286 BB83     		strh	r3, [r7, #28]	@ movhi
+ 386 0288 07E0     		b	.L36
+ 387              	.L35:
+ 388 028a FB8C     		ldrh	r3, [r7, #38]
+ 389 028c 0133     		adds	r3, r3, #1
+ 390 028e FB84     		strh	r3, [r7, #38]	@ movhi
+ 391 0290 BA8B     		ldrh	r2, [r7, #28]
+ 392 0292 BB89     		ldrh	r3, [r7, #12]
+ 393 0294 1344     		add	r3, r3, r2
+ 394 0296 9BB2     		uxth	r3, r3
+ 395 0298 BB83     		strh	r3, [r7, #28]	@ movhi
+ 396              	.L36:
+ 397 029a 3A8F     		ldrh	r2, [r7, #56]
+ 398 029c B98C     		ldrh	r1, [r7, #36]
+ 399 029e FB8C     		ldrh	r3, [r7, #38]
+ 400 02a0 1846     		mov	r0, r3
+ 401 02a2 FFF7FEFF 		bl	ili9320_SetPoint
+ 402              	.L34:
+ 403 02a6 BA8C     		ldrh	r2, [r7, #36]
+ 404 02a8 3B88     		ldrh	r3, [r7]
+ 405 02aa 9A42     		cmp	r2, r3
+ 406 02ac E0D3     		bcc	.L37
+ 407 02ae 68E0     		b	.L6
+ 408              	.L27:
+ 409 02b0 7A8C     		ldrh	r2, [r7, #34]
+ 410 02b2 3B8C     		ldrh	r3, [r7, #32]
+ 411 02b4 9A42     		cmp	r2, r3
+ 412 02b6 32D9     		bls	.L38
+ 413 02b8 3B8C     		ldrh	r3, [r7, #32]	@ movhi
+ 414 02ba 5B00     		lsls	r3, r3, #1
+ 415 02bc 9AB2     		uxth	r2, r3
+ 416 02be 7B8C     		ldrh	r3, [r7, #34]	@ movhi
+ 417 02c0 D31A     		subs	r3, r2, r3
+ 418 02c2 9BB2     		uxth	r3, r3
+ 419 02c4 7B83     		strh	r3, [r7, #26]	@ movhi
+ 420 02c6 3B8C     		ldrh	r3, [r7, #32]	@ movhi
+ 421 02c8 5B00     		lsls	r3, r3, #1
+ 422 02ca 9BB2     		uxth	r3, r3
+ 423 02cc 7B82     		strh	r3, [r7, #18]	@ movhi
+ 424 02ce 3A8C     		ldrh	r2, [r7, #32]
+ 425 02d0 7B8C     		ldrh	r3, [r7, #34]
+ 426 02d2 D31A     		subs	r3, r2, r3
+ 427 02d4 9BB2     		uxth	r3, r3
+ 428 02d6 5B00     		lsls	r3, r3, #1
+ 429 02d8 9BB2     		uxth	r3, r3
+ 430 02da 3B82     		strh	r3, [r7, #16]	@ movhi
+ 431 02dc 1AE0     		b	.L39
+ 432              	.L42:
+ 433 02de FB8C     		ldrh	r3, [r7, #38]
+ 434 02e0 0133     		adds	r3, r3, #1
+ 435 02e2 FB84     		strh	r3, [r7, #38]	@ movhi
+ 436 02e4 B7F91A30 		ldrsh	r3, [r7, #26]
+ 437 02e8 002B     		cmp	r3, #0
+ 438 02ea 05DA     		bge	.L40
+ 439 02ec 7A8B     		ldrh	r2, [r7, #26]
+ 440 02ee 7B8A     		ldrh	r3, [r7, #18]
+ 441 02f0 1344     		add	r3, r3, r2
+ 442 02f2 9BB2     		uxth	r3, r3
+ 443 02f4 7B83     		strh	r3, [r7, #26]	@ movhi
+ 444 02f6 07E0     		b	.L41
+ 445              	.L40:
+ 446 02f8 BB8C     		ldrh	r3, [r7, #36]
+ 447 02fa 013B     		subs	r3, r3, #1
+ 448 02fc BB84     		strh	r3, [r7, #36]	@ movhi
+ 449 02fe 7A8B     		ldrh	r2, [r7, #26]
+ 450 0300 3B8A     		ldrh	r3, [r7, #16]
+ 451 0302 1344     		add	r3, r3, r2
+ 452 0304 9BB2     		uxth	r3, r3
+ 453 0306 7B83     		strh	r3, [r7, #26]	@ movhi
+ 454              	.L41:
+ 455 0308 3A8F     		ldrh	r2, [r7, #56]
+ 456 030a B98C     		ldrh	r1, [r7, #36]
+ 457 030c FB8C     		ldrh	r3, [r7, #38]
+ 458 030e 1846     		mov	r0, r3
+ 459 0310 FFF7FEFF 		bl	ili9320_SetPoint
+ 460              	.L39:
+ 461 0314 FA8C     		ldrh	r2, [r7, #38]
+ 462 0316 7B88     		ldrh	r3, [r7, #2]
+ 463 0318 9A42     		cmp	r2, r3
+ 464 031a E0D3     		bcc	.L42
+ 465 031c 31E0     		b	.L6
+ 466              	.L38:
+ 467 031e 7B8C     		ldrh	r3, [r7, #34]	@ movhi
+ 468 0320 5B00     		lsls	r3, r3, #1
+ 469 0322 9AB2     		uxth	r2, r3
+ 470 0324 3B8C     		ldrh	r3, [r7, #32]	@ movhi
+ 471 0326 D31A     		subs	r3, r2, r3
+ 472 0328 9BB2     		uxth	r3, r3
+ 473 032a 3B83     		strh	r3, [r7, #24]	@ movhi
+ 474 032c 7B8C     		ldrh	r3, [r7, #34]	@ movhi
+ 475 032e 5B00     		lsls	r3, r3, #1
+ 476 0330 9BB2     		uxth	r3, r3
+ 477 0332 FB82     		strh	r3, [r7, #22]	@ movhi
+ 478 0334 7A8C     		ldrh	r2, [r7, #34]
+ 479 0336 3B8C     		ldrh	r3, [r7, #32]
+ 480 0338 D31A     		subs	r3, r2, r3
+ 481 033a 9BB2     		uxth	r3, r3
+ 482 033c 5B00     		lsls	r3, r3, #1
+ 483 033e 9BB2     		uxth	r3, r3
+ 484 0340 BB82     		strh	r3, [r7, #20]	@ movhi
+ 485 0342 1AE0     		b	.L43
+ 486              	.L46:
+ 487 0344 BB8C     		ldrh	r3, [r7, #36]
+ 488 0346 013B     		subs	r3, r3, #1
+ 489 0348 BB84     		strh	r3, [r7, #36]	@ movhi
+ 490 034a B7F91830 		ldrsh	r3, [r7, #24]
+ 491 034e 002B     		cmp	r3, #0
+ 492 0350 05DA     		bge	.L44
+ 493 0352 3A8B     		ldrh	r2, [r7, #24]
+ 494 0354 FB8A     		ldrh	r3, [r7, #22]
+ 495 0356 1344     		add	r3, r3, r2
+ 496 0358 9BB2     		uxth	r3, r3
+ 497 035a 3B83     		strh	r3, [r7, #24]	@ movhi
+ 498 035c 07E0     		b	.L45
+ 499              	.L44:
+ 500 035e FB8C     		ldrh	r3, [r7, #38]
+ 501 0360 0133     		adds	r3, r3, #1
+ 502 0362 FB84     		strh	r3, [r7, #38]	@ movhi
+ 503 0364 3A8B     		ldrh	r2, [r7, #24]
+ 504 0366 BB8A     		ldrh	r3, [r7, #20]
+ 505 0368 1344     		add	r3, r3, r2
+ 506 036a 9BB2     		uxth	r3, r3
+ 507 036c 3B83     		strh	r3, [r7, #24]	@ movhi
+ 508              	.L45:
+ 509 036e 3A8F     		ldrh	r2, [r7, #56]
+ 510 0370 B98C     		ldrh	r1, [r7, #36]
+ 511 0372 FB8C     		ldrh	r3, [r7, #38]
+ 512 0374 1846     		mov	r0, r3
+ 513 0376 FFF7FEFF 		bl	ili9320_SetPoint
+ 514              	.L43:
+ 515 037a 3A88     		ldrh	r2, [r7]
+ 516 037c BB8C     		ldrh	r3, [r7, #36]
+ 517 037e 9A42     		cmp	r2, r3
+ 518 0380 E0D3     		bcc	.L46
+ 519              	.L6:
+ 520 0382 2C37     		adds	r7, r7, #44
+ 521 0384 BD46     		mov	sp, r7
+ 522              		@ sp needed
+ 523 0386 90BD     		pop	{r4, r7, pc}
+ 525              		.align	1
+ 526              		.global	GUI_Circle
+ 527              		.syntax unified
+ 528              		.thumb
+ 529              		.thumb_func
+ 530              		.fpu softvfp
+ 532              	GUI_Circle:
+ 533              		@ args = 4, pretend = 0, frame = 16
+ 534              		@ frame_needed = 1, uses_anonymous_args = 0
+ 535 0388 90B5     		push	{r4, r7, lr}
+ 536 038a 87B0     		sub	sp, sp, #28
+ 537 038c 02AF     		add	r7, sp, #8
+ 538 038e 0446     		mov	r4, r0
+ 539 0390 0846     		mov	r0, r1
+ 540 0392 1146     		mov	r1, r2
+ 541 0394 1A46     		mov	r2, r3
+ 542 0396 2346     		mov	r3, r4	@ movhi
+ 543 0398 FB80     		strh	r3, [r7, #6]	@ movhi
+ 544 039a 0346     		mov	r3, r0	@ movhi
+ 545 039c BB80     		strh	r3, [r7, #4]	@ movhi
+ 546 039e 0B46     		mov	r3, r1	@ movhi
+ 547 03a0 7B80     		strh	r3, [r7, #2]	@ movhi
+ 548 03a2 1346     		mov	r3, r2	@ movhi
+ 549 03a4 3B80     		strh	r3, [r7]	@ movhi
+ 550 03a6 0023     		movs	r3, #0
+ 551 03a8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 552 03aa 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 553 03ac BB81     		strh	r3, [r7, #12]	@ movhi
+ 554 03ae 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 555 03b0 5B00     		lsls	r3, r3, #1
+ 556 03b2 9BB2     		uxth	r3, r3
+ 557 03b4 C3F10303 		rsb	r3, r3, #3
+ 558 03b8 9BB2     		uxth	r3, r3
+ 559 03ba 7B81     		strh	r3, [r7, #10]	@ movhi
+ 560 03bc E1E0     		b	.L48
+ 561              	.L52:
+ 562 03be 97F82030 		ldrb	r3, [r7, #32]	@ zero_extendqisi2
+ 563 03c2 002B     		cmp	r3, #0
+ 564 03c4 58D0     		beq	.L49
+ 565 03c6 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 566 03c8 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 567 03ca 1344     		add	r3, r3, r2
+ 568 03cc 98B2     		uxth	r0, r3
+ 569 03ce BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 570 03d0 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 571 03d2 1344     		add	r3, r3, r2
+ 572 03d4 99B2     		uxth	r1, r3
+ 573 03d6 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 574 03d8 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 575 03da D31A     		subs	r3, r2, r3
+ 576 03dc 9CB2     		uxth	r4, r3
+ 577 03de BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 578 03e0 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 579 03e2 1344     		add	r3, r3, r2
+ 580 03e4 9AB2     		uxth	r2, r3
+ 581 03e6 3B88     		ldrh	r3, [r7]
+ 582 03e8 0093     		str	r3, [sp]
+ 583 03ea 1346     		mov	r3, r2
+ 584 03ec 2246     		mov	r2, r4
+ 585 03ee FFF7FEFF 		bl	GUI_Line
+ 586 03f2 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 587 03f4 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 588 03f6 1344     		add	r3, r3, r2
+ 589 03f8 98B2     		uxth	r0, r3
+ 590 03fa BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 591 03fc BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 592 03fe D31A     		subs	r3, r2, r3
+ 593 0400 99B2     		uxth	r1, r3
+ 594 0402 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 595 0404 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 596 0406 D31A     		subs	r3, r2, r3
+ 597 0408 9CB2     		uxth	r4, r3
+ 598 040a BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 599 040c BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 600 040e D31A     		subs	r3, r2, r3
+ 601 0410 9AB2     		uxth	r2, r3
+ 602 0412 3B88     		ldrh	r3, [r7]
+ 603 0414 0093     		str	r3, [sp]
+ 604 0416 1346     		mov	r3, r2
+ 605 0418 2246     		mov	r2, r4
+ 606 041a FFF7FEFF 		bl	GUI_Line
+ 607 041e FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 608 0420 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 609 0422 1344     		add	r3, r3, r2
+ 610 0424 98B2     		uxth	r0, r3
+ 611 0426 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 612 0428 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 613 042a 1344     		add	r3, r3, r2
+ 614 042c 99B2     		uxth	r1, r3
+ 615 042e FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 616 0430 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 617 0432 D31A     		subs	r3, r2, r3
+ 618 0434 9CB2     		uxth	r4, r3
+ 619 0436 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 620 0438 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 621 043a 1344     		add	r3, r3, r2
+ 622 043c 9AB2     		uxth	r2, r3
+ 623 043e 3B88     		ldrh	r3, [r7]
+ 624 0440 0093     		str	r3, [sp]
+ 625 0442 1346     		mov	r3, r2
+ 626 0444 2246     		mov	r2, r4
+ 627 0446 FFF7FEFF 		bl	GUI_Line
+ 628 044a FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 629 044c BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 630 044e 1344     		add	r3, r3, r2
+ 631 0450 98B2     		uxth	r0, r3
+ 632 0452 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 633 0454 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 634 0456 D31A     		subs	r3, r2, r3
+ 635 0458 99B2     		uxth	r1, r3
+ 636 045a FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 637 045c BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 638 045e D31A     		subs	r3, r2, r3
+ 639 0460 9CB2     		uxth	r4, r3
+ 640 0462 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 641 0464 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 642 0466 D31A     		subs	r3, r2, r3
+ 643 0468 9AB2     		uxth	r2, r3
+ 644 046a 3B88     		ldrh	r3, [r7]
+ 645 046c 0093     		str	r3, [sp]
+ 646 046e 1346     		mov	r3, r2
+ 647 0470 2246     		mov	r2, r4
+ 648 0472 FFF7FEFF 		bl	GUI_Line
+ 649 0476 5FE0     		b	.L50
+ 650              	.L49:
+ 651 0478 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 652 047a FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 653 047c 1344     		add	r3, r3, r2
+ 654 047e 98B2     		uxth	r0, r3
+ 655 0480 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 656 0482 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 657 0484 1344     		add	r3, r3, r2
+ 658 0486 9BB2     		uxth	r3, r3
+ 659 0488 3A88     		ldrh	r2, [r7]
+ 660 048a 1946     		mov	r1, r3
+ 661 048c FFF7FEFF 		bl	ili9320_SetPoint
+ 662 0490 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 663 0492 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 664 0494 D31A     		subs	r3, r2, r3
+ 665 0496 98B2     		uxth	r0, r3
+ 666 0498 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 667 049a BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 668 049c 1344     		add	r3, r3, r2
+ 669 049e 9BB2     		uxth	r3, r3
+ 670 04a0 3A88     		ldrh	r2, [r7]
+ 671 04a2 1946     		mov	r1, r3
+ 672 04a4 FFF7FEFF 		bl	ili9320_SetPoint
+ 673 04a8 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 674 04aa FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 675 04ac 1344     		add	r3, r3, r2
+ 676 04ae 98B2     		uxth	r0, r3
+ 677 04b0 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 678 04b2 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 679 04b4 D31A     		subs	r3, r2, r3
+ 680 04b6 9BB2     		uxth	r3, r3
+ 681 04b8 3A88     		ldrh	r2, [r7]
+ 682 04ba 1946     		mov	r1, r3
+ 683 04bc FFF7FEFF 		bl	ili9320_SetPoint
+ 684 04c0 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 685 04c2 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 686 04c4 D31A     		subs	r3, r2, r3
+ 687 04c6 98B2     		uxth	r0, r3
+ 688 04c8 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 689 04ca BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 690 04cc D31A     		subs	r3, r2, r3
+ 691 04ce 9BB2     		uxth	r3, r3
+ 692 04d0 3A88     		ldrh	r2, [r7]
+ 693 04d2 1946     		mov	r1, r3
+ 694 04d4 FFF7FEFF 		bl	ili9320_SetPoint
+ 695 04d8 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 696 04da BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 697 04dc 1344     		add	r3, r3, r2
+ 698 04de 98B2     		uxth	r0, r3
+ 699 04e0 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 700 04e2 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 701 04e4 1344     		add	r3, r3, r2
+ 702 04e6 9BB2     		uxth	r3, r3
+ 703 04e8 3A88     		ldrh	r2, [r7]
+ 704 04ea 1946     		mov	r1, r3
+ 705 04ec FFF7FEFF 		bl	ili9320_SetPoint
+ 706 04f0 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 707 04f2 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 708 04f4 D31A     		subs	r3, r2, r3
+ 709 04f6 98B2     		uxth	r0, r3
+ 710 04f8 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 711 04fa FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 712 04fc 1344     		add	r3, r3, r2
+ 713 04fe 9BB2     		uxth	r3, r3
+ 714 0500 3A88     		ldrh	r2, [r7]
+ 715 0502 1946     		mov	r1, r3
+ 716 0504 FFF7FEFF 		bl	ili9320_SetPoint
+ 717 0508 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 718 050a BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 719 050c 1344     		add	r3, r3, r2
+ 720 050e 98B2     		uxth	r0, r3
+ 721 0510 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 722 0512 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 723 0514 D31A     		subs	r3, r2, r3
+ 724 0516 9BB2     		uxth	r3, r3
+ 725 0518 3A88     		ldrh	r2, [r7]
+ 726 051a 1946     		mov	r1, r3
+ 727 051c FFF7FEFF 		bl	ili9320_SetPoint
+ 728 0520 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 729 0522 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 730 0524 D31A     		subs	r3, r2, r3
+ 731 0526 98B2     		uxth	r0, r3
+ 732 0528 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 733 052a FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 734 052c D31A     		subs	r3, r2, r3
+ 735 052e 9BB2     		uxth	r3, r3
+ 736 0530 3A88     		ldrh	r2, [r7]
+ 737 0532 1946     		mov	r1, r3
+ 738 0534 FFF7FEFF 		bl	ili9320_SetPoint
+ 739              	.L50:
+ 740 0538 FB89     		ldrh	r3, [r7, #14]
+ 741 053a 0133     		adds	r3, r3, #1
+ 742 053c FB81     		strh	r3, [r7, #14]	@ movhi
+ 743 053e B7F90A30 		ldrsh	r3, [r7, #10]
+ 744 0542 002B     		cmp	r3, #0
+ 745 0544 14DB     		blt	.L51
+ 746 0546 BB89     		ldrh	r3, [r7, #12]
+ 747 0548 013B     		subs	r3, r3, #1
+ 748 054a BB81     		strh	r3, [r7, #12]	@ movhi
+ 749 054c FB89     		ldrh	r3, [r7, #14]
+ 750 054e 9B00     		lsls	r3, r3, #2
+ 751 0550 3B81     		strh	r3, [r7, #8]	@ movhi
+ 752 0552 3A89     		ldrh	r2, [r7, #8]
+ 753 0554 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 754 0556 9B00     		lsls	r3, r3, #2
+ 755 0558 9BB2     		uxth	r3, r3
+ 756 055a D31A     		subs	r3, r2, r3
+ 757 055c 9BB2     		uxth	r3, r3
+ 758 055e 3B81     		strh	r3, [r7, #8]	@ movhi
+ 759 0560 3A89     		ldrh	r2, [r7, #8]
+ 760 0562 7B89     		ldrh	r3, [r7, #10]
+ 761 0564 1344     		add	r3, r3, r2
+ 762 0566 9BB2     		uxth	r3, r3
+ 763 0568 0A33     		adds	r3, r3, #10
+ 764 056a 9BB2     		uxth	r3, r3
+ 765 056c 7B81     		strh	r3, [r7, #10]	@ movhi
+ 766 056e 08E0     		b	.L48
+ 767              	.L51:
+ 768 0570 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 769 0572 9B00     		lsls	r3, r3, #2
+ 770 0574 9AB2     		uxth	r2, r3
+ 771 0576 7B89     		ldrh	r3, [r7, #10]
+ 772 0578 1344     		add	r3, r3, r2
+ 773 057a 9BB2     		uxth	r3, r3
+ 774 057c 0633     		adds	r3, r3, #6
+ 775 057e 9BB2     		uxth	r3, r3
+ 776 0580 7B81     		strh	r3, [r7, #10]	@ movhi
+ 777              	.L48:
+ 778 0582 BA89     		ldrh	r2, [r7, #12]
+ 779 0584 FB89     		ldrh	r3, [r7, #14]
+ 780 0586 9A42     		cmp	r2, r3
+ 781 0588 3FF619AF 		bhi	.L52
+ 782 058c 00BF     		nop
+ 783 058e 1437     		adds	r7, r7, #20
+ 784 0590 BD46     		mov	sp, r7
+ 785              		@ sp needed
+ 786 0592 90BD     		pop	{r4, r7, pc}
+ 788              		.align	1
+ 789              		.global	GUI_Rectangle
+ 790              		.syntax unified
+ 791              		.thumb
+ 792              		.thumb_func
+ 793              		.fpu softvfp
+ 795              	GUI_Rectangle:
+ 796              		@ args = 8, pretend = 0, frame = 16
+ 797              		@ frame_needed = 1, uses_anonymous_args = 0
+ 798 0594 90B5     		push	{r4, r7, lr}
+ 799 0596 87B0     		sub	sp, sp, #28
+ 800 0598 02AF     		add	r7, sp, #8
+ 801 059a 0446     		mov	r4, r0
+ 802 059c 0846     		mov	r0, r1
+ 803 059e 1146     		mov	r1, r2
+ 804 05a0 1A46     		mov	r2, r3
+ 805 05a2 2346     		mov	r3, r4	@ movhi
+ 806 05a4 FB80     		strh	r3, [r7, #6]	@ movhi
+ 807 05a6 0346     		mov	r3, r0	@ movhi
+ 808 05a8 BB80     		strh	r3, [r7, #4]	@ movhi
+ 809 05aa 0B46     		mov	r3, r1	@ movhi
+ 810 05ac 7B80     		strh	r3, [r7, #2]	@ movhi
+ 811 05ae 1346     		mov	r3, r2	@ movhi
+ 812 05b0 3B80     		strh	r3, [r7]	@ movhi
+ 813 05b2 3A88     		ldrh	r2, [r7]	@ movhi
+ 814 05b4 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 815 05b6 D31A     		subs	r3, r2, r3
+ 816 05b8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 817 05ba 97F82430 		ldrb	r3, [r7, #36]	@ zero_extendqisi2
+ 818 05be 002B     		cmp	r3, #0
+ 819 05c0 11D0     		beq	.L54
+ 820 05c2 FB89     		ldrh	r3, [r7, #14]
+ 821 05c4 0133     		adds	r3, r3, #1
+ 822 05c6 FB81     		strh	r3, [r7, #14]	@ movhi
+ 823 05c8 08E0     		b	.L55
+ 824              	.L56:
+ 825 05ca 3B8C     		ldrh	r3, [r7, #32]
+ 826 05cc FA89     		ldrh	r2, [r7, #14]
+ 827 05ce B988     		ldrh	r1, [r7, #4]
+ 828 05d0 F888     		ldrh	r0, [r7, #6]
+ 829 05d2 FFF7FEFF 		bl	ili9320_VLine
+ 830 05d6 FB88     		ldrh	r3, [r7, #6]
+ 831 05d8 0133     		adds	r3, r3, #1
+ 832 05da FB80     		strh	r3, [r7, #6]	@ movhi
+ 833              	.L55:
+ 834 05dc FA88     		ldrh	r2, [r7, #6]
+ 835 05de 7B88     		ldrh	r3, [r7, #2]
+ 836 05e0 9A42     		cmp	r2, r3
+ 837 05e2 F2D9     		bls	.L56
+ 838 05e4 1DE0     		b	.L53
+ 839              	.L54:
+ 840 05e6 3B8C     		ldrh	r3, [r7, #32]
+ 841 05e8 FA89     		ldrh	r2, [r7, #14]
+ 842 05ea B988     		ldrh	r1, [r7, #4]
+ 843 05ec F888     		ldrh	r0, [r7, #6]
+ 844 05ee FFF7FEFF 		bl	ili9320_VLine
+ 845 05f2 BC88     		ldrh	r4, [r7, #4]
+ 846 05f4 7A88     		ldrh	r2, [r7, #2]
+ 847 05f6 B988     		ldrh	r1, [r7, #4]
+ 848 05f8 F888     		ldrh	r0, [r7, #6]
+ 849 05fa 3B8C     		ldrh	r3, [r7, #32]
+ 850 05fc 0093     		str	r3, [sp]
+ 851 05fe 2346     		mov	r3, r4
+ 852 0600 FFF7FEFF 		bl	GUI_Line
+ 853 0604 3C88     		ldrh	r4, [r7]
+ 854 0606 7A88     		ldrh	r2, [r7, #2]
+ 855 0608 3988     		ldrh	r1, [r7]
+ 856 060a F888     		ldrh	r0, [r7, #6]
+ 857 060c 3B8C     		ldrh	r3, [r7, #32]
+ 858 060e 0093     		str	r3, [sp]
+ 859 0610 2346     		mov	r3, r4
+ 860 0612 FFF7FEFF 		bl	GUI_Line
+ 861 0616 3B8C     		ldrh	r3, [r7, #32]
+ 862 0618 FA89     		ldrh	r2, [r7, #14]
+ 863 061a B988     		ldrh	r1, [r7, #4]
+ 864 061c 7888     		ldrh	r0, [r7, #2]
+ 865 061e FFF7FEFF 		bl	ili9320_VLine
+ 866              	.L53:
+ 867 0622 1437     		adds	r7, r7, #20
+ 868 0624 BD46     		mov	sp, r7
+ 869              		@ sp needed
+ 870 0626 90BD     		pop	{r4, r7, pc}
+ 872              		.align	1
+ 873              		.global	GUI_Square
+ 874              		.syntax unified
+ 875              		.thumb
+ 876              		.thumb_func
+ 877              		.fpu softvfp
+ 879              	GUI_Square:
+ 880              		@ args = 4, pretend = 0, frame = 8
+ 881              		@ frame_needed = 1, uses_anonymous_args = 0
+ 882 0628 90B5     		push	{r4, r7, lr}
+ 883 062a 85B0     		sub	sp, sp, #20
+ 884 062c 02AF     		add	r7, sp, #8
+ 885 062e 0446     		mov	r4, r0
+ 886 0630 0846     		mov	r0, r1
+ 887 0632 1146     		mov	r1, r2
+ 888 0634 1A46     		mov	r2, r3
+ 889 0636 2346     		mov	r3, r4	@ movhi
+ 890 0638 FB80     		strh	r3, [r7, #6]	@ movhi
+ 891 063a 0346     		mov	r3, r0	@ movhi
+ 892 063c BB80     		strh	r3, [r7, #4]	@ movhi
+ 893 063e 0B46     		mov	r3, r1	@ movhi
+ 894 0640 7B80     		strh	r3, [r7, #2]	@ movhi
+ 895 0642 1346     		mov	r3, r2	@ movhi
+ 896 0644 3B80     		strh	r3, [r7]	@ movhi
+ 897 0646 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 898 0648 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 899 064a 1344     		add	r3, r3, r2
+ 900 064c 9CB2     		uxth	r4, r3
+ 901 064e BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 902 0650 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 903 0652 1344     		add	r3, r3, r2
+ 904 0654 9AB2     		uxth	r2, r3
+ 905 0656 B988     		ldrh	r1, [r7, #4]
+ 906 0658 F888     		ldrh	r0, [r7, #6]
+ 907 065a 3B7E     		ldrb	r3, [r7, #24]	@ zero_extendqisi2
+ 908 065c 0193     		str	r3, [sp, #4]
+ 909 065e 3B88     		ldrh	r3, [r7]
+ 910 0660 0093     		str	r3, [sp]
+ 911 0662 1346     		mov	r3, r2
+ 912 0664 2246     		mov	r2, r4
+ 913 0666 FFF7FEFF 		bl	GUI_Rectangle
+ 914 066a 00BF     		nop
+ 915 066c 0C37     		adds	r7, r7, #12
+ 916 066e BD46     		mov	sp, r7
+ 917              		@ sp needed
+ 918 0670 90BD     		pop	{r4, r7, pc}
+ 920              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ili9320_api.c
+     /tmp/cckPynvj.s:13     .text:0000000000000000 $t
+     /tmp/cckPynvj.s:20     .text:0000000000000000 GUI_Color565
+     /tmp/cckPynvj.s:71     .text:0000000000000052 GUI_Text
+     /tmp/cckPynvj.s:128    .text:00000000000000aa GUI_Line
+     /tmp/cckPynvj.s:532    .text:0000000000000388 GUI_Circle
+     /tmp/cckPynvj.s:795    .text:0000000000000594 GUI_Rectangle
+     /tmp/cckPynvj.s:879    .text:0000000000000628 GUI_Square
+
+UNDEFINED SYMBOLS
+ili9320_PutChar
+ili9320_SetPoint
+ili9320_VLine

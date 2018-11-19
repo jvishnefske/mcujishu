@@ -1,0 +1,685 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ili9320_touch.c"
+  12              		.text
+  13              		.align	1
+  14              		.global	SPI_CS
+  15              		.syntax unified
+  16              		.thumb
+  17              		.thumb_func
+  18              		.fpu softvfp
+  20              	SPI_CS:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23 0000 80B5     		push	{r7, lr}
+  24 0002 82B0     		sub	sp, sp, #8
+  25 0004 00AF     		add	r7, sp, #0
+  26 0006 0346     		mov	r3, r0
+  27 0008 FB71     		strb	r3, [r7, #7]
+  28 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  29 000c 002B     		cmp	r3, #0
+  30 000e 04D0     		beq	.L2
+  31 0010 4021     		movs	r1, #64
+  32 0012 0648     		ldr	r0, .L5
+  33 0014 FFF7FEFF 		bl	GPIO_SetBits
+  34 0018 03E0     		b	.L4
+  35              	.L2:
+  36 001a 4021     		movs	r1, #64
+  37 001c 0348     		ldr	r0, .L5
+  38 001e FFF7FEFF 		bl	GPIO_ResetBits
+  39              	.L4:
+  40 0022 00BF     		nop
+  41 0024 0837     		adds	r7, r7, #8
+  42 0026 BD46     		mov	sp, r7
+  43              		@ sp needed
+  44 0028 80BD     		pop	{r7, pc}
+  45              	.L6:
+  46 002a 00BF     		.align	2
+  47              	.L5:
+  48 002c 00140140 		.word	1073812480
+  50              		.align	1
+  51              		.global	SPI_DIN
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	SPI_DIN:
+  58              		@ args = 0, pretend = 0, frame = 8
+  59              		@ frame_needed = 1, uses_anonymous_args = 0
+  60 0030 80B5     		push	{r7, lr}
+  61 0032 82B0     		sub	sp, sp, #8
+  62 0034 00AF     		add	r7, sp, #0
+  63 0036 0346     		mov	r3, r0
+  64 0038 FB71     		strb	r3, [r7, #7]
+  65 003a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  66 003c 002B     		cmp	r3, #0
+  67 003e 04D0     		beq	.L8
+  68 0040 8021     		movs	r1, #128
+  69 0042 0648     		ldr	r0, .L11
+  70 0044 FFF7FEFF 		bl	GPIO_SetBits
+  71 0048 03E0     		b	.L10
+  72              	.L8:
+  73 004a 8021     		movs	r1, #128
+  74 004c 0348     		ldr	r0, .L11
+  75 004e FFF7FEFF 		bl	GPIO_ResetBits
+  76              	.L10:
+  77 0052 00BF     		nop
+  78 0054 0837     		adds	r7, r7, #8
+  79 0056 BD46     		mov	sp, r7
+  80              		@ sp needed
+  81 0058 80BD     		pop	{r7, pc}
+  82              	.L12:
+  83 005a 00BF     		.align	2
+  84              	.L11:
+  85 005c 00140140 		.word	1073812480
+  87              		.align	1
+  88              		.global	SPI_CLK
+  89              		.syntax unified
+  90              		.thumb
+  91              		.thumb_func
+  92              		.fpu softvfp
+  94              	SPI_CLK:
+  95              		@ args = 0, pretend = 0, frame = 8
+  96              		@ frame_needed = 1, uses_anonymous_args = 0
+  97 0060 80B5     		push	{r7, lr}
+  98 0062 82B0     		sub	sp, sp, #8
+  99 0064 00AF     		add	r7, sp, #0
+ 100 0066 0346     		mov	r3, r0
+ 101 0068 FB71     		strb	r3, [r7, #7]
+ 102 006a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 103 006c 002B     		cmp	r3, #0
+ 104 006e 04D0     		beq	.L14
+ 105 0070 2021     		movs	r1, #32
+ 106 0072 0648     		ldr	r0, .L17
+ 107 0074 FFF7FEFF 		bl	GPIO_SetBits
+ 108 0078 03E0     		b	.L16
+ 109              	.L14:
+ 110 007a 2021     		movs	r1, #32
+ 111 007c 0348     		ldr	r0, .L17
+ 112 007e FFF7FEFF 		bl	GPIO_ResetBits
+ 113              	.L16:
+ 114 0082 00BF     		nop
+ 115 0084 0837     		adds	r7, r7, #8
+ 116 0086 BD46     		mov	sp, r7
+ 117              		@ sp needed
+ 118 0088 80BD     		pop	{r7, pc}
+ 119              	.L18:
+ 120 008a 00BF     		.align	2
+ 121              	.L17:
+ 122 008c 00140140 		.word	1073812480
+ 124              		.align	1
+ 125              		.global	SPI_DOUT
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.fpu softvfp
+ 131              	SPI_DOUT:
+ 132              		@ args = 0, pretend = 0, frame = 0
+ 133              		@ frame_needed = 1, uses_anonymous_args = 0
+ 134 0090 80B5     		push	{r7, lr}
+ 135 0092 00AF     		add	r7, sp, #0
+ 136 0094 4FF48061 		mov	r1, #1024
+ 137 0098 0248     		ldr	r0, .L21
+ 138 009a FFF7FEFF 		bl	GPIO_ReadInputDataBit
+ 139 009e 0346     		mov	r3, r0
+ 140 00a0 1846     		mov	r0, r3
+ 141 00a2 80BD     		pop	{r7, pc}
+ 142              	.L22:
+ 143              		.align	2
+ 144              	.L21:
+ 145 00a4 00140140 		.word	1073812480
+ 147              		.align	1
+ 148              		.global	SPI_delay
+ 149              		.syntax unified
+ 150              		.thumb
+ 151              		.thumb_func
+ 152              		.fpu softvfp
+ 154              	SPI_delay:
+ 155              		@ args = 0, pretend = 0, frame = 16
+ 156              		@ frame_needed = 1, uses_anonymous_args = 0
+ 157              		@ link register save eliminated.
+ 158 00a8 80B4     		push	{r7}
+ 159 00aa 85B0     		sub	sp, sp, #20
+ 160 00ac 00AF     		add	r7, sp, #0
+ 161 00ae 0346     		mov	r3, r0
+ 162 00b0 FB80     		strh	r3, [r7, #6]	@ movhi
+ 163 00b2 0023     		movs	r3, #0
+ 164 00b4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 165 00b6 02E0     		b	.L24
+ 166              	.L25:
+ 167 00b8 FB89     		ldrh	r3, [r7, #14]
+ 168 00ba 0133     		adds	r3, r3, #1
+ 169 00bc FB81     		strh	r3, [r7, #14]	@ movhi
+ 170              	.L24:
+ 171 00be FA89     		ldrh	r2, [r7, #14]
+ 172 00c0 FB88     		ldrh	r3, [r7, #6]
+ 173 00c2 9A42     		cmp	r2, r3
+ 174 00c4 F8D3     		bcc	.L25
+ 175 00c6 00BF     		nop
+ 176 00c8 1437     		adds	r7, r7, #20
+ 177 00ca BD46     		mov	sp, r7
+ 178              		@ sp needed
+ 179 00cc 80BC     		pop	{r7}
+ 180 00ce 7047     		bx	lr
+ 182              		.align	1
+ 183              		.global	Touch_Start
+ 184              		.syntax unified
+ 185              		.thumb
+ 186              		.thumb_func
+ 187              		.fpu softvfp
+ 189              	Touch_Start:
+ 190              		@ args = 0, pretend = 0, frame = 0
+ 191              		@ frame_needed = 1, uses_anonymous_args = 0
+ 192 00d0 80B5     		push	{r7, lr}
+ 193 00d2 00AF     		add	r7, sp, #0
+ 194 00d4 0020     		movs	r0, #0
+ 195 00d6 FFF7FEFF 		bl	SPI_CLK
+ 196 00da 0120     		movs	r0, #1
+ 197 00dc FFF7FEFF 		bl	SPI_CS
+ 198 00e0 0120     		movs	r0, #1
+ 199 00e2 FFF7FEFF 		bl	SPI_DIN
+ 200 00e6 0120     		movs	r0, #1
+ 201 00e8 FFF7FEFF 		bl	SPI_CLK
+ 202 00ec 0020     		movs	r0, #0
+ 203 00ee FFF7FEFF 		bl	SPI_CS
+ 204 00f2 00BF     		nop
+ 205 00f4 80BD     		pop	{r7, pc}
+ 207              		.align	1
+ 208              		.global	Touch_Write
+ 209              		.syntax unified
+ 210              		.thumb
+ 211              		.thumb_func
+ 212              		.fpu softvfp
+ 214              	Touch_Write:
+ 215              		@ args = 0, pretend = 0, frame = 16
+ 216              		@ frame_needed = 1, uses_anonymous_args = 0
+ 217 00f6 80B5     		push	{r7, lr}
+ 218 00f8 84B0     		sub	sp, sp, #16
+ 219 00fa 00AF     		add	r7, sp, #0
+ 220 00fc 0346     		mov	r3, r0
+ 221 00fe FB71     		strb	r3, [r7, #7]
+ 222 0100 0020     		movs	r0, #0
+ 223 0102 FFF7FEFF 		bl	SPI_CLK
+ 224 0106 0023     		movs	r3, #0
+ 225 0108 FB73     		strb	r3, [r7, #15]
+ 226 010a 19E0     		b	.L28
+ 227              	.L29:
+ 228 010c FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 229 010e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 230 0110 C3F10703 		rsb	r3, r3, #7
+ 231 0114 42FA03F3 		asr	r3, r2, r3
+ 232 0118 DBB2     		uxtb	r3, r3
+ 233 011a 03F00103 		and	r3, r3, #1
+ 234 011e BB73     		strb	r3, [r7, #14]
+ 235 0120 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 236 0122 1846     		mov	r0, r3
+ 237 0124 FFF7FEFF 		bl	SPI_DIN
+ 238 0128 0020     		movs	r0, #0
+ 239 012a FFF7FEFF 		bl	SPI_CLK
+ 240 012e 0120     		movs	r0, #1
+ 241 0130 FFF7FEFF 		bl	SPI_CLK
+ 242 0134 0020     		movs	r0, #0
+ 243 0136 FFF7FEFF 		bl	SPI_CLK
+ 244 013a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 245 013c 0133     		adds	r3, r3, #1
+ 246 013e FB73     		strb	r3, [r7, #15]
+ 247              	.L28:
+ 248 0140 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 249 0142 072B     		cmp	r3, #7
+ 250 0144 E2D9     		bls	.L29
+ 251 0146 00BF     		nop
+ 252 0148 1037     		adds	r7, r7, #16
+ 253 014a BD46     		mov	sp, r7
+ 254              		@ sp needed
+ 255 014c 80BD     		pop	{r7, pc}
+ 257              		.align	1
+ 258              		.global	Touch_Read
+ 259              		.syntax unified
+ 260              		.thumb
+ 261              		.thumb_func
+ 262              		.fpu softvfp
+ 264              	Touch_Read:
+ 265              		@ args = 0, pretend = 0, frame = 8
+ 266              		@ frame_needed = 1, uses_anonymous_args = 0
+ 267 014e 80B5     		push	{r7, lr}
+ 268 0150 82B0     		sub	sp, sp, #8
+ 269 0152 00AF     		add	r7, sp, #0
+ 270 0154 0023     		movs	r3, #0
+ 271 0156 FB80     		strh	r3, [r7, #6]	@ movhi
+ 272 0158 0023     		movs	r3, #0
+ 273 015a 7B71     		strb	r3, [r7, #5]
+ 274 015c 13E0     		b	.L31
+ 275              	.L33:
+ 276 015e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 277 0160 5B00     		lsls	r3, r3, #1
+ 278 0162 FB80     		strh	r3, [r7, #6]	@ movhi
+ 279 0164 0120     		movs	r0, #1
+ 280 0166 FFF7FEFF 		bl	SPI_CLK
+ 281 016a 0020     		movs	r0, #0
+ 282 016c FFF7FEFF 		bl	SPI_CLK
+ 283 0170 FFF7FEFF 		bl	SPI_DOUT
+ 284 0174 0346     		mov	r3, r0
+ 285 0176 002B     		cmp	r3, #0
+ 286 0178 02D0     		beq	.L32
+ 287 017a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 288 017c 0133     		adds	r3, r3, #1
+ 289 017e FB80     		strh	r3, [r7, #6]	@ movhi
+ 290              	.L32:
+ 291 0180 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 292 0182 0133     		adds	r3, r3, #1
+ 293 0184 7B71     		strb	r3, [r7, #5]
+ 294              	.L31:
+ 295 0186 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 296 0188 0B2B     		cmp	r3, #11
+ 297 018a E8D9     		bls	.L33
+ 298 018c FB88     		ldrh	r3, [r7, #6]
+ 299 018e 1846     		mov	r0, r3
+ 300 0190 0837     		adds	r7, r7, #8
+ 301 0192 BD46     		mov	sp, r7
+ 302              		@ sp needed
+ 303 0194 80BD     		pop	{r7, pc}
+ 305              		.align	1
+ 306              		.global	Touch_Busy
+ 307              		.syntax unified
+ 308              		.thumb
+ 309              		.thumb_func
+ 310              		.fpu softvfp
+ 312              	Touch_Busy:
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 1, uses_anonymous_args = 0
+ 315 0196 80B5     		push	{r7, lr}
+ 316 0198 00AF     		add	r7, sp, #0
+ 317 019a 4FF48071 		mov	r1, #256
+ 318 019e 0348     		ldr	r0, .L37
+ 319 01a0 FFF7FEFF 		bl	GPIO_ReadInputDataBit
+ 320 01a4 0346     		mov	r3, r0
+ 321 01a6 1846     		mov	r0, r3
+ 322 01a8 80BD     		pop	{r7, pc}
+ 323              	.L38:
+ 324 01aa 00BF     		.align	2
+ 325              	.L37:
+ 326 01ac 00140140 		.word	1073812480
+ 328              		.align	1
+ 329              		.global	Touch_PenIRQ
+ 330              		.syntax unified
+ 331              		.thumb
+ 332              		.thumb_func
+ 333              		.fpu softvfp
+ 335              	Touch_PenIRQ:
+ 336              		@ args = 0, pretend = 0, frame = 0
+ 337              		@ frame_needed = 1, uses_anonymous_args = 0
+ 338 01b0 80B5     		push	{r7, lr}
+ 339 01b2 00AF     		add	r7, sp, #0
+ 340 01b4 4FF40071 		mov	r1, #512
+ 341 01b8 0248     		ldr	r0, .L41
+ 342 01ba FFF7FEFF 		bl	GPIO_ReadInputDataBit
+ 343 01be 0346     		mov	r3, r0
+ 344 01c0 1846     		mov	r0, r3
+ 345 01c2 80BD     		pop	{r7, pc}
+ 346              	.L42:
+ 347              		.align	2
+ 348              	.L41:
+ 349 01c4 00140140 		.word	1073812480
+ 351              		.align	1
+ 352              		.global	Touch_Initializtion
+ 353              		.syntax unified
+ 354              		.thumb
+ 355              		.thumb_func
+ 356              		.fpu softvfp
+ 358              	Touch_Initializtion:
+ 359              		@ args = 0, pretend = 0, frame = 8
+ 360              		@ frame_needed = 1, uses_anonymous_args = 0
+ 361 01c8 80B5     		push	{r7, lr}
+ 362 01ca 82B0     		sub	sp, sp, #8
+ 363 01cc 00AF     		add	r7, sp, #0
+ 364 01ce 0121     		movs	r1, #1
+ 365 01d0 2020     		movs	r0, #32
+ 366 01d2 FFF7FEFF 		bl	RCC_APB2PeriphClockCmd
+ 367 01d6 4FF4E063 		mov	r3, #1792
+ 368 01da BB80     		strh	r3, [r7, #4]	@ movhi
+ 369 01dc 0323     		movs	r3, #3
+ 370 01de BB71     		strb	r3, [r7, #6]
+ 371 01e0 0423     		movs	r3, #4
+ 372 01e2 FB71     		strb	r3, [r7, #7]
+ 373 01e4 3B1D     		adds	r3, r7, #4
+ 374 01e6 1946     		mov	r1, r3
+ 375 01e8 0A48     		ldr	r0, .L44
+ 376 01ea FFF7FEFF 		bl	GPIO_Init
+ 377 01ee 0121     		movs	r1, #1
+ 378 01f0 2020     		movs	r0, #32
+ 379 01f2 FFF7FEFF 		bl	RCC_APB2PeriphClockCmd
+ 380 01f6 E023     		movs	r3, #224
+ 381 01f8 BB80     		strh	r3, [r7, #4]	@ movhi
+ 382 01fa 0323     		movs	r3, #3
+ 383 01fc BB71     		strb	r3, [r7, #6]
+ 384 01fe 1023     		movs	r3, #16
+ 385 0200 FB71     		strb	r3, [r7, #7]
+ 386 0202 3B1D     		adds	r3, r7, #4
+ 387 0204 1946     		mov	r1, r3
+ 388 0206 0348     		ldr	r0, .L44
+ 389 0208 FFF7FEFF 		bl	GPIO_Init
+ 390 020c 00BF     		nop
+ 391 020e 0837     		adds	r7, r7, #8
+ 392 0210 BD46     		mov	sp, r7
+ 393              		@ sp needed
+ 394 0212 80BD     		pop	{r7, pc}
+ 395              	.L45:
+ 396              		.align	2
+ 397              	.L44:
+ 398 0214 00140140 		.word	1073812480
+ 400              		.align	1
+ 401              		.global	_AD2X
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 405              		.fpu softvfp
+ 407              	_AD2X:
+ 408              		@ args = 0, pretend = 0, frame = 16
+ 409              		@ frame_needed = 1, uses_anonymous_args = 0
+ 410              		@ link register save eliminated.
+ 411 0218 80B4     		push	{r7}
+ 412 021a 85B0     		sub	sp, sp, #20
+ 413 021c 00AF     		add	r7, sp, #0
+ 414 021e 7860     		str	r0, [r7, #4]
+ 415 0220 0023     		movs	r3, #0
+ 416 0222 FB81     		strh	r3, [r7, #14]	@ movhi
+ 417 0224 7B68     		ldr	r3, [r7, #4]
+ 418 0226 A3F58C73 		sub	r3, r3, #280
+ 419 022a BB60     		str	r3, [r7, #8]
+ 420 022c BA68     		ldr	r2, [r7, #8]
+ 421 022e 1346     		mov	r3, r2
+ 422 0230 1B01     		lsls	r3, r3, #4
+ 423 0232 9B1A     		subs	r3, r3, r2
+ 424 0234 1B01     		lsls	r3, r3, #4
+ 425 0236 9B1A     		subs	r3, r3, r2
+ 426 0238 BB60     		str	r3, [r7, #8]
+ 427 023a BB68     		ldr	r3, [r7, #8]
+ 428 023c 0A4A     		ldr	r2, .L50
+ 429 023e 82FB0312 		smull	r1, r2, r2, r3
+ 430 0242 9212     		asrs	r2, r2, #10
+ 431 0244 DB17     		asrs	r3, r3, #31
+ 432 0246 D31A     		subs	r3, r2, r3
+ 433 0248 FB81     		strh	r3, [r7, #14]	@ movhi
+ 434 024a FB89     		ldrh	r3, [r7, #14]
+ 435 024c 002B     		cmp	r3, #0
+ 436 024e 02D0     		beq	.L47
+ 437 0250 FB89     		ldrh	r3, [r7, #14]
+ 438 0252 F02B     		cmp	r3, #240
+ 439 0254 01D9     		bls	.L48
+ 440              	.L47:
+ 441 0256 0023     		movs	r3, #0
+ 442 0258 00E0     		b	.L49
+ 443              	.L48:
+ 444 025a FB89     		ldrh	r3, [r7, #14]
+ 445              	.L49:
+ 446 025c 1846     		mov	r0, r3
+ 447 025e 1437     		adds	r7, r7, #20
+ 448 0260 BD46     		mov	sp, r7
+ 449              		@ sp needed
+ 450 0262 80BC     		pop	{r7}
+ 451 0264 7047     		bx	lr
+ 452              	.L51:
+ 453 0266 00BF     		.align	2
+ 454              	.L50:
+ 455 0268 1DA0C34B 		.word	1271111709
+ 457              		.align	1
+ 458              		.global	_AD2Y
+ 459              		.syntax unified
+ 460              		.thumb
+ 461              		.thumb_func
+ 462              		.fpu softvfp
+ 464              	_AD2Y:
+ 465              		@ args = 0, pretend = 0, frame = 16
+ 466              		@ frame_needed = 1, uses_anonymous_args = 0
+ 467              		@ link register save eliminated.
+ 468 026c 80B4     		push	{r7}
+ 469 026e 85B0     		sub	sp, sp, #20
+ 470 0270 00AF     		add	r7, sp, #0
+ 471 0272 7860     		str	r0, [r7, #4]
+ 472 0274 0023     		movs	r3, #0
+ 473 0276 FB81     		strh	r3, [r7, #14]	@ movhi
+ 474 0278 7B68     		ldr	r3, [r7, #4]
+ 475 027a E63B     		subs	r3, r3, #230
+ 476 027c BB60     		str	r3, [r7, #8]
+ 477 027e BA68     		ldr	r2, [r7, #8]
+ 478 0280 1346     		mov	r3, r2
+ 479 0282 9B00     		lsls	r3, r3, #2
+ 480 0284 1344     		add	r3, r3, r2
+ 481 0286 9B01     		lsls	r3, r3, #6
+ 482 0288 9B1A     		subs	r3, r3, r2
+ 483 028a BB60     		str	r3, [r7, #8]
+ 484 028c BB68     		ldr	r3, [r7, #8]
+ 485 028e 0B4A     		ldr	r2, .L56
+ 486 0290 82FB0312 		smull	r1, r2, r2, r3
+ 487 0294 9212     		asrs	r2, r2, #10
+ 488 0296 DB17     		asrs	r3, r3, #31
+ 489 0298 D31A     		subs	r3, r2, r3
+ 490 029a FB81     		strh	r3, [r7, #14]	@ movhi
+ 491 029c FB89     		ldrh	r3, [r7, #14]
+ 492 029e 002B     		cmp	r3, #0
+ 493 02a0 03D0     		beq	.L53
+ 494 02a2 FB89     		ldrh	r3, [r7, #14]
+ 495 02a4 B3F5A07F 		cmp	r3, #320
+ 496 02a8 01D9     		bls	.L54
+ 497              	.L53:
+ 498 02aa 0023     		movs	r3, #0
+ 499 02ac 00E0     		b	.L55
+ 500              	.L54:
+ 501 02ae FB89     		ldrh	r3, [r7, #14]
+ 502              	.L55:
+ 503 02b0 1846     		mov	r0, r3
+ 504 02b2 1437     		adds	r7, r7, #20
+ 505 02b4 BD46     		mov	sp, r7
+ 506              		@ sp needed
+ 507 02b6 80BC     		pop	{r7}
+ 508 02b8 7047     		bx	lr
+ 509              	.L57:
+ 510 02ba 00BF     		.align	2
+ 511              	.L56:
+ 512 02bc 9FE61C4B 		.word	1260185247
+ 514              		.align	1
+ 515              		.global	Touch_MeasurementX
+ 516              		.syntax unified
+ 517              		.thumb
+ 518              		.thumb_func
+ 519              		.fpu softvfp
+ 521              	Touch_MeasurementX:
+ 522              		@ args = 0, pretend = 0, frame = 8
+ 523              		@ frame_needed = 1, uses_anonymous_args = 0
+ 524 02c0 80B5     		push	{r7, lr}
+ 525 02c2 82B0     		sub	sp, sp, #8
+ 526 02c4 00AF     		add	r7, sp, #0
+ 527 02c6 0023     		movs	r3, #0
+ 528 02c8 BB80     		strh	r3, [r7, #4]	@ movhi
+ 529 02ca 0023     		movs	r3, #0
+ 530 02cc FB71     		strb	r3, [r7, #7]
+ 531 02ce 0DE0     		b	.L59
+ 532              	.L60:
+ 533 02d0 FFF7FEFF 		bl	Touch_GetPhyX
+ 534 02d4 0346     		mov	r3, r0
+ 535 02d6 1A46     		mov	r2, r3
+ 536 02d8 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 537 02da 1344     		add	r3, r3, r2
+ 538 02dc BB80     		strh	r3, [r7, #4]	@ movhi
+ 539 02de 4FF47A70 		mov	r0, #1000
+ 540 02e2 FFF7FEFF 		bl	SPI_delay
+ 541 02e6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 542 02e8 0133     		adds	r3, r3, #1
+ 543 02ea FB71     		strb	r3, [r7, #7]
+ 544              	.L59:
+ 545 02ec FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 546 02ee 072B     		cmp	r3, #7
+ 547 02f0 EED9     		bls	.L60
+ 548 02f2 BB88     		ldrh	r3, [r7, #4]
+ 549 02f4 DB08     		lsrs	r3, r3, #3
+ 550 02f6 BB80     		strh	r3, [r7, #4]	@ movhi
+ 551 02f8 BB88     		ldrh	r3, [r7, #4]
+ 552 02fa 1846     		mov	r0, r3
+ 553 02fc 0837     		adds	r7, r7, #8
+ 554 02fe BD46     		mov	sp, r7
+ 555              		@ sp needed
+ 556 0300 80BD     		pop	{r7, pc}
+ 558              		.align	1
+ 559              		.global	Touch_MeasurementY
+ 560              		.syntax unified
+ 561              		.thumb
+ 562              		.thumb_func
+ 563              		.fpu softvfp
+ 565              	Touch_MeasurementY:
+ 566              		@ args = 0, pretend = 0, frame = 8
+ 567              		@ frame_needed = 1, uses_anonymous_args = 0
+ 568 0302 80B5     		push	{r7, lr}
+ 569 0304 82B0     		sub	sp, sp, #8
+ 570 0306 00AF     		add	r7, sp, #0
+ 571 0308 0023     		movs	r3, #0
+ 572 030a BB80     		strh	r3, [r7, #4]	@ movhi
+ 573 030c 0023     		movs	r3, #0
+ 574 030e FB71     		strb	r3, [r7, #7]
+ 575 0310 0DE0     		b	.L63
+ 576              	.L64:
+ 577 0312 FFF7FEFF 		bl	Touch_GetPhyY
+ 578 0316 0346     		mov	r3, r0
+ 579 0318 1A46     		mov	r2, r3
+ 580 031a BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 581 031c 1344     		add	r3, r3, r2
+ 582 031e BB80     		strh	r3, [r7, #4]	@ movhi
+ 583 0320 4FF47A70 		mov	r0, #1000
+ 584 0324 FFF7FEFF 		bl	SPI_delay
+ 585 0328 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 586 032a 0133     		adds	r3, r3, #1
+ 587 032c FB71     		strb	r3, [r7, #7]
+ 588              	.L63:
+ 589 032e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 590 0330 072B     		cmp	r3, #7
+ 591 0332 EED9     		bls	.L64
+ 592 0334 BB88     		ldrh	r3, [r7, #4]
+ 593 0336 DB08     		lsrs	r3, r3, #3
+ 594 0338 BB80     		strh	r3, [r7, #4]	@ movhi
+ 595 033a BB88     		ldrh	r3, [r7, #4]
+ 596 033c 1846     		mov	r0, r3
+ 597 033e 0837     		adds	r7, r7, #8
+ 598 0340 BD46     		mov	sp, r7
+ 599              		@ sp needed
+ 600 0342 80BD     		pop	{r7, pc}
+ 602              		.align	1
+ 603              		.global	Touch_GetPhyX
+ 604              		.syntax unified
+ 605              		.thumb
+ 606              		.thumb_func
+ 607              		.fpu softvfp
+ 609              	Touch_GetPhyX:
+ 610              		@ args = 0, pretend = 0, frame = 0
+ 611              		@ frame_needed = 1, uses_anonymous_args = 0
+ 612 0344 80B5     		push	{r7, lr}
+ 613 0346 00AF     		add	r7, sp, #0
+ 614 0348 FFF7FEFF 		bl	Touch_PenIRQ
+ 615 034c 0346     		mov	r3, r0
+ 616 034e 002B     		cmp	r3, #0
+ 617 0350 01D0     		beq	.L67
+ 618 0352 0023     		movs	r3, #0
+ 619 0354 10E0     		b	.L68
+ 620              	.L67:
+ 621 0356 FFF7FEFF 		bl	Touch_Start
+ 622 035a 0020     		movs	r0, #0
+ 623 035c FFF7FEFF 		bl	Touch_Write
+ 624 0360 D020     		movs	r0, #208
+ 625 0362 FFF7FEFF 		bl	Touch_Write
+ 626 0366 00BF     		nop
+ 627              	.L69:
+ 628 0368 FFF7FEFF 		bl	Touch_Busy
+ 629 036c 0346     		mov	r3, r0
+ 630 036e 002B     		cmp	r3, #0
+ 631 0370 FAD0     		beq	.L69
+ 632 0372 FFF7FEFF 		bl	Touch_Read
+ 633 0376 0346     		mov	r3, r0
+ 634              	.L68:
+ 635 0378 1846     		mov	r0, r3
+ 636 037a 80BD     		pop	{r7, pc}
+ 638              		.align	1
+ 639              		.global	Touch_GetPhyY
+ 640              		.syntax unified
+ 641              		.thumb
+ 642              		.thumb_func
+ 643              		.fpu softvfp
+ 645              	Touch_GetPhyY:
+ 646              		@ args = 0, pretend = 0, frame = 0
+ 647              		@ frame_needed = 1, uses_anonymous_args = 0
+ 648 037c 80B5     		push	{r7, lr}
+ 649 037e 00AF     		add	r7, sp, #0
+ 650 0380 FFF7FEFF 		bl	Touch_PenIRQ
+ 651 0384 0346     		mov	r3, r0
+ 652 0386 002B     		cmp	r3, #0
+ 653 0388 01D0     		beq	.L71
+ 654 038a 0023     		movs	r3, #0
+ 655 038c 10E0     		b	.L72
+ 656              	.L71:
+ 657 038e FFF7FEFF 		bl	Touch_Start
+ 658 0392 0020     		movs	r0, #0
+ 659 0394 FFF7FEFF 		bl	Touch_Write
+ 660 0398 9020     		movs	r0, #144
+ 661 039a FFF7FEFF 		bl	Touch_Write
+ 662 039e 00BF     		nop
+ 663              	.L73:
+ 664 03a0 FFF7FEFF 		bl	Touch_Busy
+ 665 03a4 0346     		mov	r3, r0
+ 666 03a6 002B     		cmp	r3, #0
+ 667 03a8 FAD0     		beq	.L73
+ 668 03aa FFF7FEFF 		bl	Touch_Read
+ 669 03ae 0346     		mov	r3, r0
+ 670              	.L72:
+ 671 03b0 1846     		mov	r0, r3
+ 672 03b2 80BD     		pop	{r7, pc}
+ 674              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ili9320_touch.c
+     /tmp/ccqz62Mt.s:13     .text:0000000000000000 $t
+     /tmp/ccqz62Mt.s:20     .text:0000000000000000 SPI_CS
+     /tmp/ccqz62Mt.s:48     .text:000000000000002c $d
+     /tmp/ccqz62Mt.s:50     .text:0000000000000030 $t
+     /tmp/ccqz62Mt.s:57     .text:0000000000000030 SPI_DIN
+     /tmp/ccqz62Mt.s:85     .text:000000000000005c $d
+     /tmp/ccqz62Mt.s:87     .text:0000000000000060 $t
+     /tmp/ccqz62Mt.s:94     .text:0000000000000060 SPI_CLK
+     /tmp/ccqz62Mt.s:122    .text:000000000000008c $d
+     /tmp/ccqz62Mt.s:124    .text:0000000000000090 $t
+     /tmp/ccqz62Mt.s:131    .text:0000000000000090 SPI_DOUT
+     /tmp/ccqz62Mt.s:145    .text:00000000000000a4 $d
+     /tmp/ccqz62Mt.s:147    .text:00000000000000a8 $t
+     /tmp/ccqz62Mt.s:154    .text:00000000000000a8 SPI_delay
+     /tmp/ccqz62Mt.s:189    .text:00000000000000d0 Touch_Start
+     /tmp/ccqz62Mt.s:214    .text:00000000000000f6 Touch_Write
+     /tmp/ccqz62Mt.s:264    .text:000000000000014e Touch_Read
+     /tmp/ccqz62Mt.s:312    .text:0000000000000196 Touch_Busy
+     /tmp/ccqz62Mt.s:326    .text:00000000000001ac $d
+     /tmp/ccqz62Mt.s:328    .text:00000000000001b0 $t
+     /tmp/ccqz62Mt.s:335    .text:00000000000001b0 Touch_PenIRQ
+     /tmp/ccqz62Mt.s:349    .text:00000000000001c4 $d
+     /tmp/ccqz62Mt.s:351    .text:00000000000001c8 $t
+     /tmp/ccqz62Mt.s:358    .text:00000000000001c8 Touch_Initializtion
+     /tmp/ccqz62Mt.s:398    .text:0000000000000214 $d
+     /tmp/ccqz62Mt.s:400    .text:0000000000000218 $t
+     /tmp/ccqz62Mt.s:407    .text:0000000000000218 _AD2X
+     /tmp/ccqz62Mt.s:455    .text:0000000000000268 $d
+     /tmp/ccqz62Mt.s:457    .text:000000000000026c $t
+     /tmp/ccqz62Mt.s:464    .text:000000000000026c _AD2Y
+     /tmp/ccqz62Mt.s:512    .text:00000000000002bc $d
+     /tmp/ccqz62Mt.s:514    .text:00000000000002c0 $t
+     /tmp/ccqz62Mt.s:521    .text:00000000000002c0 Touch_MeasurementX
+     /tmp/ccqz62Mt.s:609    .text:0000000000000344 Touch_GetPhyX
+     /tmp/ccqz62Mt.s:565    .text:0000000000000302 Touch_MeasurementY
+     /tmp/ccqz62Mt.s:645    .text:000000000000037c Touch_GetPhyY
+
+UNDEFINED SYMBOLS
+GPIO_SetBits
+GPIO_ResetBits
+GPIO_ReadInputDataBit
+RCC_APB2PeriphClockCmd
+GPIO_Init

@@ -10,9 +10,10 @@ RM := rm -rf
 -include sources.mk
 -include startup/subdir.mk
 -include Src/subdir.mk
+-include Middlewares/liblcd/subdir.mk
 -include Middlewares/USB_Device_Library/subdir.mk
+-include Middlewares/FreeRTOS-Plus-CLI/subdir.mk
 -include Middlewares/FreeRTOS/subdir.mk
--include Middlewares/FatFs/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/subdir.mk
 -include subdir.mk
 -include objects.mk

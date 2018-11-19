@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * @file           : main.h
-  * @brief          : Header for main.c file.
-  *                   This file contains the common defines of the application.
+  * File Name          : USART.h
+  * Description        : This file provides code for the configuration
+  *                      of the USART instances.
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -46,100 +46,46 @@
   *
   ******************************************************************************
   */
-
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef __usart_H
+#define __usart_H
+#ifdef __cplusplus
+ extern "C" {
+#endif
 
 /* Includes ------------------------------------------------------------------*/
+#include "stm32f1xx_hal.h"
+#include "main.h"
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
-/* Private define ------------------------------------------------------------*/
-
-#define lcd0_Pin GPIO_PIN_0
-#define lcd0_GPIO_Port GPIOC
-#define lcd1_Pin GPIO_PIN_1
-#define lcd1_GPIO_Port GPIOC
-#define lcd2_Pin GPIO_PIN_2
-#define lcd2_GPIO_Port GPIOC
-#define lcd3_Pin GPIO_PIN_3
-#define lcd3_GPIO_Port GPIOC
-#define sw3_Pin GPIO_PIN_0
-#define sw3_GPIO_Port GPIOA
-#define sw4_Pin GPIO_PIN_1
-#define sw4_GPIO_Port GPIOA
-#define led1_Pin GPIO_PIN_2
-#define led1_GPIO_Port GPIOA
-#define led3_Pin GPIO_PIN_3
-#define led3_GPIO_Port GPIOA
-#define CS_TP_Pin GPIO_PIN_4
-#define CS_TP_GPIO_Port GPIOA
-#define lcd4_Pin GPIO_PIN_4
-#define lcd4_GPIO_Port GPIOC
-#define lcd5_Pin GPIO_PIN_5
-#define lcd5_GPIO_Port GPIOC
-#define led2_Pin GPIO_PIN_2
-#define led2_GPIO_Port GPIOB
-#define lcd10_Pin GPIO_PIN_10
-#define lcd10_GPIO_Port GPIOB
-#define lcd11_Pin GPIO_PIN_11
-#define lcd11_GPIO_Port GPIOB
-#define lcd12_Pin GPIO_PIN_12
-#define lcd12_GPIO_Port GPIOB
-#define lcd13_Pin GPIO_PIN_13
-#define lcd13_GPIO_Port GPIOB
-#define lcd14_Pin GPIO_PIN_14
-#define lcd14_GPIO_Port GPIOB
-#define lcd15_Pin GPIO_PIN_15
-#define lcd15_GPIO_Port GPIOB
-#define lcd6_Pin GPIO_PIN_6
-#define lcd6_GPIO_Port GPIOC
-#define lcd7_Pin GPIO_PIN_7
-#define lcd7_GPIO_Port GPIOC
-#define lcd_rs_Pin GPIO_PIN_8
-#define lcd_rs_GPIO_Port GPIOC
-#define lcd_cs_Pin GPIO_PIN_9
-#define lcd_cs_GPIO_Port GPIOC
-#define lcd_wr_Pin GPIO_PIN_10
-#define lcd_wr_GPIO_Port GPIOC
-#define lcd_rd_Pin GPIO_PIN_11
-#define lcd_rd_GPIO_Port GPIOC
-#define BL_EN_Pin GPIO_PIN_12
-#define BL_EN_GPIO_Port GPIOC
-#define CS_DF_Pin GPIO_PIN_6
-#define CS_DF_GPIO_Port GPIOB
-#define CS_SD_Pin GPIO_PIN_7
-#define CS_SD_GPIO_Port GPIOB
-#define lcd8_Pin GPIO_PIN_8
-#define lcd8_GPIO_Port GPIOB
-#define lcd9_Pin GPIO_PIN_9
-#define lcd9_GPIO_Port GPIOB
-
-/* ########################## Assert Selection ############################## */
-/**
-  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
-  *        HAL drivers code
-  */
-/* #define USE_FULL_ASSERT    1U */
+extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
-#define FALSE 0
-#define TRUE 1
+
 /* USER CODE END Private defines */
 
-#ifdef __cplusplus
- extern "C" {
-#endif
-void _Error_Handler(char *, int);
+extern void _Error_Handler(char *, int);
 
-#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
+void MX_USART1_UART_Init(void);
+
+/* USER CODE BEGIN Prototypes */
+
+/* USER CODE END Prototypes */
+
 #ifdef __cplusplus
 }
 #endif
+#endif /*__ usart_H */
 
-#endif /* __MAIN_H__ */
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

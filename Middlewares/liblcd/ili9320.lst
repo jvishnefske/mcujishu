@@ -1,0 +1,3961 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ili9320.c"
+  12              		.global	ascii_8x16
+  13              		.section	.rodata
+  14              		.align	2
+  17              	ascii_8x16:
+  18 0000 00       		.byte	0
+  19 0001 00       		.byte	0
+  20 0002 00       		.byte	0
+  21 0003 00       		.byte	0
+  22 0004 00       		.byte	0
+  23 0005 00       		.byte	0
+  24 0006 00       		.byte	0
+  25 0007 00       		.byte	0
+  26 0008 00       		.byte	0
+  27 0009 00       		.byte	0
+  28 000a 00       		.byte	0
+  29 000b 00       		.byte	0
+  30 000c 00       		.byte	0
+  31 000d 00       		.byte	0
+  32 000e 00       		.byte	0
+  33 000f 00       		.byte	0
+  34 0010 00       		.byte	0
+  35 0011 00       		.byte	0
+  36 0012 18       		.byte	24
+  37 0013 3C       		.byte	60
+  38 0014 3C       		.byte	60
+  39 0015 3C       		.byte	60
+  40 0016 18       		.byte	24
+  41 0017 18       		.byte	24
+  42 0018 18       		.byte	24
+  43 0019 00       		.byte	0
+  44 001a 18       		.byte	24
+  45 001b 18       		.byte	24
+  46 001c 00       		.byte	0
+  47 001d 00       		.byte	0
+  48 001e 00       		.byte	0
+  49 001f 00       		.byte	0
+  50 0020 00       		.byte	0
+  51 0021 66       		.byte	102
+  52 0022 66       		.byte	102
+  53 0023 66       		.byte	102
+  54 0024 24       		.byte	36
+  55 0025 00       		.byte	0
+  56 0026 00       		.byte	0
+  57 0027 00       		.byte	0
+  58 0028 00       		.byte	0
+  59 0029 00       		.byte	0
+  60 002a 00       		.byte	0
+  61 002b 00       		.byte	0
+  62 002c 00       		.byte	0
+  63 002d 00       		.byte	0
+  64 002e 00       		.byte	0
+  65 002f 00       		.byte	0
+  66 0030 00       		.byte	0
+  67 0031 00       		.byte	0
+  68 0032 00       		.byte	0
+  69 0033 6C       		.byte	108
+  70 0034 6C       		.byte	108
+  71 0035 FE       		.byte	-2
+  72 0036 6C       		.byte	108
+  73 0037 6C       		.byte	108
+  74 0038 6C       		.byte	108
+  75 0039 FE       		.byte	-2
+  76 003a 6C       		.byte	108
+  77 003b 6C       		.byte	108
+  78 003c 00       		.byte	0
+  79 003d 00       		.byte	0
+  80 003e 00       		.byte	0
+  81 003f 00       		.byte	0
+  82 0040 18       		.byte	24
+  83 0041 18       		.byte	24
+  84 0042 7C       		.byte	124
+  85 0043 C6       		.byte	-58
+  86 0044 C2       		.byte	-62
+  87 0045 C0       		.byte	-64
+  88 0046 7C       		.byte	124
+  89 0047 06       		.byte	6
+  90 0048 86       		.byte	-122
+  91 0049 C6       		.byte	-58
+  92 004a 7C       		.byte	124
+  93 004b 18       		.byte	24
+  94 004c 18       		.byte	24
+  95 004d 00       		.byte	0
+  96 004e 00       		.byte	0
+  97 004f 00       		.byte	0
+  98 0050 00       		.byte	0
+  99 0051 00       		.byte	0
+ 100 0052 00       		.byte	0
+ 101 0053 00       		.byte	0
+ 102 0054 C2       		.byte	-62
+ 103 0055 C6       		.byte	-58
+ 104 0056 0C       		.byte	12
+ 105 0057 18       		.byte	24
+ 106 0058 30       		.byte	48
+ 107 0059 60       		.byte	96
+ 108 005a C6       		.byte	-58
+ 109 005b 86       		.byte	-122
+ 110 005c 00       		.byte	0
+ 111 005d 00       		.byte	0
+ 112 005e 00       		.byte	0
+ 113 005f 00       		.byte	0
+ 114 0060 00       		.byte	0
+ 115 0061 00       		.byte	0
+ 116 0062 38       		.byte	56
+ 117 0063 6C       		.byte	108
+ 118 0064 6C       		.byte	108
+ 119 0065 38       		.byte	56
+ 120 0066 76       		.byte	118
+ 121 0067 DC       		.byte	-36
+ 122 0068 CC       		.byte	-52
+ 123 0069 CC       		.byte	-52
+ 124 006a CC       		.byte	-52
+ 125 006b 76       		.byte	118
+ 126 006c 00       		.byte	0
+ 127 006d 00       		.byte	0
+ 128 006e 00       		.byte	0
+ 129 006f 00       		.byte	0
+ 130 0070 00       		.byte	0
+ 131 0071 30       		.byte	48
+ 132 0072 30       		.byte	48
+ 133 0073 30       		.byte	48
+ 134 0074 60       		.byte	96
+ 135 0075 00       		.byte	0
+ 136 0076 00       		.byte	0
+ 137 0077 00       		.byte	0
+ 138 0078 00       		.byte	0
+ 139 0079 00       		.byte	0
+ 140 007a 00       		.byte	0
+ 141 007b 00       		.byte	0
+ 142 007c 00       		.byte	0
+ 143 007d 00       		.byte	0
+ 144 007e 00       		.byte	0
+ 145 007f 00       		.byte	0
+ 146 0080 00       		.byte	0
+ 147 0081 00       		.byte	0
+ 148 0082 0C       		.byte	12
+ 149 0083 18       		.byte	24
+ 150 0084 30       		.byte	48
+ 151 0085 30       		.byte	48
+ 152 0086 30       		.byte	48
+ 153 0087 30       		.byte	48
+ 154 0088 30       		.byte	48
+ 155 0089 30       		.byte	48
+ 156 008a 18       		.byte	24
+ 157 008b 0C       		.byte	12
+ 158 008c 00       		.byte	0
+ 159 008d 00       		.byte	0
+ 160 008e 00       		.byte	0
+ 161 008f 00       		.byte	0
+ 162 0090 00       		.byte	0
+ 163 0091 00       		.byte	0
+ 164 0092 30       		.byte	48
+ 165 0093 18       		.byte	24
+ 166 0094 0C       		.byte	12
+ 167 0095 0C       		.byte	12
+ 168 0096 0C       		.byte	12
+ 169 0097 0C       		.byte	12
+ 170 0098 0C       		.byte	12
+ 171 0099 0C       		.byte	12
+ 172 009a 18       		.byte	24
+ 173 009b 30       		.byte	48
+ 174 009c 00       		.byte	0
+ 175 009d 00       		.byte	0
+ 176 009e 00       		.byte	0
+ 177 009f 00       		.byte	0
+ 178 00a0 00       		.byte	0
+ 179 00a1 00       		.byte	0
+ 180 00a2 00       		.byte	0
+ 181 00a3 00       		.byte	0
+ 182 00a4 00       		.byte	0
+ 183 00a5 66       		.byte	102
+ 184 00a6 3C       		.byte	60
+ 185 00a7 FF       		.byte	-1
+ 186 00a8 3C       		.byte	60
+ 187 00a9 66       		.byte	102
+ 188 00aa 00       		.byte	0
+ 189 00ab 00       		.byte	0
+ 190 00ac 00       		.byte	0
+ 191 00ad 00       		.byte	0
+ 192 00ae 00       		.byte	0
+ 193 00af 00       		.byte	0
+ 194 00b0 00       		.byte	0
+ 195 00b1 00       		.byte	0
+ 196 00b2 00       		.byte	0
+ 197 00b3 00       		.byte	0
+ 198 00b4 00       		.byte	0
+ 199 00b5 18       		.byte	24
+ 200 00b6 18       		.byte	24
+ 201 00b7 7E       		.byte	126
+ 202 00b8 18       		.byte	24
+ 203 00b9 18       		.byte	24
+ 204 00ba 00       		.byte	0
+ 205 00bb 00       		.byte	0
+ 206 00bc 00       		.byte	0
+ 207 00bd 00       		.byte	0
+ 208 00be 00       		.byte	0
+ 209 00bf 00       		.byte	0
+ 210 00c0 00       		.byte	0
+ 211 00c1 00       		.byte	0
+ 212 00c2 00       		.byte	0
+ 213 00c3 00       		.byte	0
+ 214 00c4 00       		.byte	0
+ 215 00c5 00       		.byte	0
+ 216 00c6 00       		.byte	0
+ 217 00c7 00       		.byte	0
+ 218 00c8 00       		.byte	0
+ 219 00c9 18       		.byte	24
+ 220 00ca 18       		.byte	24
+ 221 00cb 18       		.byte	24
+ 222 00cc 30       		.byte	48
+ 223 00cd 00       		.byte	0
+ 224 00ce 00       		.byte	0
+ 225 00cf 00       		.byte	0
+ 226 00d0 00       		.byte	0
+ 227 00d1 00       		.byte	0
+ 228 00d2 00       		.byte	0
+ 229 00d3 00       		.byte	0
+ 230 00d4 00       		.byte	0
+ 231 00d5 00       		.byte	0
+ 232 00d6 00       		.byte	0
+ 233 00d7 FE       		.byte	-2
+ 234 00d8 00       		.byte	0
+ 235 00d9 00       		.byte	0
+ 236 00da 00       		.byte	0
+ 237 00db 00       		.byte	0
+ 238 00dc 00       		.byte	0
+ 239 00dd 00       		.byte	0
+ 240 00de 00       		.byte	0
+ 241 00df 00       		.byte	0
+ 242 00e0 00       		.byte	0
+ 243 00e1 00       		.byte	0
+ 244 00e2 00       		.byte	0
+ 245 00e3 00       		.byte	0
+ 246 00e4 00       		.byte	0
+ 247 00e5 00       		.byte	0
+ 248 00e6 00       		.byte	0
+ 249 00e7 00       		.byte	0
+ 250 00e8 00       		.byte	0
+ 251 00e9 00       		.byte	0
+ 252 00ea 18       		.byte	24
+ 253 00eb 18       		.byte	24
+ 254 00ec 00       		.byte	0
+ 255 00ed 00       		.byte	0
+ 256 00ee 00       		.byte	0
+ 257 00ef 00       		.byte	0
+ 258 00f0 00       		.byte	0
+ 259 00f1 00       		.byte	0
+ 260 00f2 00       		.byte	0
+ 261 00f3 00       		.byte	0
+ 262 00f4 02       		.byte	2
+ 263 00f5 06       		.byte	6
+ 264 00f6 0C       		.byte	12
+ 265 00f7 18       		.byte	24
+ 266 00f8 30       		.byte	48
+ 267 00f9 60       		.byte	96
+ 268 00fa C0       		.byte	-64
+ 269 00fb 80       		.byte	-128
+ 270 00fc 00       		.byte	0
+ 271 00fd 00       		.byte	0
+ 272 00fe 00       		.byte	0
+ 273 00ff 00       		.byte	0
+ 274 0100 00       		.byte	0
+ 275 0101 00       		.byte	0
+ 276 0102 7C       		.byte	124
+ 277 0103 C6       		.byte	-58
+ 278 0104 C6       		.byte	-58
+ 279 0105 CE       		.byte	-50
+ 280 0106 D6       		.byte	-42
+ 281 0107 D6       		.byte	-42
+ 282 0108 E6       		.byte	-26
+ 283 0109 C6       		.byte	-58
+ 284 010a C6       		.byte	-58
+ 285 010b 7C       		.byte	124
+ 286 010c 00       		.byte	0
+ 287 010d 00       		.byte	0
+ 288 010e 00       		.byte	0
+ 289 010f 00       		.byte	0
+ 290 0110 00       		.byte	0
+ 291 0111 00       		.byte	0
+ 292 0112 18       		.byte	24
+ 293 0113 38       		.byte	56
+ 294 0114 78       		.byte	120
+ 295 0115 18       		.byte	24
+ 296 0116 18       		.byte	24
+ 297 0117 18       		.byte	24
+ 298 0118 18       		.byte	24
+ 299 0119 18       		.byte	24
+ 300 011a 18       		.byte	24
+ 301 011b 7E       		.byte	126
+ 302 011c 00       		.byte	0
+ 303 011d 00       		.byte	0
+ 304 011e 00       		.byte	0
+ 305 011f 00       		.byte	0
+ 306 0120 00       		.byte	0
+ 307 0121 00       		.byte	0
+ 308 0122 7C       		.byte	124
+ 309 0123 C6       		.byte	-58
+ 310 0124 06       		.byte	6
+ 311 0125 0C       		.byte	12
+ 312 0126 18       		.byte	24
+ 313 0127 30       		.byte	48
+ 314 0128 60       		.byte	96
+ 315 0129 C0       		.byte	-64
+ 316 012a C6       		.byte	-58
+ 317 012b FE       		.byte	-2
+ 318 012c 00       		.byte	0
+ 319 012d 00       		.byte	0
+ 320 012e 00       		.byte	0
+ 321 012f 00       		.byte	0
+ 322 0130 00       		.byte	0
+ 323 0131 00       		.byte	0
+ 324 0132 7C       		.byte	124
+ 325 0133 C6       		.byte	-58
+ 326 0134 06       		.byte	6
+ 327 0135 06       		.byte	6
+ 328 0136 3C       		.byte	60
+ 329 0137 06       		.byte	6
+ 330 0138 06       		.byte	6
+ 331 0139 06       		.byte	6
+ 332 013a C6       		.byte	-58
+ 333 013b 7C       		.byte	124
+ 334 013c 00       		.byte	0
+ 335 013d 00       		.byte	0
+ 336 013e 00       		.byte	0
+ 337 013f 00       		.byte	0
+ 338 0140 00       		.byte	0
+ 339 0141 00       		.byte	0
+ 340 0142 0C       		.byte	12
+ 341 0143 1C       		.byte	28
+ 342 0144 3C       		.byte	60
+ 343 0145 6C       		.byte	108
+ 344 0146 CC       		.byte	-52
+ 345 0147 FE       		.byte	-2
+ 346 0148 0C       		.byte	12
+ 347 0149 0C       		.byte	12
+ 348 014a 0C       		.byte	12
+ 349 014b 1E       		.byte	30
+ 350 014c 00       		.byte	0
+ 351 014d 00       		.byte	0
+ 352 014e 00       		.byte	0
+ 353 014f 00       		.byte	0
+ 354 0150 00       		.byte	0
+ 355 0151 00       		.byte	0
+ 356 0152 FE       		.byte	-2
+ 357 0153 C0       		.byte	-64
+ 358 0154 C0       		.byte	-64
+ 359 0155 C0       		.byte	-64
+ 360 0156 FC       		.byte	-4
+ 361 0157 0E       		.byte	14
+ 362 0158 06       		.byte	6
+ 363 0159 06       		.byte	6
+ 364 015a C6       		.byte	-58
+ 365 015b 7C       		.byte	124
+ 366 015c 00       		.byte	0
+ 367 015d 00       		.byte	0
+ 368 015e 00       		.byte	0
+ 369 015f 00       		.byte	0
+ 370 0160 00       		.byte	0
+ 371 0161 00       		.byte	0
+ 372 0162 38       		.byte	56
+ 373 0163 60       		.byte	96
+ 374 0164 C0       		.byte	-64
+ 375 0165 C0       		.byte	-64
+ 376 0166 FC       		.byte	-4
+ 377 0167 C6       		.byte	-58
+ 378 0168 C6       		.byte	-58
+ 379 0169 C6       		.byte	-58
+ 380 016a C6       		.byte	-58
+ 381 016b 7C       		.byte	124
+ 382 016c 00       		.byte	0
+ 383 016d 00       		.byte	0
+ 384 016e 00       		.byte	0
+ 385 016f 00       		.byte	0
+ 386 0170 00       		.byte	0
+ 387 0171 00       		.byte	0
+ 388 0172 FE       		.byte	-2
+ 389 0173 C6       		.byte	-58
+ 390 0174 06       		.byte	6
+ 391 0175 06       		.byte	6
+ 392 0176 0C       		.byte	12
+ 393 0177 18       		.byte	24
+ 394 0178 30       		.byte	48
+ 395 0179 30       		.byte	48
+ 396 017a 30       		.byte	48
+ 397 017b 30       		.byte	48
+ 398 017c 00       		.byte	0
+ 399 017d 00       		.byte	0
+ 400 017e 00       		.byte	0
+ 401 017f 00       		.byte	0
+ 402 0180 00       		.byte	0
+ 403 0181 00       		.byte	0
+ 404 0182 7C       		.byte	124
+ 405 0183 C6       		.byte	-58
+ 406 0184 C6       		.byte	-58
+ 407 0185 C6       		.byte	-58
+ 408 0186 7C       		.byte	124
+ 409 0187 C6       		.byte	-58
+ 410 0188 C6       		.byte	-58
+ 411 0189 C6       		.byte	-58
+ 412 018a C6       		.byte	-58
+ 413 018b 7C       		.byte	124
+ 414 018c 00       		.byte	0
+ 415 018d 00       		.byte	0
+ 416 018e 00       		.byte	0
+ 417 018f 00       		.byte	0
+ 418 0190 00       		.byte	0
+ 419 0191 00       		.byte	0
+ 420 0192 7C       		.byte	124
+ 421 0193 C6       		.byte	-58
+ 422 0194 C6       		.byte	-58
+ 423 0195 C6       		.byte	-58
+ 424 0196 7E       		.byte	126
+ 425 0197 06       		.byte	6
+ 426 0198 06       		.byte	6
+ 427 0199 06       		.byte	6
+ 428 019a 0C       		.byte	12
+ 429 019b 78       		.byte	120
+ 430 019c 00       		.byte	0
+ 431 019d 00       		.byte	0
+ 432 019e 00       		.byte	0
+ 433 019f 00       		.byte	0
+ 434 01a0 00       		.byte	0
+ 435 01a1 00       		.byte	0
+ 436 01a2 00       		.byte	0
+ 437 01a3 00       		.byte	0
+ 438 01a4 18       		.byte	24
+ 439 01a5 18       		.byte	24
+ 440 01a6 00       		.byte	0
+ 441 01a7 00       		.byte	0
+ 442 01a8 00       		.byte	0
+ 443 01a9 18       		.byte	24
+ 444 01aa 18       		.byte	24
+ 445 01ab 00       		.byte	0
+ 446 01ac 00       		.byte	0
+ 447 01ad 00       		.byte	0
+ 448 01ae 00       		.byte	0
+ 449 01af 00       		.byte	0
+ 450 01b0 00       		.byte	0
+ 451 01b1 00       		.byte	0
+ 452 01b2 00       		.byte	0
+ 453 01b3 00       		.byte	0
+ 454 01b4 18       		.byte	24
+ 455 01b5 18       		.byte	24
+ 456 01b6 00       		.byte	0
+ 457 01b7 00       		.byte	0
+ 458 01b8 00       		.byte	0
+ 459 01b9 18       		.byte	24
+ 460 01ba 18       		.byte	24
+ 461 01bb 30       		.byte	48
+ 462 01bc 00       		.byte	0
+ 463 01bd 00       		.byte	0
+ 464 01be 00       		.byte	0
+ 465 01bf 00       		.byte	0
+ 466 01c0 00       		.byte	0
+ 467 01c1 00       		.byte	0
+ 468 01c2 00       		.byte	0
+ 469 01c3 06       		.byte	6
+ 470 01c4 0C       		.byte	12
+ 471 01c5 18       		.byte	24
+ 472 01c6 30       		.byte	48
+ 473 01c7 60       		.byte	96
+ 474 01c8 30       		.byte	48
+ 475 01c9 18       		.byte	24
+ 476 01ca 0C       		.byte	12
+ 477 01cb 06       		.byte	6
+ 478 01cc 00       		.byte	0
+ 479 01cd 00       		.byte	0
+ 480 01ce 00       		.byte	0
+ 481 01cf 00       		.byte	0
+ 482 01d0 00       		.byte	0
+ 483 01d1 00       		.byte	0
+ 484 01d2 00       		.byte	0
+ 485 01d3 00       		.byte	0
+ 486 01d4 00       		.byte	0
+ 487 01d5 00       		.byte	0
+ 488 01d6 FE       		.byte	-2
+ 489 01d7 00       		.byte	0
+ 490 01d8 00       		.byte	0
+ 491 01d9 FE       		.byte	-2
+ 492 01da 00       		.byte	0
+ 493 01db 00       		.byte	0
+ 494 01dc 00       		.byte	0
+ 495 01dd 00       		.byte	0
+ 496 01de 00       		.byte	0
+ 497 01df 00       		.byte	0
+ 498 01e0 00       		.byte	0
+ 499 01e1 00       		.byte	0
+ 500 01e2 00       		.byte	0
+ 501 01e3 60       		.byte	96
+ 502 01e4 30       		.byte	48
+ 503 01e5 18       		.byte	24
+ 504 01e6 0C       		.byte	12
+ 505 01e7 06       		.byte	6
+ 506 01e8 0C       		.byte	12
+ 507 01e9 18       		.byte	24
+ 508 01ea 30       		.byte	48
+ 509 01eb 60       		.byte	96
+ 510 01ec 00       		.byte	0
+ 511 01ed 00       		.byte	0
+ 512 01ee 00       		.byte	0
+ 513 01ef 00       		.byte	0
+ 514 01f0 00       		.byte	0
+ 515 01f1 00       		.byte	0
+ 516 01f2 7C       		.byte	124
+ 517 01f3 C6       		.byte	-58
+ 518 01f4 C6       		.byte	-58
+ 519 01f5 0C       		.byte	12
+ 520 01f6 18       		.byte	24
+ 521 01f7 18       		.byte	24
+ 522 01f8 18       		.byte	24
+ 523 01f9 00       		.byte	0
+ 524 01fa 18       		.byte	24
+ 525 01fb 18       		.byte	24
+ 526 01fc 00       		.byte	0
+ 527 01fd 00       		.byte	0
+ 528 01fe 00       		.byte	0
+ 529 01ff 00       		.byte	0
+ 530 0200 00       		.byte	0
+ 531 0201 00       		.byte	0
+ 532 0202 00       		.byte	0
+ 533 0203 7C       		.byte	124
+ 534 0204 C6       		.byte	-58
+ 535 0205 C6       		.byte	-58
+ 536 0206 DE       		.byte	-34
+ 537 0207 DE       		.byte	-34
+ 538 0208 DE       		.byte	-34
+ 539 0209 DC       		.byte	-36
+ 540 020a C0       		.byte	-64
+ 541 020b 7C       		.byte	124
+ 542 020c 00       		.byte	0
+ 543 020d 00       		.byte	0
+ 544 020e 00       		.byte	0
+ 545 020f 00       		.byte	0
+ 546 0210 00       		.byte	0
+ 547 0211 00       		.byte	0
+ 548 0212 10       		.byte	16
+ 549 0213 38       		.byte	56
+ 550 0214 6C       		.byte	108
+ 551 0215 C6       		.byte	-58
+ 552 0216 C6       		.byte	-58
+ 553 0217 FE       		.byte	-2
+ 554 0218 C6       		.byte	-58
+ 555 0219 C6       		.byte	-58
+ 556 021a C6       		.byte	-58
+ 557 021b C6       		.byte	-58
+ 558 021c 00       		.byte	0
+ 559 021d 00       		.byte	0
+ 560 021e 00       		.byte	0
+ 561 021f 00       		.byte	0
+ 562 0220 00       		.byte	0
+ 563 0221 00       		.byte	0
+ 564 0222 FC       		.byte	-4
+ 565 0223 66       		.byte	102
+ 566 0224 66       		.byte	102
+ 567 0225 66       		.byte	102
+ 568 0226 7C       		.byte	124
+ 569 0227 66       		.byte	102
+ 570 0228 66       		.byte	102
+ 571 0229 66       		.byte	102
+ 572 022a 66       		.byte	102
+ 573 022b FC       		.byte	-4
+ 574 022c 00       		.byte	0
+ 575 022d 00       		.byte	0
+ 576 022e 00       		.byte	0
+ 577 022f 00       		.byte	0
+ 578 0230 00       		.byte	0
+ 579 0231 00       		.byte	0
+ 580 0232 3C       		.byte	60
+ 581 0233 66       		.byte	102
+ 582 0234 C2       		.byte	-62
+ 583 0235 C0       		.byte	-64
+ 584 0236 C0       		.byte	-64
+ 585 0237 C0       		.byte	-64
+ 586 0238 C0       		.byte	-64
+ 587 0239 C2       		.byte	-62
+ 588 023a 66       		.byte	102
+ 589 023b 3C       		.byte	60
+ 590 023c 00       		.byte	0
+ 591 023d 00       		.byte	0
+ 592 023e 00       		.byte	0
+ 593 023f 00       		.byte	0
+ 594 0240 00       		.byte	0
+ 595 0241 00       		.byte	0
+ 596 0242 F8       		.byte	-8
+ 597 0243 6C       		.byte	108
+ 598 0244 66       		.byte	102
+ 599 0245 66       		.byte	102
+ 600 0246 66       		.byte	102
+ 601 0247 66       		.byte	102
+ 602 0248 66       		.byte	102
+ 603 0249 66       		.byte	102
+ 604 024a 6C       		.byte	108
+ 605 024b F8       		.byte	-8
+ 606 024c 00       		.byte	0
+ 607 024d 00       		.byte	0
+ 608 024e 00       		.byte	0
+ 609 024f 00       		.byte	0
+ 610 0250 00       		.byte	0
+ 611 0251 00       		.byte	0
+ 612 0252 FE       		.byte	-2
+ 613 0253 66       		.byte	102
+ 614 0254 62       		.byte	98
+ 615 0255 68       		.byte	104
+ 616 0256 78       		.byte	120
+ 617 0257 68       		.byte	104
+ 618 0258 60       		.byte	96
+ 619 0259 62       		.byte	98
+ 620 025a 66       		.byte	102
+ 621 025b FE       		.byte	-2
+ 622 025c 00       		.byte	0
+ 623 025d 00       		.byte	0
+ 624 025e 00       		.byte	0
+ 625 025f 00       		.byte	0
+ 626 0260 00       		.byte	0
+ 627 0261 00       		.byte	0
+ 628 0262 FE       		.byte	-2
+ 629 0263 66       		.byte	102
+ 630 0264 62       		.byte	98
+ 631 0265 68       		.byte	104
+ 632 0266 78       		.byte	120
+ 633 0267 68       		.byte	104
+ 634 0268 60       		.byte	96
+ 635 0269 60       		.byte	96
+ 636 026a 60       		.byte	96
+ 637 026b F0       		.byte	-16
+ 638 026c 00       		.byte	0
+ 639 026d 00       		.byte	0
+ 640 026e 00       		.byte	0
+ 641 026f 00       		.byte	0
+ 642 0270 00       		.byte	0
+ 643 0271 00       		.byte	0
+ 644 0272 3C       		.byte	60
+ 645 0273 66       		.byte	102
+ 646 0274 C2       		.byte	-62
+ 647 0275 C0       		.byte	-64
+ 648 0276 C0       		.byte	-64
+ 649 0277 DE       		.byte	-34
+ 650 0278 C6       		.byte	-58
+ 651 0279 C6       		.byte	-58
+ 652 027a 66       		.byte	102
+ 653 027b 3A       		.byte	58
+ 654 027c 00       		.byte	0
+ 655 027d 00       		.byte	0
+ 656 027e 00       		.byte	0
+ 657 027f 00       		.byte	0
+ 658 0280 00       		.byte	0
+ 659 0281 00       		.byte	0
+ 660 0282 C6       		.byte	-58
+ 661 0283 C6       		.byte	-58
+ 662 0284 C6       		.byte	-58
+ 663 0285 C6       		.byte	-58
+ 664 0286 FE       		.byte	-2
+ 665 0287 C6       		.byte	-58
+ 666 0288 C6       		.byte	-58
+ 667 0289 C6       		.byte	-58
+ 668 028a C6       		.byte	-58
+ 669 028b C6       		.byte	-58
+ 670 028c 00       		.byte	0
+ 671 028d 00       		.byte	0
+ 672 028e 00       		.byte	0
+ 673 028f 00       		.byte	0
+ 674 0290 00       		.byte	0
+ 675 0291 00       		.byte	0
+ 676 0292 3C       		.byte	60
+ 677 0293 18       		.byte	24
+ 678 0294 18       		.byte	24
+ 679 0295 18       		.byte	24
+ 680 0296 18       		.byte	24
+ 681 0297 18       		.byte	24
+ 682 0298 18       		.byte	24
+ 683 0299 18       		.byte	24
+ 684 029a 18       		.byte	24
+ 685 029b 3C       		.byte	60
+ 686 029c 00       		.byte	0
+ 687 029d 00       		.byte	0
+ 688 029e 00       		.byte	0
+ 689 029f 00       		.byte	0
+ 690 02a0 00       		.byte	0
+ 691 02a1 00       		.byte	0
+ 692 02a2 1E       		.byte	30
+ 693 02a3 0C       		.byte	12
+ 694 02a4 0C       		.byte	12
+ 695 02a5 0C       		.byte	12
+ 696 02a6 0C       		.byte	12
+ 697 02a7 0C       		.byte	12
+ 698 02a8 CC       		.byte	-52
+ 699 02a9 CC       		.byte	-52
+ 700 02aa CC       		.byte	-52
+ 701 02ab 78       		.byte	120
+ 702 02ac 00       		.byte	0
+ 703 02ad 00       		.byte	0
+ 704 02ae 00       		.byte	0
+ 705 02af 00       		.byte	0
+ 706 02b0 00       		.byte	0
+ 707 02b1 00       		.byte	0
+ 708 02b2 E6       		.byte	-26
+ 709 02b3 66       		.byte	102
+ 710 02b4 6C       		.byte	108
+ 711 02b5 6C       		.byte	108
+ 712 02b6 78       		.byte	120
+ 713 02b7 78       		.byte	120
+ 714 02b8 6C       		.byte	108
+ 715 02b9 66       		.byte	102
+ 716 02ba 66       		.byte	102
+ 717 02bb E6       		.byte	-26
+ 718 02bc 00       		.byte	0
+ 719 02bd 00       		.byte	0
+ 720 02be 00       		.byte	0
+ 721 02bf 00       		.byte	0
+ 722 02c0 00       		.byte	0
+ 723 02c1 00       		.byte	0
+ 724 02c2 F0       		.byte	-16
+ 725 02c3 60       		.byte	96
+ 726 02c4 60       		.byte	96
+ 727 02c5 60       		.byte	96
+ 728 02c6 60       		.byte	96
+ 729 02c7 60       		.byte	96
+ 730 02c8 60       		.byte	96
+ 731 02c9 62       		.byte	98
+ 732 02ca 66       		.byte	102
+ 733 02cb FE       		.byte	-2
+ 734 02cc 00       		.byte	0
+ 735 02cd 00       		.byte	0
+ 736 02ce 00       		.byte	0
+ 737 02cf 00       		.byte	0
+ 738 02d0 00       		.byte	0
+ 739 02d1 00       		.byte	0
+ 740 02d2 C6       		.byte	-58
+ 741 02d3 EE       		.byte	-18
+ 742 02d4 FE       		.byte	-2
+ 743 02d5 FE       		.byte	-2
+ 744 02d6 D6       		.byte	-42
+ 745 02d7 C6       		.byte	-58
+ 746 02d8 C6       		.byte	-58
+ 747 02d9 C6       		.byte	-58
+ 748 02da C6       		.byte	-58
+ 749 02db C6       		.byte	-58
+ 750 02dc 00       		.byte	0
+ 751 02dd 00       		.byte	0
+ 752 02de 00       		.byte	0
+ 753 02df 00       		.byte	0
+ 754 02e0 00       		.byte	0
+ 755 02e1 00       		.byte	0
+ 756 02e2 C6       		.byte	-58
+ 757 02e3 E6       		.byte	-26
+ 758 02e4 F6       		.byte	-10
+ 759 02e5 FE       		.byte	-2
+ 760 02e6 DE       		.byte	-34
+ 761 02e7 CE       		.byte	-50
+ 762 02e8 C6       		.byte	-58
+ 763 02e9 C6       		.byte	-58
+ 764 02ea C6       		.byte	-58
+ 765 02eb C6       		.byte	-58
+ 766 02ec 00       		.byte	0
+ 767 02ed 00       		.byte	0
+ 768 02ee 00       		.byte	0
+ 769 02ef 00       		.byte	0
+ 770 02f0 00       		.byte	0
+ 771 02f1 00       		.byte	0
+ 772 02f2 38       		.byte	56
+ 773 02f3 6C       		.byte	108
+ 774 02f4 C6       		.byte	-58
+ 775 02f5 C6       		.byte	-58
+ 776 02f6 C6       		.byte	-58
+ 777 02f7 C6       		.byte	-58
+ 778 02f8 C6       		.byte	-58
+ 779 02f9 C6       		.byte	-58
+ 780 02fa 6C       		.byte	108
+ 781 02fb 38       		.byte	56
+ 782 02fc 00       		.byte	0
+ 783 02fd 00       		.byte	0
+ 784 02fe 00       		.byte	0
+ 785 02ff 00       		.byte	0
+ 786 0300 00       		.byte	0
+ 787 0301 00       		.byte	0
+ 788 0302 FC       		.byte	-4
+ 789 0303 66       		.byte	102
+ 790 0304 66       		.byte	102
+ 791 0305 66       		.byte	102
+ 792 0306 7C       		.byte	124
+ 793 0307 60       		.byte	96
+ 794 0308 60       		.byte	96
+ 795 0309 60       		.byte	96
+ 796 030a 60       		.byte	96
+ 797 030b F0       		.byte	-16
+ 798 030c 00       		.byte	0
+ 799 030d 00       		.byte	0
+ 800 030e 00       		.byte	0
+ 801 030f 00       		.byte	0
+ 802 0310 00       		.byte	0
+ 803 0311 00       		.byte	0
+ 804 0312 7C       		.byte	124
+ 805 0313 C6       		.byte	-58
+ 806 0314 C6       		.byte	-58
+ 807 0315 C6       		.byte	-58
+ 808 0316 C6       		.byte	-58
+ 809 0317 C6       		.byte	-58
+ 810 0318 C6       		.byte	-58
+ 811 0319 D6       		.byte	-42
+ 812 031a DE       		.byte	-34
+ 813 031b 7C       		.byte	124
+ 814 031c 0C       		.byte	12
+ 815 031d 0E       		.byte	14
+ 816 031e 00       		.byte	0
+ 817 031f 00       		.byte	0
+ 818 0320 00       		.byte	0
+ 819 0321 00       		.byte	0
+ 820 0322 FC       		.byte	-4
+ 821 0323 66       		.byte	102
+ 822 0324 66       		.byte	102
+ 823 0325 66       		.byte	102
+ 824 0326 7C       		.byte	124
+ 825 0327 6C       		.byte	108
+ 826 0328 66       		.byte	102
+ 827 0329 66       		.byte	102
+ 828 032a 66       		.byte	102
+ 829 032b E6       		.byte	-26
+ 830 032c 00       		.byte	0
+ 831 032d 00       		.byte	0
+ 832 032e 00       		.byte	0
+ 833 032f 00       		.byte	0
+ 834 0330 00       		.byte	0
+ 835 0331 00       		.byte	0
+ 836 0332 7C       		.byte	124
+ 837 0333 C6       		.byte	-58
+ 838 0334 C6       		.byte	-58
+ 839 0335 60       		.byte	96
+ 840 0336 38       		.byte	56
+ 841 0337 0C       		.byte	12
+ 842 0338 06       		.byte	6
+ 843 0339 C6       		.byte	-58
+ 844 033a C6       		.byte	-58
+ 845 033b 7C       		.byte	124
+ 846 033c 00       		.byte	0
+ 847 033d 00       		.byte	0
+ 848 033e 00       		.byte	0
+ 849 033f 00       		.byte	0
+ 850 0340 00       		.byte	0
+ 851 0341 00       		.byte	0
+ 852 0342 7E       		.byte	126
+ 853 0343 7E       		.byte	126
+ 854 0344 5A       		.byte	90
+ 855 0345 18       		.byte	24
+ 856 0346 18       		.byte	24
+ 857 0347 18       		.byte	24
+ 858 0348 18       		.byte	24
+ 859 0349 18       		.byte	24
+ 860 034a 18       		.byte	24
+ 861 034b 3C       		.byte	60
+ 862 034c 00       		.byte	0
+ 863 034d 00       		.byte	0
+ 864 034e 00       		.byte	0
+ 865 034f 00       		.byte	0
+ 866 0350 00       		.byte	0
+ 867 0351 00       		.byte	0
+ 868 0352 C6       		.byte	-58
+ 869 0353 C6       		.byte	-58
+ 870 0354 C6       		.byte	-58
+ 871 0355 C6       		.byte	-58
+ 872 0356 C6       		.byte	-58
+ 873 0357 C6       		.byte	-58
+ 874 0358 C6       		.byte	-58
+ 875 0359 C6       		.byte	-58
+ 876 035a C6       		.byte	-58
+ 877 035b 7C       		.byte	124
+ 878 035c 00       		.byte	0
+ 879 035d 00       		.byte	0
+ 880 035e 00       		.byte	0
+ 881 035f 00       		.byte	0
+ 882 0360 00       		.byte	0
+ 883 0361 00       		.byte	0
+ 884 0362 C6       		.byte	-58
+ 885 0363 C6       		.byte	-58
+ 886 0364 C6       		.byte	-58
+ 887 0365 C6       		.byte	-58
+ 888 0366 C6       		.byte	-58
+ 889 0367 C6       		.byte	-58
+ 890 0368 C6       		.byte	-58
+ 891 0369 6C       		.byte	108
+ 892 036a 38       		.byte	56
+ 893 036b 10       		.byte	16
+ 894 036c 00       		.byte	0
+ 895 036d 00       		.byte	0
+ 896 036e 00       		.byte	0
+ 897 036f 00       		.byte	0
+ 898 0370 00       		.byte	0
+ 899 0371 00       		.byte	0
+ 900 0372 C6       		.byte	-58
+ 901 0373 C6       		.byte	-58
+ 902 0374 C6       		.byte	-58
+ 903 0375 C6       		.byte	-58
+ 904 0376 C6       		.byte	-58
+ 905 0377 D6       		.byte	-42
+ 906 0378 D6       		.byte	-42
+ 907 0379 FE       		.byte	-2
+ 908 037a 6C       		.byte	108
+ 909 037b 6C       		.byte	108
+ 910 037c 00       		.byte	0
+ 911 037d 00       		.byte	0
+ 912 037e 00       		.byte	0
+ 913 037f 00       		.byte	0
+ 914 0380 00       		.byte	0
+ 915 0381 00       		.byte	0
+ 916 0382 C6       		.byte	-58
+ 917 0383 C6       		.byte	-58
+ 918 0384 6C       		.byte	108
+ 919 0385 6C       		.byte	108
+ 920 0386 38       		.byte	56
+ 921 0387 38       		.byte	56
+ 922 0388 6C       		.byte	108
+ 923 0389 6C       		.byte	108
+ 924 038a C6       		.byte	-58
+ 925 038b C6       		.byte	-58
+ 926 038c 00       		.byte	0
+ 927 038d 00       		.byte	0
+ 928 038e 00       		.byte	0
+ 929 038f 00       		.byte	0
+ 930 0390 00       		.byte	0
+ 931 0391 00       		.byte	0
+ 932 0392 66       		.byte	102
+ 933 0393 66       		.byte	102
+ 934 0394 66       		.byte	102
+ 935 0395 66       		.byte	102
+ 936 0396 3C       		.byte	60
+ 937 0397 18       		.byte	24
+ 938 0398 18       		.byte	24
+ 939 0399 18       		.byte	24
+ 940 039a 18       		.byte	24
+ 941 039b 3C       		.byte	60
+ 942 039c 00       		.byte	0
+ 943 039d 00       		.byte	0
+ 944 039e 00       		.byte	0
+ 945 039f 00       		.byte	0
+ 946 03a0 00       		.byte	0
+ 947 03a1 00       		.byte	0
+ 948 03a2 FE       		.byte	-2
+ 949 03a3 C6       		.byte	-58
+ 950 03a4 86       		.byte	-122
+ 951 03a5 0C       		.byte	12
+ 952 03a6 18       		.byte	24
+ 953 03a7 30       		.byte	48
+ 954 03a8 60       		.byte	96
+ 955 03a9 C2       		.byte	-62
+ 956 03aa C6       		.byte	-58
+ 957 03ab FE       		.byte	-2
+ 958 03ac 00       		.byte	0
+ 959 03ad 00       		.byte	0
+ 960 03ae 00       		.byte	0
+ 961 03af 00       		.byte	0
+ 962 03b0 00       		.byte	0
+ 963 03b1 00       		.byte	0
+ 964 03b2 3C       		.byte	60
+ 965 03b3 30       		.byte	48
+ 966 03b4 30       		.byte	48
+ 967 03b5 30       		.byte	48
+ 968 03b6 30       		.byte	48
+ 969 03b7 30       		.byte	48
+ 970 03b8 30       		.byte	48
+ 971 03b9 30       		.byte	48
+ 972 03ba 30       		.byte	48
+ 973 03bb 3C       		.byte	60
+ 974 03bc 00       		.byte	0
+ 975 03bd 00       		.byte	0
+ 976 03be 00       		.byte	0
+ 977 03bf 00       		.byte	0
+ 978 03c0 00       		.byte	0
+ 979 03c1 00       		.byte	0
+ 980 03c2 00       		.byte	0
+ 981 03c3 80       		.byte	-128
+ 982 03c4 C0       		.byte	-64
+ 983 03c5 E0       		.byte	-32
+ 984 03c6 70       		.byte	112
+ 985 03c7 38       		.byte	56
+ 986 03c8 1C       		.byte	28
+ 987 03c9 0E       		.byte	14
+ 988 03ca 06       		.byte	6
+ 989 03cb 02       		.byte	2
+ 990 03cc 00       		.byte	0
+ 991 03cd 00       		.byte	0
+ 992 03ce 00       		.byte	0
+ 993 03cf 00       		.byte	0
+ 994 03d0 00       		.byte	0
+ 995 03d1 00       		.byte	0
+ 996 03d2 3C       		.byte	60
+ 997 03d3 0C       		.byte	12
+ 998 03d4 0C       		.byte	12
+ 999 03d5 0C       		.byte	12
+ 1000 03d6 0C       		.byte	12
+ 1001 03d7 0C       		.byte	12
+ 1002 03d8 0C       		.byte	12
+ 1003 03d9 0C       		.byte	12
+ 1004 03da 0C       		.byte	12
+ 1005 03db 3C       		.byte	60
+ 1006 03dc 00       		.byte	0
+ 1007 03dd 00       		.byte	0
+ 1008 03de 00       		.byte	0
+ 1009 03df 00       		.byte	0
+ 1010 03e0 10       		.byte	16
+ 1011 03e1 38       		.byte	56
+ 1012 03e2 6C       		.byte	108
+ 1013 03e3 C6       		.byte	-58
+ 1014 03e4 00       		.byte	0
+ 1015 03e5 00       		.byte	0
+ 1016 03e6 00       		.byte	0
+ 1017 03e7 00       		.byte	0
+ 1018 03e8 00       		.byte	0
+ 1019 03e9 00       		.byte	0
+ 1020 03ea 00       		.byte	0
+ 1021 03eb 00       		.byte	0
+ 1022 03ec 00       		.byte	0
+ 1023 03ed 00       		.byte	0
+ 1024 03ee 00       		.byte	0
+ 1025 03ef 00       		.byte	0
+ 1026 03f0 00       		.byte	0
+ 1027 03f1 00       		.byte	0
+ 1028 03f2 00       		.byte	0
+ 1029 03f3 00       		.byte	0
+ 1030 03f4 00       		.byte	0
+ 1031 03f5 00       		.byte	0
+ 1032 03f6 00       		.byte	0
+ 1033 03f7 00       		.byte	0
+ 1034 03f8 00       		.byte	0
+ 1035 03f9 00       		.byte	0
+ 1036 03fa 00       		.byte	0
+ 1037 03fb 00       		.byte	0
+ 1038 03fc 00       		.byte	0
+ 1039 03fd FF       		.byte	-1
+ 1040 03fe 00       		.byte	0
+ 1041 03ff 00       		.byte	0
+ 1042 0400 30       		.byte	48
+ 1043 0401 30       		.byte	48
+ 1044 0402 18       		.byte	24
+ 1045 0403 00       		.byte	0
+ 1046 0404 00       		.byte	0
+ 1047 0405 00       		.byte	0
+ 1048 0406 00       		.byte	0
+ 1049 0407 00       		.byte	0
+ 1050 0408 00       		.byte	0
+ 1051 0409 00       		.byte	0
+ 1052 040a 00       		.byte	0
+ 1053 040b 00       		.byte	0
+ 1054 040c 00       		.byte	0
+ 1055 040d 00       		.byte	0
+ 1056 040e 00       		.byte	0
+ 1057 040f 00       		.byte	0
+ 1058 0410 00       		.byte	0
+ 1059 0411 00       		.byte	0
+ 1060 0412 00       		.byte	0
+ 1061 0413 00       		.byte	0
+ 1062 0414 00       		.byte	0
+ 1063 0415 78       		.byte	120
+ 1064 0416 0C       		.byte	12
+ 1065 0417 7C       		.byte	124
+ 1066 0418 CC       		.byte	-52
+ 1067 0419 CC       		.byte	-52
+ 1068 041a CC       		.byte	-52
+ 1069 041b 76       		.byte	118
+ 1070 041c 00       		.byte	0
+ 1071 041d 00       		.byte	0
+ 1072 041e 00       		.byte	0
+ 1073 041f 00       		.byte	0
+ 1074 0420 00       		.byte	0
+ 1075 0421 00       		.byte	0
+ 1076 0422 E0       		.byte	-32
+ 1077 0423 60       		.byte	96
+ 1078 0424 60       		.byte	96
+ 1079 0425 78       		.byte	120
+ 1080 0426 6C       		.byte	108
+ 1081 0427 66       		.byte	102
+ 1082 0428 66       		.byte	102
+ 1083 0429 66       		.byte	102
+ 1084 042a 66       		.byte	102
+ 1085 042b DC       		.byte	-36
+ 1086 042c 00       		.byte	0
+ 1087 042d 00       		.byte	0
+ 1088 042e 00       		.byte	0
+ 1089 042f 00       		.byte	0
+ 1090 0430 00       		.byte	0
+ 1091 0431 00       		.byte	0
+ 1092 0432 00       		.byte	0
+ 1093 0433 00       		.byte	0
+ 1094 0434 00       		.byte	0
+ 1095 0435 7C       		.byte	124
+ 1096 0436 C6       		.byte	-58
+ 1097 0437 C0       		.byte	-64
+ 1098 0438 C0       		.byte	-64
+ 1099 0439 C0       		.byte	-64
+ 1100 043a C6       		.byte	-58
+ 1101 043b 7C       		.byte	124
+ 1102 043c 00       		.byte	0
+ 1103 043d 00       		.byte	0
+ 1104 043e 00       		.byte	0
+ 1105 043f 00       		.byte	0
+ 1106 0440 00       		.byte	0
+ 1107 0441 00       		.byte	0
+ 1108 0442 1C       		.byte	28
+ 1109 0443 0C       		.byte	12
+ 1110 0444 0C       		.byte	12
+ 1111 0445 3C       		.byte	60
+ 1112 0446 6C       		.byte	108
+ 1113 0447 CC       		.byte	-52
+ 1114 0448 CC       		.byte	-52
+ 1115 0449 CC       		.byte	-52
+ 1116 044a CC       		.byte	-52
+ 1117 044b 76       		.byte	118
+ 1118 044c 00       		.byte	0
+ 1119 044d 00       		.byte	0
+ 1120 044e 00       		.byte	0
+ 1121 044f 00       		.byte	0
+ 1122 0450 00       		.byte	0
+ 1123 0451 00       		.byte	0
+ 1124 0452 00       		.byte	0
+ 1125 0453 00       		.byte	0
+ 1126 0454 00       		.byte	0
+ 1127 0455 7C       		.byte	124
+ 1128 0456 C6       		.byte	-58
+ 1129 0457 FE       		.byte	-2
+ 1130 0458 C0       		.byte	-64
+ 1131 0459 C0       		.byte	-64
+ 1132 045a C6       		.byte	-58
+ 1133 045b 7C       		.byte	124
+ 1134 045c 00       		.byte	0
+ 1135 045d 00       		.byte	0
+ 1136 045e 00       		.byte	0
+ 1137 045f 00       		.byte	0
+ 1138 0460 00       		.byte	0
+ 1139 0461 00       		.byte	0
+ 1140 0462 38       		.byte	56
+ 1141 0463 6C       		.byte	108
+ 1142 0464 64       		.byte	100
+ 1143 0465 60       		.byte	96
+ 1144 0466 F0       		.byte	-16
+ 1145 0467 60       		.byte	96
+ 1146 0468 60       		.byte	96
+ 1147 0469 60       		.byte	96
+ 1148 046a 60       		.byte	96
+ 1149 046b F0       		.byte	-16
+ 1150 046c 00       		.byte	0
+ 1151 046d 00       		.byte	0
+ 1152 046e 00       		.byte	0
+ 1153 046f 00       		.byte	0
+ 1154 0470 00       		.byte	0
+ 1155 0471 00       		.byte	0
+ 1156 0472 00       		.byte	0
+ 1157 0473 00       		.byte	0
+ 1158 0474 00       		.byte	0
+ 1159 0475 76       		.byte	118
+ 1160 0476 CC       		.byte	-52
+ 1161 0477 CC       		.byte	-52
+ 1162 0478 CC       		.byte	-52
+ 1163 0479 CC       		.byte	-52
+ 1164 047a CC       		.byte	-52
+ 1165 047b 7C       		.byte	124
+ 1166 047c 0C       		.byte	12
+ 1167 047d CC       		.byte	-52
+ 1168 047e 78       		.byte	120
+ 1169 047f 00       		.byte	0
+ 1170 0480 00       		.byte	0
+ 1171 0481 00       		.byte	0
+ 1172 0482 E0       		.byte	-32
+ 1173 0483 60       		.byte	96
+ 1174 0484 60       		.byte	96
+ 1175 0485 6C       		.byte	108
+ 1176 0486 76       		.byte	118
+ 1177 0487 66       		.byte	102
+ 1178 0488 66       		.byte	102
+ 1179 0489 66       		.byte	102
+ 1180 048a 66       		.byte	102
+ 1181 048b E6       		.byte	-26
+ 1182 048c 00       		.byte	0
+ 1183 048d 00       		.byte	0
+ 1184 048e 00       		.byte	0
+ 1185 048f 00       		.byte	0
+ 1186 0490 00       		.byte	0
+ 1187 0491 00       		.byte	0
+ 1188 0492 18       		.byte	24
+ 1189 0493 18       		.byte	24
+ 1190 0494 00       		.byte	0
+ 1191 0495 38       		.byte	56
+ 1192 0496 18       		.byte	24
+ 1193 0497 18       		.byte	24
+ 1194 0498 18       		.byte	24
+ 1195 0499 18       		.byte	24
+ 1196 049a 18       		.byte	24
+ 1197 049b 3C       		.byte	60
+ 1198 049c 00       		.byte	0
+ 1199 049d 00       		.byte	0
+ 1200 049e 00       		.byte	0
+ 1201 049f 00       		.byte	0
+ 1202 04a0 00       		.byte	0
+ 1203 04a1 00       		.byte	0
+ 1204 04a2 06       		.byte	6
+ 1205 04a3 06       		.byte	6
+ 1206 04a4 00       		.byte	0
+ 1207 04a5 0E       		.byte	14
+ 1208 04a6 06       		.byte	6
+ 1209 04a7 06       		.byte	6
+ 1210 04a8 06       		.byte	6
+ 1211 04a9 06       		.byte	6
+ 1212 04aa 06       		.byte	6
+ 1213 04ab 06       		.byte	6
+ 1214 04ac 66       		.byte	102
+ 1215 04ad 66       		.byte	102
+ 1216 04ae 3C       		.byte	60
+ 1217 04af 00       		.byte	0
+ 1218 04b0 00       		.byte	0
+ 1219 04b1 00       		.byte	0
+ 1220 04b2 E0       		.byte	-32
+ 1221 04b3 60       		.byte	96
+ 1222 04b4 60       		.byte	96
+ 1223 04b5 66       		.byte	102
+ 1224 04b6 6C       		.byte	108
+ 1225 04b7 78       		.byte	120
+ 1226 04b8 78       		.byte	120
+ 1227 04b9 6C       		.byte	108
+ 1228 04ba 66       		.byte	102
+ 1229 04bb E6       		.byte	-26
+ 1230 04bc 00       		.byte	0
+ 1231 04bd 00       		.byte	0
+ 1232 04be 00       		.byte	0
+ 1233 04bf 00       		.byte	0
+ 1234 04c0 00       		.byte	0
+ 1235 04c1 00       		.byte	0
+ 1236 04c2 38       		.byte	56
+ 1237 04c3 18       		.byte	24
+ 1238 04c4 18       		.byte	24
+ 1239 04c5 18       		.byte	24
+ 1240 04c6 18       		.byte	24
+ 1241 04c7 18       		.byte	24
+ 1242 04c8 18       		.byte	24
+ 1243 04c9 18       		.byte	24
+ 1244 04ca 18       		.byte	24
+ 1245 04cb 3C       		.byte	60
+ 1246 04cc 00       		.byte	0
+ 1247 04cd 00       		.byte	0
+ 1248 04ce 00       		.byte	0
+ 1249 04cf 00       		.byte	0
+ 1250 04d0 00       		.byte	0
+ 1251 04d1 00       		.byte	0
+ 1252 04d2 00       		.byte	0
+ 1253 04d3 00       		.byte	0
+ 1254 04d4 00       		.byte	0
+ 1255 04d5 EC       		.byte	-20
+ 1256 04d6 FE       		.byte	-2
+ 1257 04d7 D6       		.byte	-42
+ 1258 04d8 D6       		.byte	-42
+ 1259 04d9 D6       		.byte	-42
+ 1260 04da D6       		.byte	-42
+ 1261 04db D6       		.byte	-42
+ 1262 04dc 00       		.byte	0
+ 1263 04dd 00       		.byte	0
+ 1264 04de 00       		.byte	0
+ 1265 04df 00       		.byte	0
+ 1266 04e0 00       		.byte	0
+ 1267 04e1 00       		.byte	0
+ 1268 04e2 00       		.byte	0
+ 1269 04e3 00       		.byte	0
+ 1270 04e4 00       		.byte	0
+ 1271 04e5 DC       		.byte	-36
+ 1272 04e6 66       		.byte	102
+ 1273 04e7 66       		.byte	102
+ 1274 04e8 66       		.byte	102
+ 1275 04e9 66       		.byte	102
+ 1276 04ea 66       		.byte	102
+ 1277 04eb 66       		.byte	102
+ 1278 04ec 00       		.byte	0
+ 1279 04ed 00       		.byte	0
+ 1280 04ee 00       		.byte	0
+ 1281 04ef 00       		.byte	0
+ 1282 04f0 00       		.byte	0
+ 1283 04f1 00       		.byte	0
+ 1284 04f2 00       		.byte	0
+ 1285 04f3 00       		.byte	0
+ 1286 04f4 00       		.byte	0
+ 1287 04f5 7C       		.byte	124
+ 1288 04f6 C6       		.byte	-58
+ 1289 04f7 C6       		.byte	-58
+ 1290 04f8 C6       		.byte	-58
+ 1291 04f9 C6       		.byte	-58
+ 1292 04fa C6       		.byte	-58
+ 1293 04fb 7C       		.byte	124
+ 1294 04fc 00       		.byte	0
+ 1295 04fd 00       		.byte	0
+ 1296 04fe 00       		.byte	0
+ 1297 04ff 00       		.byte	0
+ 1298 0500 00       		.byte	0
+ 1299 0501 00       		.byte	0
+ 1300 0502 00       		.byte	0
+ 1301 0503 00       		.byte	0
+ 1302 0504 00       		.byte	0
+ 1303 0505 DC       		.byte	-36
+ 1304 0506 66       		.byte	102
+ 1305 0507 66       		.byte	102
+ 1306 0508 66       		.byte	102
+ 1307 0509 66       		.byte	102
+ 1308 050a 66       		.byte	102
+ 1309 050b 7C       		.byte	124
+ 1310 050c 60       		.byte	96
+ 1311 050d 60       		.byte	96
+ 1312 050e F0       		.byte	-16
+ 1313 050f 00       		.byte	0
+ 1314 0510 00       		.byte	0
+ 1315 0511 00       		.byte	0
+ 1316 0512 00       		.byte	0
+ 1317 0513 00       		.byte	0
+ 1318 0514 00       		.byte	0
+ 1319 0515 76       		.byte	118
+ 1320 0516 CC       		.byte	-52
+ 1321 0517 CC       		.byte	-52
+ 1322 0518 CC       		.byte	-52
+ 1323 0519 CC       		.byte	-52
+ 1324 051a CC       		.byte	-52
+ 1325 051b 7C       		.byte	124
+ 1326 051c 0C       		.byte	12
+ 1327 051d 0C       		.byte	12
+ 1328 051e 1E       		.byte	30
+ 1329 051f 00       		.byte	0
+ 1330 0520 00       		.byte	0
+ 1331 0521 00       		.byte	0
+ 1332 0522 00       		.byte	0
+ 1333 0523 00       		.byte	0
+ 1334 0524 00       		.byte	0
+ 1335 0525 DC       		.byte	-36
+ 1336 0526 76       		.byte	118
+ 1337 0527 62       		.byte	98
+ 1338 0528 60       		.byte	96
+ 1339 0529 60       		.byte	96
+ 1340 052a 60       		.byte	96
+ 1341 052b F0       		.byte	-16
+ 1342 052c 00       		.byte	0
+ 1343 052d 00       		.byte	0
+ 1344 052e 00       		.byte	0
+ 1345 052f 00       		.byte	0
+ 1346 0530 00       		.byte	0
+ 1347 0531 00       		.byte	0
+ 1348 0532 00       		.byte	0
+ 1349 0533 00       		.byte	0
+ 1350 0534 00       		.byte	0
+ 1351 0535 7C       		.byte	124
+ 1352 0536 C6       		.byte	-58
+ 1353 0537 60       		.byte	96
+ 1354 0538 38       		.byte	56
+ 1355 0539 0C       		.byte	12
+ 1356 053a C6       		.byte	-58
+ 1357 053b 7C       		.byte	124
+ 1358 053c 00       		.byte	0
+ 1359 053d 00       		.byte	0
+ 1360 053e 00       		.byte	0
+ 1361 053f 00       		.byte	0
+ 1362 0540 00       		.byte	0
+ 1363 0541 00       		.byte	0
+ 1364 0542 10       		.byte	16
+ 1365 0543 30       		.byte	48
+ 1366 0544 30       		.byte	48
+ 1367 0545 FC       		.byte	-4
+ 1368 0546 30       		.byte	48
+ 1369 0547 30       		.byte	48
+ 1370 0548 30       		.byte	48
+ 1371 0549 30       		.byte	48
+ 1372 054a 36       		.byte	54
+ 1373 054b 1C       		.byte	28
+ 1374 054c 00       		.byte	0
+ 1375 054d 00       		.byte	0
+ 1376 054e 00       		.byte	0
+ 1377 054f 00       		.byte	0
+ 1378 0550 00       		.byte	0
+ 1379 0551 00       		.byte	0
+ 1380 0552 00       		.byte	0
+ 1381 0553 00       		.byte	0
+ 1382 0554 00       		.byte	0
+ 1383 0555 CC       		.byte	-52
+ 1384 0556 CC       		.byte	-52
+ 1385 0557 CC       		.byte	-52
+ 1386 0558 CC       		.byte	-52
+ 1387 0559 CC       		.byte	-52
+ 1388 055a CC       		.byte	-52
+ 1389 055b 76       		.byte	118
+ 1390 055c 00       		.byte	0
+ 1391 055d 00       		.byte	0
+ 1392 055e 00       		.byte	0
+ 1393 055f 00       		.byte	0
+ 1394 0560 00       		.byte	0
+ 1395 0561 00       		.byte	0
+ 1396 0562 00       		.byte	0
+ 1397 0563 00       		.byte	0
+ 1398 0564 00       		.byte	0
+ 1399 0565 66       		.byte	102
+ 1400 0566 66       		.byte	102
+ 1401 0567 66       		.byte	102
+ 1402 0568 66       		.byte	102
+ 1403 0569 66       		.byte	102
+ 1404 056a 3C       		.byte	60
+ 1405 056b 18       		.byte	24
+ 1406 056c 00       		.byte	0
+ 1407 056d 00       		.byte	0
+ 1408 056e 00       		.byte	0
+ 1409 056f 00       		.byte	0
+ 1410 0570 00       		.byte	0
+ 1411 0571 00       		.byte	0
+ 1412 0572 00       		.byte	0
+ 1413 0573 00       		.byte	0
+ 1414 0574 00       		.byte	0
+ 1415 0575 C6       		.byte	-58
+ 1416 0576 C6       		.byte	-58
+ 1417 0577 C6       		.byte	-58
+ 1418 0578 D6       		.byte	-42
+ 1419 0579 D6       		.byte	-42
+ 1420 057a FE       		.byte	-2
+ 1421 057b 6C       		.byte	108
+ 1422 057c 00       		.byte	0
+ 1423 057d 00       		.byte	0
+ 1424 057e 00       		.byte	0
+ 1425 057f 00       		.byte	0
+ 1426 0580 00       		.byte	0
+ 1427 0581 00       		.byte	0
+ 1428 0582 00       		.byte	0
+ 1429 0583 00       		.byte	0
+ 1430 0584 00       		.byte	0
+ 1431 0585 C6       		.byte	-58
+ 1432 0586 6C       		.byte	108
+ 1433 0587 38       		.byte	56
+ 1434 0588 38       		.byte	56
+ 1435 0589 38       		.byte	56
+ 1436 058a 6C       		.byte	108
+ 1437 058b C6       		.byte	-58
+ 1438 058c 00       		.byte	0
+ 1439 058d 00       		.byte	0
+ 1440 058e 00       		.byte	0
+ 1441 058f 00       		.byte	0
+ 1442 0590 00       		.byte	0
+ 1443 0591 00       		.byte	0
+ 1444 0592 00       		.byte	0
+ 1445 0593 00       		.byte	0
+ 1446 0594 00       		.byte	0
+ 1447 0595 C6       		.byte	-58
+ 1448 0596 C6       		.byte	-58
+ 1449 0597 C6       		.byte	-58
+ 1450 0598 C6       		.byte	-58
+ 1451 0599 C6       		.byte	-58
+ 1452 059a C6       		.byte	-58
+ 1453 059b 7E       		.byte	126
+ 1454 059c 06       		.byte	6
+ 1455 059d 0C       		.byte	12
+ 1456 059e F8       		.byte	-8
+ 1457 059f 00       		.byte	0
+ 1458 05a0 00       		.byte	0
+ 1459 05a1 00       		.byte	0
+ 1460 05a2 00       		.byte	0
+ 1461 05a3 00       		.byte	0
+ 1462 05a4 00       		.byte	0
+ 1463 05a5 FE       		.byte	-2
+ 1464 05a6 CC       		.byte	-52
+ 1465 05a7 18       		.byte	24
+ 1466 05a8 30       		.byte	48
+ 1467 05a9 60       		.byte	96
+ 1468 05aa C6       		.byte	-58
+ 1469 05ab FE       		.byte	-2
+ 1470 05ac 00       		.byte	0
+ 1471 05ad 00       		.byte	0
+ 1472 05ae 00       		.byte	0
+ 1473 05af 00       		.byte	0
+ 1474 05b0 00       		.byte	0
+ 1475 05b1 00       		.byte	0
+ 1476 05b2 0E       		.byte	14
+ 1477 05b3 18       		.byte	24
+ 1478 05b4 18       		.byte	24
+ 1479 05b5 18       		.byte	24
+ 1480 05b6 70       		.byte	112
+ 1481 05b7 18       		.byte	24
+ 1482 05b8 18       		.byte	24
+ 1483 05b9 18       		.byte	24
+ 1484 05ba 18       		.byte	24
+ 1485 05bb 0E       		.byte	14
+ 1486 05bc 00       		.byte	0
+ 1487 05bd 00       		.byte	0
+ 1488 05be 00       		.byte	0
+ 1489 05bf 00       		.byte	0
+ 1490 05c0 00       		.byte	0
+ 1491 05c1 00       		.byte	0
+ 1492 05c2 18       		.byte	24
+ 1493 05c3 18       		.byte	24
+ 1494 05c4 18       		.byte	24
+ 1495 05c5 18       		.byte	24
+ 1496 05c6 00       		.byte	0
+ 1497 05c7 18       		.byte	24
+ 1498 05c8 18       		.byte	24
+ 1499 05c9 18       		.byte	24
+ 1500 05ca 18       		.byte	24
+ 1501 05cb 18       		.byte	24
+ 1502 05cc 00       		.byte	0
+ 1503 05cd 00       		.byte	0
+ 1504 05ce 00       		.byte	0
+ 1505 05cf 00       		.byte	0
+ 1506 05d0 00       		.byte	0
+ 1507 05d1 00       		.byte	0
+ 1508 05d2 70       		.byte	112
+ 1509 05d3 18       		.byte	24
+ 1510 05d4 18       		.byte	24
+ 1511 05d5 18       		.byte	24
+ 1512 05d6 0E       		.byte	14
+ 1513 05d7 18       		.byte	24
+ 1514 05d8 18       		.byte	24
+ 1515 05d9 18       		.byte	24
+ 1516 05da 18       		.byte	24
+ 1517 05db 70       		.byte	112
+ 1518 05dc 00       		.byte	0
+ 1519 05dd 00       		.byte	0
+ 1520 05de 00       		.byte	0
+ 1521 05df 00       		.byte	0
+ 1522 05e0 00       		.byte	0
+ 1523 05e1 00       		.byte	0
+ 1524 05e2 76       		.byte	118
+ 1525 05e3 DC       		.byte	-36
+ 1526 05e4 00       		.byte	0
+ 1527 05e5 00       		.byte	0
+ 1528 05e6 00       		.byte	0
+ 1529 05e7 00       		.byte	0
+ 1530 05e8 00       		.byte	0
+ 1531 05e9 00       		.byte	0
+ 1532 05ea 00       		.byte	0
+ 1533 05eb 00       		.byte	0
+ 1534 05ec 00       		.byte	0
+ 1535 05ed 00       		.byte	0
+ 1536 05ee 00       		.byte	0
+ 1537 05ef 00       		.byte	0
+ 1538 05f0 00       		.byte	0
+ 1539 05f1 00       		.byte	0
+ 1540 05f2 00       		.byte	0
+ 1541 05f3 00       		.byte	0
+ 1542 05f4 10       		.byte	16
+ 1543 05f5 38       		.byte	56
+ 1544 05f6 6C       		.byte	108
+ 1545 05f7 C6       		.byte	-58
+ 1546 05f8 C6       		.byte	-58
+ 1547 05f9 C6       		.byte	-58
+ 1548 05fa FE       		.byte	-2
+ 1549 05fb 00       		.byte	0
+ 1550 05fc 00       		.byte	0
+ 1551 05fd 00       		.byte	0
+ 1552 05fe 00       		.byte	0
+ 1553 05ff 00       		.byte	0
+ 1554              		.comm	DeviceCode,2,2
+ 1555              		.text
+ 1556              		.align	1
+ 1557              		.global	Lcd_Configuration
+ 1558              		.syntax unified
+ 1559              		.thumb
+ 1560              		.thumb_func
+ 1561              		.fpu softvfp
+ 1563              	Lcd_Configuration:
+ 1564              		@ args = 0, pretend = 0, frame = 8
+ 1565              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1566 0000 80B5     		push	{r7, lr}
+ 1567 0002 82B0     		sub	sp, sp, #8
+ 1568 0004 00AF     		add	r7, sp, #0
+ 1569 0006 0121     		movs	r1, #1
+ 1570 0008 1C20     		movs	r0, #28
+ 1571 000a FFF7FEFF 		bl	RCC_APB2PeriphClockCmd
+ 1572 000e FF23     		movs	r3, #255
+ 1573 0010 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1574 0012 0323     		movs	r3, #3
+ 1575 0014 BB71     		strb	r3, [r7, #6]
+ 1576 0016 1023     		movs	r3, #16
+ 1577 0018 FB71     		strb	r3, [r7, #7]
+ 1578 001a 3B1D     		adds	r3, r7, #4
+ 1579 001c 1946     		mov	r1, r3
+ 1580 001e 0B48     		ldr	r0, .L2
+ 1581 0020 FFF7FEFF 		bl	GPIO_Init
+ 1582 0024 4FF47F43 		mov	r3, #65280
+ 1583 0028 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1584 002a 3B1D     		adds	r3, r7, #4
+ 1585 002c 1946     		mov	r1, r3
+ 1586 002e 0848     		ldr	r0, .L2+4
+ 1587 0030 FFF7FEFF 		bl	GPIO_Init
+ 1588 0034 4FF4F853 		mov	r3, #7936
+ 1589 0038 BB80     		strh	r3, [r7, #4]	@ movhi
+ 1590 003a 3B1D     		adds	r3, r7, #4
+ 1591 003c 1946     		mov	r1, r3
+ 1592 003e 0348     		ldr	r0, .L2
+ 1593 0040 FFF7FEFF 		bl	GPIO_Init
+ 1594 0044 00BF     		nop
+ 1595 0046 0837     		adds	r7, r7, #8
+ 1596 0048 BD46     		mov	sp, r7
+ 1597              		@ sp needed
+ 1598 004a 80BD     		pop	{r7, pc}
+ 1599              	.L3:
+ 1600              		.align	2
+ 1601              	.L2:
+ 1602 004c 00100140 		.word	1073811456
+ 1603 0050 000C0140 		.word	1073810432
+ 1605              		.align	1
+ 1606              		.global	ili9320_Initializtion
+ 1607              		.syntax unified
+ 1608              		.thumb
+ 1609              		.thumb_func
+ 1610              		.fpu softvfp
+ 1612              	ili9320_Initializtion:
+ 1613              		@ args = 0, pretend = 0, frame = 8
+ 1614              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1615 0054 80B5     		push	{r7, lr}
+ 1616 0056 82B0     		sub	sp, sp, #8
+ 1617 0058 00AF     		add	r7, sp, #0
+ 1618 005a 4FF6FF70 		movw	r0, #65535
+ 1619 005e FFF7FEFF 		bl	ili9320_WriteData
+ 1620 0062 B24B     		ldr	r3, .L55
+ 1621 0064 4FF48062 		mov	r2, #1024
+ 1622 0068 1A60     		str	r2, [r3]
+ 1623 006a B04B     		ldr	r3, .L55
+ 1624 006c 4FF48072 		mov	r2, #256
+ 1625 0070 1A60     		str	r2, [r3]
+ 1626 0072 AE4B     		ldr	r3, .L55
+ 1627 0074 4FF40072 		mov	r2, #512
+ 1628 0078 1A60     		str	r2, [r3]
+ 1629 007a AC4B     		ldr	r3, .L55
+ 1630 007c 4FF40062 		mov	r2, #2048
+ 1631 0080 1A60     		str	r2, [r3]
+ 1632 0082 4CF25033 		movw	r3, #50000
+ 1633 0086 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1634 0088 02E0     		b	.L5
+ 1635              	.L6:
+ 1636 008a FB88     		ldrh	r3, [r7, #6]
+ 1637 008c 013B     		subs	r3, r3, #1
+ 1638 008e FB80     		strh	r3, [r7, #6]	@ movhi
+ 1639              	.L5:
+ 1640 0090 FB88     		ldrh	r3, [r7, #6]
+ 1641 0092 002B     		cmp	r3, #0
+ 1642 0094 F9D1     		bne	.L6
+ 1643 0096 4CF25033 		movw	r3, #50000
+ 1644 009a FB80     		strh	r3, [r7, #6]	@ movhi
+ 1645 009c 02E0     		b	.L7
+ 1646              	.L8:
+ 1647 009e FB88     		ldrh	r3, [r7, #6]
+ 1648 00a0 013B     		subs	r3, r3, #1
+ 1649 00a2 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1650              	.L7:
+ 1651 00a4 FB88     		ldrh	r3, [r7, #6]
+ 1652 00a6 002B     		cmp	r3, #0
+ 1653 00a8 F9D1     		bne	.L8
+ 1654 00aa 4CF25033 		movw	r3, #50000
+ 1655 00ae FB80     		strh	r3, [r7, #6]	@ movhi
+ 1656 00b0 02E0     		b	.L9
+ 1657              	.L10:
+ 1658 00b2 FB88     		ldrh	r3, [r7, #6]
+ 1659 00b4 013B     		subs	r3, r3, #1
+ 1660 00b6 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1661              	.L9:
+ 1662 00b8 FB88     		ldrh	r3, [r7, #6]
+ 1663 00ba 002B     		cmp	r3, #0
+ 1664 00bc F9D1     		bne	.L10
+ 1665 00be 0121     		movs	r1, #1
+ 1666 00c0 0020     		movs	r0, #0
+ 1667 00c2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1668 00c6 42F21070 		movw	r0, #10000
+ 1669 00ca FFF7FEFF 		bl	ili9320_Delay
+ 1670 00ce 4CF25033 		movw	r3, #50000
+ 1671 00d2 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1672 00d4 02E0     		b	.L11
+ 1673              	.L12:
+ 1674 00d6 FB88     		ldrh	r3, [r7, #6]
+ 1675 00d8 013B     		subs	r3, r3, #1
+ 1676 00da FB80     		strh	r3, [r7, #6]	@ movhi
+ 1677              	.L11:
+ 1678 00dc FB88     		ldrh	r3, [r7, #6]
+ 1679 00de 002B     		cmp	r3, #0
+ 1680 00e0 F9D1     		bne	.L12
+ 1681 00e2 4CF25033 		movw	r3, #50000
+ 1682 00e6 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1683 00e8 02E0     		b	.L13
+ 1684              	.L14:
+ 1685 00ea FB88     		ldrh	r3, [r7, #6]
+ 1686 00ec 013B     		subs	r3, r3, #1
+ 1687 00ee FB80     		strh	r3, [r7, #6]	@ movhi
+ 1688              	.L13:
+ 1689 00f0 FB88     		ldrh	r3, [r7, #6]
+ 1690 00f2 002B     		cmp	r3, #0
+ 1691 00f4 F9D1     		bne	.L14
+ 1692 00f6 0020     		movs	r0, #0
+ 1693 00f8 FFF7FEFF 		bl	ili9320_ReadRegister
+ 1694 00fc 0346     		mov	r3, r0
+ 1695 00fe 1A46     		mov	r2, r3
+ 1696 0100 8B4B     		ldr	r3, .L55+4
+ 1697 0102 1A80     		strh	r2, [r3]	@ movhi
+ 1698 0104 8A4B     		ldr	r3, .L55+4
+ 1699 0106 1B88     		ldrh	r3, [r3]
+ 1700 0108 49F22532 		movw	r2, #37669
+ 1701 010c 9342     		cmp	r3, r2
+ 1702 010e 06D0     		beq	.L15
+ 1703 0110 874B     		ldr	r3, .L55+4
+ 1704 0112 1B88     		ldrh	r3, [r3]
+ 1705 0114 49F22832 		movw	r2, #37672
+ 1706 0118 9342     		cmp	r3, r2
+ 1707 011a 40F06E81 		bne	.L16
+ 1708              	.L15:
+ 1709 011e 1021     		movs	r1, #16
+ 1710 0120 E720     		movs	r0, #231
+ 1711 0122 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1712 0126 0121     		movs	r1, #1
+ 1713 0128 0020     		movs	r0, #0
+ 1714 012a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1715 012e 4FF48071 		mov	r1, #256
+ 1716 0132 0120     		movs	r0, #1
+ 1717 0134 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1718 0138 4FF4E061 		mov	r1, #1792
+ 1719 013c 0220     		movs	r0, #2
+ 1720 013e FFF7FEFF 		bl	ili9320_WriteRegister
+ 1721 0142 41F23001 		movw	r1, #4144
+ 1722 0146 0320     		movs	r0, #3
+ 1723 0148 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1724 014c 0021     		movs	r1, #0
+ 1725 014e 0420     		movs	r0, #4
+ 1726 0150 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1727 0154 40F20721 		movw	r1, #519
+ 1728 0158 0820     		movs	r0, #8
+ 1729 015a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1730 015e 0021     		movs	r1, #0
+ 1731 0160 0920     		movs	r0, #9
+ 1732 0162 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1733 0166 0021     		movs	r1, #0
+ 1734 0168 0A20     		movs	r0, #10
+ 1735 016a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1736 016e 0121     		movs	r1, #1
+ 1737 0170 0C20     		movs	r0, #12
+ 1738 0172 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1739 0176 0021     		movs	r1, #0
+ 1740 0178 0D20     		movs	r0, #13
+ 1741 017a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1742 017e 0021     		movs	r1, #0
+ 1743 0180 0F20     		movs	r0, #15
+ 1744 0182 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1745 0186 0021     		movs	r1, #0
+ 1746 0188 1020     		movs	r0, #16
+ 1747 018a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1748 018e 0721     		movs	r1, #7
+ 1749 0190 1120     		movs	r0, #17
+ 1750 0192 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1751 0196 0021     		movs	r1, #0
+ 1752 0198 1220     		movs	r0, #18
+ 1753 019a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1754 019e 0021     		movs	r1, #0
+ 1755 01a0 1320     		movs	r0, #19
+ 1756 01a2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1757 01a6 4CF25033 		movw	r3, #50000
+ 1758 01aa FB80     		strh	r3, [r7, #6]	@ movhi
+ 1759 01ac 02E0     		b	.L17
+ 1760              	.L18:
+ 1761 01ae FB88     		ldrh	r3, [r7, #6]
+ 1762 01b0 013B     		subs	r3, r3, #1
+ 1763 01b2 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1764              	.L17:
+ 1765 01b4 FB88     		ldrh	r3, [r7, #6]
+ 1766 01b6 002B     		cmp	r3, #0
+ 1767 01b8 F9D1     		bne	.L18
+ 1768 01ba 4CF25033 		movw	r3, #50000
+ 1769 01be FB80     		strh	r3, [r7, #6]	@ movhi
+ 1770 01c0 02E0     		b	.L19
+ 1771              	.L20:
+ 1772 01c2 FB88     		ldrh	r3, [r7, #6]
+ 1773 01c4 013B     		subs	r3, r3, #1
+ 1774 01c6 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1775              	.L19:
+ 1776 01c8 FB88     		ldrh	r3, [r7, #6]
+ 1777 01ca 002B     		cmp	r3, #0
+ 1778 01cc F9D1     		bne	.L20
+ 1779 01ce 41F29051 		movw	r1, #5520
+ 1780 01d2 1020     		movs	r0, #16
+ 1781 01d4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1782 01d8 40F22721 		movw	r1, #551
+ 1783 01dc 1120     		movs	r0, #17
+ 1784 01de FFF7FEFF 		bl	ili9320_WriteRegister
+ 1785 01e2 4CF25033 		movw	r3, #50000
+ 1786 01e6 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1787 01e8 02E0     		b	.L21
+ 1788              	.L22:
+ 1789 01ea FB88     		ldrh	r3, [r7, #6]
+ 1790 01ec 013B     		subs	r3, r3, #1
+ 1791 01ee FB80     		strh	r3, [r7, #6]	@ movhi
+ 1792              	.L21:
+ 1793 01f0 FB88     		ldrh	r3, [r7, #6]
+ 1794 01f2 002B     		cmp	r3, #0
+ 1795 01f4 F9D1     		bne	.L22
+ 1796 01f6 4CF25033 		movw	r3, #50000
+ 1797 01fa FB80     		strh	r3, [r7, #6]	@ movhi
+ 1798 01fc 02E0     		b	.L23
+ 1799              	.L24:
+ 1800 01fe FB88     		ldrh	r3, [r7, #6]
+ 1801 0200 013B     		subs	r3, r3, #1
+ 1802 0202 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1803              	.L23:
+ 1804 0204 FB88     		ldrh	r3, [r7, #6]
+ 1805 0206 002B     		cmp	r3, #0
+ 1806 0208 F9D1     		bne	.L24
+ 1807 020a 9C21     		movs	r1, #156
+ 1808 020c 1220     		movs	r0, #18
+ 1809 020e FFF7FEFF 		bl	ili9320_WriteRegister
+ 1810 0212 4CF25033 		movw	r3, #50000
+ 1811 0216 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1812 0218 02E0     		b	.L25
+ 1813              	.L26:
+ 1814 021a FB88     		ldrh	r3, [r7, #6]
+ 1815 021c 013B     		subs	r3, r3, #1
+ 1816 021e FB80     		strh	r3, [r7, #6]	@ movhi
+ 1817              	.L25:
+ 1818 0220 FB88     		ldrh	r3, [r7, #6]
+ 1819 0222 002B     		cmp	r3, #0
+ 1820 0224 F9D1     		bne	.L26
+ 1821 0226 4CF25033 		movw	r3, #50000
+ 1822 022a FB80     		strh	r3, [r7, #6]	@ movhi
+ 1823 022c 02E0     		b	.L27
+ 1824              	.L28:
+ 1825 022e FB88     		ldrh	r3, [r7, #6]
+ 1826 0230 013B     		subs	r3, r3, #1
+ 1827 0232 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1828              	.L27:
+ 1829 0234 FB88     		ldrh	r3, [r7, #6]
+ 1830 0236 002B     		cmp	r3, #0
+ 1831 0238 F9D1     		bne	.L28
+ 1832 023a 4FF4C851 		mov	r1, #6400
+ 1833 023e 1320     		movs	r0, #19
+ 1834 0240 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1835 0244 2321     		movs	r1, #35
+ 1836 0246 2920     		movs	r0, #41
+ 1837 0248 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1838 024c 0E21     		movs	r1, #14
+ 1839 024e 2B20     		movs	r0, #43
+ 1840 0250 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1841 0254 4CF25033 		movw	r3, #50000
+ 1842 0258 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1843 025a 02E0     		b	.L29
+ 1844              	.L30:
+ 1845 025c FB88     		ldrh	r3, [r7, #6]
+ 1846 025e 013B     		subs	r3, r3, #1
+ 1847 0260 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1848              	.L29:
+ 1849 0262 FB88     		ldrh	r3, [r7, #6]
+ 1850 0264 002B     		cmp	r3, #0
+ 1851 0266 F9D1     		bne	.L30
+ 1852 0268 4CF25033 		movw	r3, #50000
+ 1853 026c FB80     		strh	r3, [r7, #6]	@ movhi
+ 1854 026e 02E0     		b	.L31
+ 1855              	.L32:
+ 1856 0270 FB88     		ldrh	r3, [r7, #6]
+ 1857 0272 013B     		subs	r3, r3, #1
+ 1858 0274 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1859              	.L31:
+ 1860 0276 FB88     		ldrh	r3, [r7, #6]
+ 1861 0278 002B     		cmp	r3, #0
+ 1862 027a F9D1     		bne	.L32
+ 1863 027c 0021     		movs	r1, #0
+ 1864 027e 2020     		movs	r0, #32
+ 1865 0280 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1866 0284 0021     		movs	r1, #0
+ 1867 0286 2120     		movs	r0, #33
+ 1868 0288 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1869 028c 4CF25033 		movw	r3, #50000
+ 1870 0290 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1871 0292 02E0     		b	.L33
+ 1872              	.L34:
+ 1873 0294 FB88     		ldrh	r3, [r7, #6]
+ 1874 0296 013B     		subs	r3, r3, #1
+ 1875 0298 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1876              	.L33:
+ 1877 029a FB88     		ldrh	r3, [r7, #6]
+ 1878 029c 002B     		cmp	r3, #0
+ 1879 029e F9D1     		bne	.L34
+ 1880 02a0 4CF25033 		movw	r3, #50000
+ 1881 02a4 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1882 02a6 02E0     		b	.L35
+ 1883              	.L36:
+ 1884 02a8 FB88     		ldrh	r3, [r7, #6]
+ 1885 02aa 013B     		subs	r3, r3, #1
+ 1886 02ac FB80     		strh	r3, [r7, #6]	@ movhi
+ 1887              	.L35:
+ 1888 02ae FB88     		ldrh	r3, [r7, #6]
+ 1889 02b0 002B     		cmp	r3, #0
+ 1890 02b2 F9D1     		bne	.L36
+ 1891 02b4 0721     		movs	r1, #7
+ 1892 02b6 3020     		movs	r0, #48
+ 1893 02b8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1894 02bc 40F20771 		movw	r1, #1799
+ 1895 02c0 3120     		movs	r0, #49
+ 1896 02c2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1897 02c6 0621     		movs	r1, #6
+ 1898 02c8 3220     		movs	r0, #50
+ 1899 02ca FFF7FEFF 		bl	ili9320_WriteRegister
+ 1900 02ce 40F20471 		movw	r1, #1796
+ 1901 02d2 3520     		movs	r0, #53
+ 1902 02d4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1903 02d8 41F60471 		movw	r1, #7940
+ 1904 02dc 3620     		movs	r0, #54
+ 1905 02de FFF7FEFF 		bl	ili9320_WriteRegister
+ 1906 02e2 0421     		movs	r1, #4
+ 1907 02e4 3720     		movs	r0, #55
+ 1908 02e6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1909 02ea 0021     		movs	r1, #0
+ 1910 02ec 3820     		movs	r0, #56
+ 1911 02ee FFF7FEFF 		bl	ili9320_WriteRegister
+ 1912 02f2 40F20671 		movw	r1, #1798
+ 1913 02f6 3920     		movs	r0, #57
+ 1914 02f8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1915 02fc 40F20171 		movw	r1, #1793
+ 1916 0300 3C20     		movs	r0, #60
+ 1917 0302 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1918 0306 0F21     		movs	r1, #15
+ 1919 0308 3D20     		movs	r0, #61
+ 1920 030a FFF7FEFF 		bl	ili9320_WriteRegister
+ 1921 030e 4CF25033 		movw	r3, #50000
+ 1922 0312 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1923 0314 02E0     		b	.L37
+ 1924              	.L38:
+ 1925 0316 FB88     		ldrh	r3, [r7, #6]
+ 1926 0318 013B     		subs	r3, r3, #1
+ 1927 031a FB80     		strh	r3, [r7, #6]	@ movhi
+ 1928              	.L37:
+ 1929 031c FB88     		ldrh	r3, [r7, #6]
+ 1930 031e 002B     		cmp	r3, #0
+ 1931 0320 F9D1     		bne	.L38
+ 1932 0322 4CF25033 		movw	r3, #50000
+ 1933 0326 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1934 0328 07E0     		b	.L39
+ 1935              	.L56:
+ 1936 032a 00BF     		.align	2
+ 1937              	.L55:
+ 1938 032c 10100140 		.word	1073811472
+ 1939 0330 00000000 		.word	DeviceCode
+ 1940              	.L40:
+ 1941 0334 FB88     		ldrh	r3, [r7, #6]
+ 1942 0336 013B     		subs	r3, r3, #1
+ 1943 0338 FB80     		strh	r3, [r7, #6]	@ movhi
+ 1944              	.L39:
+ 1945 033a FB88     		ldrh	r3, [r7, #6]
+ 1946 033c 002B     		cmp	r3, #0
+ 1947 033e F9D1     		bne	.L40
+ 1948 0340 0021     		movs	r1, #0
+ 1949 0342 5020     		movs	r0, #80
+ 1950 0344 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1951 0348 EF21     		movs	r1, #239
+ 1952 034a 5120     		movs	r0, #81
+ 1953 034c FFF7FEFF 		bl	ili9320_WriteRegister
+ 1954 0350 0021     		movs	r1, #0
+ 1955 0352 5220     		movs	r0, #82
+ 1956 0354 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1957 0358 40F23F11 		movw	r1, #319
+ 1958 035c 5320     		movs	r0, #83
+ 1959 035e FFF7FEFF 		bl	ili9320_WriteRegister
+ 1960 0362 4FF42741 		mov	r1, #42752
+ 1961 0366 6020     		movs	r0, #96
+ 1962 0368 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1963 036c 0121     		movs	r1, #1
+ 1964 036e 6120     		movs	r0, #97
+ 1965 0370 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1966 0374 0021     		movs	r1, #0
+ 1967 0376 6A20     		movs	r0, #106
+ 1968 0378 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1969 037c 0021     		movs	r1, #0
+ 1970 037e 8020     		movs	r0, #128
+ 1971 0380 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1972 0384 0021     		movs	r1, #0
+ 1973 0386 8120     		movs	r0, #129
+ 1974 0388 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1975 038c 0021     		movs	r1, #0
+ 1976 038e 8220     		movs	r0, #130
+ 1977 0390 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1978 0394 0021     		movs	r1, #0
+ 1979 0396 8320     		movs	r0, #131
+ 1980 0398 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1981 039c 0021     		movs	r1, #0
+ 1982 039e 8420     		movs	r0, #132
+ 1983 03a0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1984 03a4 0021     		movs	r1, #0
+ 1985 03a6 8520     		movs	r0, #133
+ 1986 03a8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1987 03ac 1021     		movs	r1, #16
+ 1988 03ae 9020     		movs	r0, #144
+ 1989 03b0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1990 03b4 0021     		movs	r1, #0
+ 1991 03b6 9220     		movs	r0, #146
+ 1992 03b8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1993 03bc 0321     		movs	r1, #3
+ 1994 03be 9320     		movs	r0, #147
+ 1995 03c0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 1996 03c4 4FF48871 		mov	r1, #272
+ 1997 03c8 9520     		movs	r0, #149
+ 1998 03ca FFF7FEFF 		bl	ili9320_WriteRegister
+ 1999 03ce 0021     		movs	r1, #0
+ 2000 03d0 9720     		movs	r0, #151
+ 2001 03d2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2002 03d6 0021     		movs	r1, #0
+ 2003 03d8 9820     		movs	r0, #152
+ 2004 03da FFF7FEFF 		bl	ili9320_WriteRegister
+ 2005 03de 40F23311 		movw	r1, #307
+ 2006 03e2 0720     		movs	r0, #7
+ 2007 03e4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2008 03e8 0021     		movs	r1, #0
+ 2009 03ea 2020     		movs	r0, #32
+ 2010 03ec FFF7FEFF 		bl	ili9320_WriteRegister
+ 2011 03f0 0021     		movs	r1, #0
+ 2012 03f2 2120     		movs	r0, #33
+ 2013 03f4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2014 03f8 E6E2     		b	.L41
+ 2015              	.L16:
+ 2016 03fa B34B     		ldr	r3, .L57
+ 2017 03fc 1B88     		ldrh	r3, [r3]
+ 2018 03fe 49F22032 		movw	r2, #37664
+ 2019 0402 9342     		cmp	r3, r2
+ 2020 0404 40F0CE80 		bne	.L42
+ 2021 0408 0021     		movs	r1, #0
+ 2022 040a 0020     		movs	r0, #0
+ 2023 040c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2024 0410 4FF48071 		mov	r1, #256
+ 2025 0414 0120     		movs	r0, #1
+ 2026 0416 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2027 041a 4FF4E061 		mov	r1, #1792
+ 2028 041e 0220     		movs	r0, #2
+ 2029 0420 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2030 0424 41F21801 		movw	r1, #4120
+ 2031 0428 0320     		movs	r0, #3
+ 2032 042a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2033 042e 0021     		movs	r1, #0
+ 2034 0430 0420     		movs	r0, #4
+ 2035 0432 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2036 0436 40F20221 		movw	r1, #514
+ 2037 043a 0820     		movs	r0, #8
+ 2038 043c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2039 0440 0021     		movs	r1, #0
+ 2040 0442 0920     		movs	r0, #9
+ 2041 0444 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2042 0448 0021     		movs	r1, #0
+ 2043 044a 0A20     		movs	r0, #10
+ 2044 044c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2045 0450 0121     		movs	r1, #1
+ 2046 0452 0C20     		movs	r0, #12
+ 2047 0454 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2048 0458 0021     		movs	r1, #0
+ 2049 045a 0D20     		movs	r0, #13
+ 2050 045c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2051 0460 0021     		movs	r1, #0
+ 2052 0462 0F20     		movs	r0, #15
+ 2053 0464 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2054 0468 4CF25033 		movw	r3, #50000
+ 2055 046c FB80     		strh	r3, [r7, #6]	@ movhi
+ 2056 046e 02E0     		b	.L43
+ 2057              	.L44:
+ 2058 0470 FB88     		ldrh	r3, [r7, #6]
+ 2059 0472 013B     		subs	r3, r3, #1
+ 2060 0474 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2061              	.L43:
+ 2062 0476 FB88     		ldrh	r3, [r7, #6]
+ 2063 0478 002B     		cmp	r3, #0
+ 2064 047a F9D1     		bne	.L44
+ 2065 047c 4CF25033 		movw	r3, #50000
+ 2066 0480 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2067 0482 02E0     		b	.L45
+ 2068              	.L46:
+ 2069 0484 FB88     		ldrh	r3, [r7, #6]
+ 2070 0486 013B     		subs	r3, r3, #1
+ 2071 0488 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2072              	.L45:
+ 2073 048a FB88     		ldrh	r3, [r7, #6]
+ 2074 048c 002B     		cmp	r3, #0
+ 2075 048e F9D1     		bne	.L46
+ 2076 0490 40F20111 		movw	r1, #257
+ 2077 0494 0720     		movs	r0, #7
+ 2078 0496 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2079 049a 4CF25033 		movw	r3, #50000
+ 2080 049e FB80     		strh	r3, [r7, #6]	@ movhi
+ 2081 04a0 02E0     		b	.L47
+ 2082              	.L48:
+ 2083 04a2 FB88     		ldrh	r3, [r7, #6]
+ 2084 04a4 013B     		subs	r3, r3, #1
+ 2085 04a6 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2086              	.L47:
+ 2087 04a8 FB88     		ldrh	r3, [r7, #6]
+ 2088 04aa 002B     		cmp	r3, #0
+ 2089 04ac F9D1     		bne	.L48
+ 2090 04ae 4CF25033 		movw	r3, #50000
+ 2091 04b2 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2092 04b4 02E0     		b	.L49
+ 2093              	.L50:
+ 2094 04b6 FB88     		ldrh	r3, [r7, #6]
+ 2095 04b8 013B     		subs	r3, r3, #1
+ 2096 04ba FB80     		strh	r3, [r7, #6]	@ movhi
+ 2097              	.L49:
+ 2098 04bc FB88     		ldrh	r3, [r7, #6]
+ 2099 04be 002B     		cmp	r3, #0
+ 2100 04c0 F9D1     		bne	.L50
+ 2101 04c2 4FF48651 		mov	r1, #4288
+ 2102 04c6 1020     		movs	r0, #16
+ 2103 04c8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2104 04cc 0721     		movs	r1, #7
+ 2105 04ce 1120     		movs	r0, #17
+ 2106 04d0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2107 04d4 4FF48871 		mov	r1, #272
+ 2108 04d8 1220     		movs	r0, #18
+ 2109 04da FFF7FEFF 		bl	ili9320_WriteRegister
+ 2110 04de 4FF43061 		mov	r1, #2816
+ 2111 04e2 1320     		movs	r0, #19
+ 2112 04e4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2113 04e8 0021     		movs	r1, #0
+ 2114 04ea 2920     		movs	r0, #41
+ 2115 04ec FFF7FEFF 		bl	ili9320_WriteRegister
+ 2116 04f0 44F21001 		movw	r1, #16400
+ 2117 04f4 2B20     		movs	r0, #43
+ 2118 04f6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2119 04fa 0021     		movs	r1, #0
+ 2120 04fc 5020     		movs	r0, #80
+ 2121 04fe FFF7FEFF 		bl	ili9320_WriteRegister
+ 2122 0502 EF21     		movs	r1, #239
+ 2123 0504 5120     		movs	r0, #81
+ 2124 0506 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2125 050a 0021     		movs	r1, #0
+ 2126 050c 5220     		movs	r0, #82
+ 2127 050e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2128 0512 40F23F11 		movw	r1, #319
+ 2129 0516 5320     		movs	r0, #83
+ 2130 0518 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2131 051c 4FF41C51 		mov	r1, #9984
+ 2132 0520 6020     		movs	r0, #96
+ 2133 0522 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2134 0526 0121     		movs	r1, #1
+ 2135 0528 6120     		movs	r0, #97
+ 2136 052a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2137 052e 0021     		movs	r1, #0
+ 2138 0530 6A20     		movs	r0, #106
+ 2139 0532 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2140 0536 0021     		movs	r1, #0
+ 2141 0538 8020     		movs	r0, #128
+ 2142 053a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2143 053e 0021     		movs	r1, #0
+ 2144 0540 8120     		movs	r0, #129
+ 2145 0542 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2146 0546 0021     		movs	r1, #0
+ 2147 0548 8220     		movs	r0, #130
+ 2148 054a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2149 054e 0021     		movs	r1, #0
+ 2150 0550 8320     		movs	r0, #131
+ 2151 0552 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2152 0556 0021     		movs	r1, #0
+ 2153 0558 8420     		movs	r0, #132
+ 2154 055a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2155 055e 0021     		movs	r1, #0
+ 2156 0560 8520     		movs	r0, #133
+ 2157 0562 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2158 0566 1021     		movs	r1, #16
+ 2159 0568 9020     		movs	r0, #144
+ 2160 056a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2161 056e 0021     		movs	r1, #0
+ 2162 0570 9220     		movs	r0, #146
+ 2163 0572 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2164 0576 0121     		movs	r1, #1
+ 2165 0578 9320     		movs	r0, #147
+ 2166 057a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2167 057e 4FF48871 		mov	r1, #272
+ 2168 0582 9520     		movs	r0, #149
+ 2169 0584 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2170 0588 0021     		movs	r1, #0
+ 2171 058a 9720     		movs	r0, #151
+ 2172 058c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2173 0590 0021     		movs	r1, #0
+ 2174 0592 9820     		movs	r0, #152
+ 2175 0594 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2176 0598 40F27311 		movw	r1, #371
+ 2177 059c 0720     		movs	r0, #7
+ 2178 059e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2179 05a2 11E2     		b	.L41
+ 2180              	.L42:
+ 2181 05a4 484B     		ldr	r3, .L57
+ 2182 05a6 1B88     		ldrh	r3, [r3]
+ 2183 05a8 49F61912 		movw	r2, #39193
+ 2184 05ac 9342     		cmp	r3, r2
+ 2185 05ae 40F08D80 		bne	.L51
+ 2186 05b2 0621     		movs	r1, #6
+ 2187 05b4 2820     		movs	r0, #40
+ 2188 05b6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2189 05ba 0121     		movs	r1, #1
+ 2190 05bc 0020     		movs	r0, #0
+ 2191 05be FFF7FEFF 		bl	ili9320_WriteRegister
+ 2192 05c2 0021     		movs	r1, #0
+ 2193 05c4 1020     		movs	r0, #16
+ 2194 05c6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2195 05ca 47F2EF21 		movw	r1, #29423
+ 2196 05ce 0120     		movs	r0, #1
+ 2197 05d0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2198 05d4 4FF4C061 		mov	r1, #1536
+ 2199 05d8 0220     		movs	r0, #2
+ 2200 05da FFF7FEFF 		bl	ili9320_WriteRegister
+ 2201 05de 46F63821 		movw	r1, #27192
+ 2202 05e2 0320     		movs	r0, #3
+ 2203 05e4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2204 05e8 46F67401 		movw	r1, #26740
+ 2205 05ec 1120     		movs	r0, #17
+ 2206 05ee FFF7FEFF 		bl	ili9320_WriteRegister
+ 2207 05f2 0021     		movs	r1, #0
+ 2208 05f4 0F20     		movs	r0, #15
+ 2209 05f6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2210 05fa 45F20831 		movw	r1, #21256
+ 2211 05fe 0B20     		movs	r0, #11
+ 2212 0600 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2213 0604 0321     		movs	r1, #3
+ 2214 0606 0C20     		movs	r0, #12
+ 2215 0608 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2216 060c 0A21     		movs	r1, #10
+ 2217 060e 0D20     		movs	r0, #13
+ 2218 0610 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2219 0614 4FF43851 		mov	r1, #11776
+ 2220 0618 0E20     		movs	r0, #14
+ 2221 061a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2222 061e BE21     		movs	r1, #190
+ 2223 0620 1E20     		movs	r0, #30
+ 2224 0622 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2225 0626 4FF40041 		mov	r1, #32768
+ 2226 062a 2520     		movs	r0, #37
+ 2227 062c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2228 0630 4FF4F041 		mov	r1, #30720
+ 2229 0634 2620     		movs	r0, #38
+ 2230 0636 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2231 063a 7821     		movs	r1, #120
+ 2232 063c 2720     		movs	r0, #39
+ 2233 063e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2234 0642 0021     		movs	r1, #0
+ 2235 0644 4E20     		movs	r0, #78
+ 2236 0646 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2237 064a 0021     		movs	r1, #0
+ 2238 064c 4F20     		movs	r0, #79
+ 2239 064e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2240 0652 40F6D901 		movw	r1, #2265
+ 2241 0656 1220     		movs	r0, #18
+ 2242 0658 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2243 065c 0021     		movs	r1, #0
+ 2244 065e 3020     		movs	r0, #48
+ 2245 0660 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2246 0664 4FF48271 		mov	r1, #260
+ 2247 0668 3120     		movs	r0, #49
+ 2248 066a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2249 066e 4FF48071 		mov	r1, #256
+ 2250 0672 3220     		movs	r0, #50
+ 2251 0674 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2252 0678 40F20531 		movw	r1, #773
+ 2253 067c 3320     		movs	r0, #51
+ 2254 067e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2255 0682 40F20551 		movw	r1, #1285
+ 2256 0686 3420     		movs	r0, #52
+ 2257 0688 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2258 068c 40F20531 		movw	r1, #773
+ 2259 0690 3520     		movs	r0, #53
+ 2260 0692 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2261 0696 40F20771 		movw	r1, #1799
+ 2262 069a 3620     		movs	r0, #54
+ 2263 069c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2264 06a0 4FF44071 		mov	r1, #768
+ 2265 06a4 3720     		movs	r0, #55
+ 2266 06a6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2267 06aa 4FF49051 		mov	r1, #4608
+ 2268 06ae 3A20     		movs	r0, #58
+ 2269 06b0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2270 06b4 4FF40061 		mov	r1, #2048
+ 2271 06b8 3B20     		movs	r0, #59
+ 2272 06ba FFF7FEFF 		bl	ili9320_WriteRegister
+ 2273 06be 3321     		movs	r1, #51
+ 2274 06c0 0720     		movs	r0, #7
+ 2275 06c2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2276 06c6 7FE1     		b	.L41
+ 2277              	.L58:
+ 2278              		.align	2
+ 2279              	.L57:
+ 2280 06c8 00000000 		.word	DeviceCode
+ 2281              	.L51:
+ 2282 06cc C94B     		ldr	r3, .L59
+ 2283 06ce 1B88     		ldrh	r3, [r3]
+ 2284 06d0 44F23152 		movw	r2, #17713
+ 2285 06d4 9342     		cmp	r3, r2
+ 2286 06d6 40F0B680 		bne	.L52
+ 2287 06da 0121     		movs	r1, #1
+ 2288 06dc 0020     		movs	r0, #0
+ 2289 06de FFF7FEFF 		bl	ili9320_WriteRegister
+ 2290 06e2 4FF4C561 		mov	r1, #1576
+ 2291 06e6 1020     		movs	r0, #16
+ 2292 06e8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2293 06ec 0621     		movs	r1, #6
+ 2294 06ee 1220     		movs	r0, #18
+ 2295 06f0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2296 06f4 40F63221 		movw	r1, #2610
+ 2297 06f8 1320     		movs	r0, #19
+ 2298 06fa FFF7FEFF 		bl	ili9320_WriteRegister
+ 2299 06fe 4021     		movs	r1, #64
+ 2300 0700 1120     		movs	r0, #17
+ 2301 0702 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2302 0706 5021     		movs	r1, #80
+ 2303 0708 1520     		movs	r0, #21
+ 2304 070a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2305 070e 1621     		movs	r1, #22
+ 2306 0710 1220     		movs	r0, #18
+ 2307 0712 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2308 0716 0F20     		movs	r0, #15
+ 2309 0718 FFF7FEFF 		bl	ili9320_Delay
+ 2310 071c 45F26061 		movw	r1, #22112
+ 2311 0720 1020     		movs	r0, #16
+ 2312 0722 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2313 0726 0F20     		movs	r0, #15
+ 2314 0728 FFF7FEFF 		bl	ili9320_Delay
+ 2315 072c 42F64E21 		movw	r1, #10830
+ 2316 0730 1320     		movs	r0, #19
+ 2317 0732 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2318 0736 4FF48071 		mov	r1, #256
+ 2319 073a 0120     		movs	r0, #1
+ 2320 073c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2321 0740 4FF44071 		mov	r1, #768
+ 2322 0744 0220     		movs	r0, #2
+ 2323 0746 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2324 074a 41F23001 		movw	r1, #4144
+ 2325 074e 0320     		movs	r0, #3
+ 2326 0750 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2327 0754 40F20221 		movw	r1, #514
+ 2328 0758 0820     		movs	r0, #8
+ 2329 075a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2330 075e 0021     		movs	r1, #0
+ 2331 0760 0A20     		movs	r0, #10
+ 2332 0762 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2333 0766 0021     		movs	r1, #0
+ 2334 0768 3020     		movs	r0, #48
+ 2335 076a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2336 076e 40F20241 		movw	r1, #1026
+ 2337 0772 3120     		movs	r0, #49
+ 2338 0774 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2339 0778 4FF48371 		mov	r1, #262
+ 2340 077c 3220     		movs	r0, #50
+ 2341 077e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2342 0782 4FF4E061 		mov	r1, #1792
+ 2343 0786 3320     		movs	r0, #51
+ 2344 0788 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2345 078c 4FF48271 		mov	r1, #260
+ 2346 0790 3420     		movs	r0, #52
+ 2347 0792 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2348 0796 40F20131 		movw	r1, #769
+ 2349 079a 3520     		movs	r0, #53
+ 2350 079c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2351 07a0 40F20771 		movw	r1, #1799
+ 2352 07a4 3620     		movs	r0, #54
+ 2353 07a6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2354 07aa 40F20531 		movw	r1, #773
+ 2355 07ae 3720     		movs	r0, #55
+ 2356 07b0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2357 07b4 4FF40271 		mov	r1, #520
+ 2358 07b8 3820     		movs	r0, #56
+ 2359 07ba FFF7FEFF 		bl	ili9320_WriteRegister
+ 2360 07be 40F60B71 		movw	r1, #3851
+ 2361 07c2 3920     		movs	r0, #57
+ 2362 07c4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2363 07c8 0F20     		movs	r0, #15
+ 2364 07ca FFF7FEFF 		bl	ili9320_Delay
+ 2365 07ce 0221     		movs	r1, #2
+ 2366 07d0 4120     		movs	r0, #65
+ 2367 07d2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2368 07d6 4FF41C51 		mov	r1, #9984
+ 2369 07da 6020     		movs	r0, #96
+ 2370 07dc FFF7FEFF 		bl	ili9320_WriteRegister
+ 2371 07e0 0121     		movs	r1, #1
+ 2372 07e2 6120     		movs	r0, #97
+ 2373 07e4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2374 07e8 40F21911 		movw	r1, #281
+ 2375 07ec 9020     		movs	r0, #144
+ 2376 07ee FFF7FEFF 		bl	ili9320_WriteRegister
+ 2377 07f2 4FF48571 		mov	r1, #266
+ 2378 07f6 9220     		movs	r0, #146
+ 2379 07f8 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2380 07fc 0421     		movs	r1, #4
+ 2381 07fe 9320     		movs	r0, #147
+ 2382 0800 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2383 0804 4FF48071 		mov	r1, #256
+ 2384 0808 A020     		movs	r0, #160
+ 2385 080a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2386 080e 0F20     		movs	r0, #15
+ 2387 0810 FFF7FEFF 		bl	ili9320_Delay
+ 2388 0814 0F20     		movs	r0, #15
+ 2389 0816 FFF7FEFF 		bl	ili9320_Delay
+ 2390 081a 0F20     		movs	r0, #15
+ 2391 081c FFF7FEFF 		bl	ili9320_Delay
+ 2392 0820 0F20     		movs	r0, #15
+ 2393 0822 FFF7FEFF 		bl	ili9320_Delay
+ 2394 0826 40F23311 		movw	r1, #307
+ 2395 082a 0720     		movs	r0, #7
+ 2396 082c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2397 0830 0F20     		movs	r0, #15
+ 2398 0832 FFF7FEFF 		bl	ili9320_Delay
+ 2399 0836 0021     		movs	r1, #0
+ 2400 0838 A020     		movs	r0, #160
+ 2401 083a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2402 083e 1420     		movs	r0, #20
+ 2403 0840 FFF7FEFF 		bl	ili9320_Delay
+ 2404 0844 C0E0     		b	.L41
+ 2405              	.L52:
+ 2406 0846 6B4B     		ldr	r3, .L59
+ 2407 0848 1B88     		ldrh	r3, [r3]
+ 2408 084a 47F28372 		movw	r2, #30595
+ 2409 084e 9342     		cmp	r3, r2
+ 2410 0850 40F0BA80 		bne	.L41
+ 2411 0854 0121     		movs	r1, #1
+ 2412 0856 FF20     		movs	r0, #255
+ 2413 0858 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2414 085c 0821     		movs	r1, #8
+ 2415 085e F320     		movs	r0, #243
+ 2416 0860 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2417 0864 4FF48071 		mov	r1, #256
+ 2418 0868 0120     		movs	r0, #1
+ 2419 086a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2420 086e 4FF4E061 		mov	r1, #1792
+ 2421 0872 0220     		movs	r0, #2
+ 2422 0874 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2423 0878 41F23001 		movw	r1, #4144
+ 2424 087c 0320     		movs	r0, #3
+ 2425 087e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2426 0882 40F20231 		movw	r1, #770
+ 2427 0886 0820     		movs	r0, #8
+ 2428 0888 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2429 088c 40F20721 		movw	r1, #519
+ 2430 0890 0820     		movs	r0, #8
+ 2431 0892 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2432 0896 0021     		movs	r1, #0
+ 2433 0898 0920     		movs	r0, #9
+ 2434 089a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2435 089e 0021     		movs	r1, #0
+ 2436 08a0 0A20     		movs	r0, #10
+ 2437 08a2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2438 08a6 0021     		movs	r1, #0
+ 2439 08a8 1020     		movs	r0, #16
+ 2440 08aa FFF7FEFF 		bl	ili9320_WriteRegister
+ 2441 08ae 0521     		movs	r1, #5
+ 2442 08b0 1120     		movs	r0, #17
+ 2443 08b2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2444 08b6 0021     		movs	r1, #0
+ 2445 08b8 1220     		movs	r0, #18
+ 2446 08ba FFF7FEFF 		bl	ili9320_WriteRegister
+ 2447 08be 0021     		movs	r1, #0
+ 2448 08c0 1320     		movs	r0, #19
+ 2449 08c2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2450 08c6 3220     		movs	r0, #50
+ 2451 08c8 FFF7FEFF 		bl	ili9320_Delay
+ 2452 08cc 41F2B021 		movw	r1, #4784
+ 2453 08d0 1020     		movs	r0, #16
+ 2454 08d2 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2455 08d6 3220     		movs	r0, #50
+ 2456 08d8 FFF7FEFF 		bl	ili9320_Delay
+ 2457 08dc 0721     		movs	r1, #7
+ 2458 08de 1120     		movs	r0, #17
+ 2459 08e0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2460 08e4 3220     		movs	r0, #50
+ 2461 08e6 FFF7FEFF 		bl	ili9320_Delay
+ 2462 08ea 8B21     		movs	r1, #139
+ 2463 08ec 1220     		movs	r0, #18
+ 2464 08ee FFF7FEFF 		bl	ili9320_WriteRegister
+ 2465 08f2 3220     		movs	r0, #50
+ 2466 08f4 FFF7FEFF 		bl	ili9320_Delay
+ 2467 08f8 4FF4B851 		mov	r1, #5888
+ 2468 08fc 1320     		movs	r0, #19
+ 2469 08fe FFF7FEFF 		bl	ili9320_WriteRegister
+ 2470 0902 3220     		movs	r0, #50
+ 2471 0904 FFF7FEFF 		bl	ili9320_Delay
+ 2472 0908 2221     		movs	r1, #34
+ 2473 090a 2920     		movs	r0, #41
+ 2474 090c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2475 0910 0021     		movs	r1, #0
+ 2476 0912 3020     		movs	r0, #48
+ 2477 0914 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2478 0918 40F20771 		movw	r1, #1799
+ 2479 091c 3120     		movs	r0, #49
+ 2480 091e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2481 0922 40F20551 		movw	r1, #1285
+ 2482 0926 3220     		movs	r0, #50
+ 2483 0928 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2484 092c 40F20711 		movw	r1, #263
+ 2485 0930 3520     		movs	r0, #53
+ 2486 0932 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2487 0936 0821     		movs	r1, #8
+ 2488 0938 3620     		movs	r0, #54
+ 2489 093a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2490 093e 0021     		movs	r1, #0
+ 2491 0940 3720     		movs	r0, #55
+ 2492 0942 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2493 0946 40F20221 		movw	r1, #514
+ 2494 094a 3820     		movs	r0, #56
+ 2495 094c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2496 0950 4FF48371 		mov	r1, #262
+ 2497 0954 3920     		movs	r0, #57
+ 2498 0956 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2499 095a 40F20221 		movw	r1, #514
+ 2500 095e 3C20     		movs	r0, #60
+ 2501 0960 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2502 0964 4FF48161 		mov	r1, #1032
+ 2503 0968 3D20     		movs	r0, #61
+ 2504 096a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2505 096e 3220     		movs	r0, #50
+ 2506 0970 FFF7FEFF 		bl	ili9320_Delay
+ 2507 0974 0021     		movs	r1, #0
+ 2508 0976 5020     		movs	r0, #80
+ 2509 0978 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2510 097c EF21     		movs	r1, #239
+ 2511 097e 5120     		movs	r0, #81
+ 2512 0980 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2513 0984 0021     		movs	r1, #0
+ 2514 0986 5220     		movs	r0, #82
+ 2515 0988 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2516 098c 40F23F11 		movw	r1, #319
+ 2517 0990 5320     		movs	r0, #83
+ 2518 0992 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2519 0996 4FF42741 		mov	r1, #42752
+ 2520 099a 6020     		movs	r0, #96
+ 2521 099c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2522 09a0 0121     		movs	r1, #1
+ 2523 09a2 6120     		movs	r0, #97
+ 2524 09a4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2525 09a8 3321     		movs	r1, #51
+ 2526 09aa 9020     		movs	r0, #144
+ 2527 09ac FFF7FEFF 		bl	ili9320_WriteRegister
+ 2528 09b0 0B21     		movs	r1, #11
+ 2529 09b2 2B20     		movs	r0, #43
+ 2530 09b4 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2531 09b8 40F23311 		movw	r1, #307
+ 2532 09bc 0720     		movs	r0, #7
+ 2533 09be FFF7FEFF 		bl	ili9320_WriteRegister
+ 2534 09c2 3220     		movs	r0, #50
+ 2535 09c4 FFF7FEFF 		bl	ili9320_Delay
+ 2536              	.L41:
+ 2537 09c8 4CF25033 		movw	r3, #50000
+ 2538 09cc FB80     		strh	r3, [r7, #6]	@ movhi
+ 2539 09ce 02E0     		b	.L53
+ 2540              	.L54:
+ 2541 09d0 FB88     		ldrh	r3, [r7, #6]
+ 2542 09d2 013B     		subs	r3, r3, #1
+ 2543 09d4 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2544              	.L53:
+ 2545 09d6 FB88     		ldrh	r3, [r7, #6]
+ 2546 09d8 002B     		cmp	r3, #0
+ 2547 09da F9D1     		bne	.L54
+ 2548 09dc F820     		movs	r0, #248
+ 2549 09de FFF7FEFF 		bl	ili9320_Clear
+ 2550 09e2 4FF47840 		mov	r0, #63488
+ 2551 09e6 FFF7FEFF 		bl	ili9320_Clear
+ 2552 09ea 00BF     		nop
+ 2553 09ec 0837     		adds	r7, r7, #8
+ 2554 09ee BD46     		mov	sp, r7
+ 2555              		@ sp needed
+ 2556 09f0 80BD     		pop	{r7, pc}
+ 2557              	.L60:
+ 2558 09f2 00BF     		.align	2
+ 2559              	.L59:
+ 2560 09f4 00000000 		.word	DeviceCode
+ 2562              		.align	1
+ 2563              		.global	ili9320_SetCursor
+ 2564              		.syntax unified
+ 2565              		.thumb
+ 2566              		.thumb_func
+ 2567              		.fpu softvfp
+ 2569              	ili9320_SetCursor:
+ 2570              		@ args = 0, pretend = 0, frame = 8
+ 2571              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2572 09f8 80B5     		push	{r7, lr}
+ 2573 09fa 82B0     		sub	sp, sp, #8
+ 2574 09fc 00AF     		add	r7, sp, #0
+ 2575 09fe 0346     		mov	r3, r0
+ 2576 0a00 0A46     		mov	r2, r1
+ 2577 0a02 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2578 0a04 1346     		mov	r3, r2	@ movhi
+ 2579 0a06 BB80     		strh	r3, [r7, #4]	@ movhi
+ 2580 0a08 1B4B     		ldr	r3, .L66
+ 2581 0a0a 1B88     		ldrh	r3, [r3]
+ 2582 0a0c 48F68912 		movw	r2, #35209
+ 2583 0a10 9342     		cmp	r3, r2
+ 2584 0a12 0ED1     		bne	.L62
+ 2585 0a14 BB88     		ldrh	r3, [r7, #4]
+ 2586 0a16 1946     		mov	r1, r3
+ 2587 0a18 4E20     		movs	r0, #78
+ 2588 0a1a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2589 0a1e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 2590 0a20 C3F59F73 		rsb	r3, r3, #318
+ 2591 0a24 0133     		adds	r3, r3, #1
+ 2592 0a26 9BB2     		uxth	r3, r3
+ 2593 0a28 1946     		mov	r1, r3
+ 2594 0a2a 4F20     		movs	r0, #79
+ 2595 0a2c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2596 0a30 1EE0     		b	.L65
+ 2597              	.L62:
+ 2598 0a32 114B     		ldr	r3, .L66
+ 2599 0a34 1B88     		ldrh	r3, [r3]
+ 2600 0a36 49F61912 		movw	r2, #39193
+ 2601 0a3a 9342     		cmp	r3, r2
+ 2602 0a3c 0AD1     		bne	.L64
+ 2603 0a3e FB88     		ldrh	r3, [r7, #6]
+ 2604 0a40 1946     		mov	r1, r3
+ 2605 0a42 4E20     		movs	r0, #78
+ 2606 0a44 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2607 0a48 BB88     		ldrh	r3, [r7, #4]
+ 2608 0a4a 1946     		mov	r1, r3
+ 2609 0a4c 4F20     		movs	r0, #79
+ 2610 0a4e FFF7FEFF 		bl	ili9320_WriteRegister
+ 2611 0a52 0DE0     		b	.L65
+ 2612              	.L64:
+ 2613 0a54 BB88     		ldrh	r3, [r7, #4]
+ 2614 0a56 1946     		mov	r1, r3
+ 2615 0a58 2020     		movs	r0, #32
+ 2616 0a5a FFF7FEFF 		bl	ili9320_WriteRegister
+ 2617 0a5e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 2618 0a60 C3F59F73 		rsb	r3, r3, #318
+ 2619 0a64 0133     		adds	r3, r3, #1
+ 2620 0a66 9BB2     		uxth	r3, r3
+ 2621 0a68 1946     		mov	r1, r3
+ 2622 0a6a 2120     		movs	r0, #33
+ 2623 0a6c FFF7FEFF 		bl	ili9320_WriteRegister
+ 2624              	.L65:
+ 2625 0a70 00BF     		nop
+ 2626 0a72 0837     		adds	r7, r7, #8
+ 2627 0a74 BD46     		mov	sp, r7
+ 2628              		@ sp needed
+ 2629 0a76 80BD     		pop	{r7, pc}
+ 2630              	.L67:
+ 2631              		.align	2
+ 2632              	.L66:
+ 2633 0a78 00000000 		.word	DeviceCode
+ 2635              		.align	1
+ 2636              		.global	ili9320_SetWindows
+ 2637              		.syntax unified
+ 2638              		.thumb
+ 2639              		.thumb_func
+ 2640              		.fpu softvfp
+ 2642              	ili9320_SetWindows:
+ 2643              		@ args = 0, pretend = 0, frame = 8
+ 2644              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2645 0a7c 90B5     		push	{r4, r7, lr}
+ 2646 0a7e 83B0     		sub	sp, sp, #12
+ 2647 0a80 00AF     		add	r7, sp, #0
+ 2648 0a82 0446     		mov	r4, r0
+ 2649 0a84 0846     		mov	r0, r1
+ 2650 0a86 1146     		mov	r1, r2
+ 2651 0a88 1A46     		mov	r2, r3
+ 2652 0a8a 2346     		mov	r3, r4	@ movhi
+ 2653 0a8c FB80     		strh	r3, [r7, #6]	@ movhi
+ 2654 0a8e 0346     		mov	r3, r0	@ movhi
+ 2655 0a90 BB80     		strh	r3, [r7, #4]	@ movhi
+ 2656 0a92 0B46     		mov	r3, r1	@ movhi
+ 2657 0a94 7B80     		strh	r3, [r7, #2]	@ movhi
+ 2658 0a96 1346     		mov	r3, r2	@ movhi
+ 2659 0a98 3B80     		strh	r3, [r7]	@ movhi
+ 2660 0a9a BA88     		ldrh	r2, [r7, #4]
+ 2661 0a9c FB88     		ldrh	r3, [r7, #6]
+ 2662 0a9e 1146     		mov	r1, r2
+ 2663 0aa0 1846     		mov	r0, r3
+ 2664 0aa2 FFF7FEFF 		bl	ili9320_SetCursor
+ 2665 0aa6 FB88     		ldrh	r3, [r7, #6]
+ 2666 0aa8 1946     		mov	r1, r3
+ 2667 0aaa 5020     		movs	r0, #80
+ 2668 0aac FFF7FEFF 		bl	ili9320_WriteRegister
+ 2669 0ab0 BB88     		ldrh	r3, [r7, #4]
+ 2670 0ab2 1946     		mov	r1, r3
+ 2671 0ab4 5220     		movs	r0, #82
+ 2672 0ab6 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2673 0aba 7B88     		ldrh	r3, [r7, #2]
+ 2674 0abc 1946     		mov	r1, r3
+ 2675 0abe 5120     		movs	r0, #81
+ 2676 0ac0 FFF7FEFF 		bl	ili9320_WriteRegister
+ 2677 0ac4 3B88     		ldrh	r3, [r7]
+ 2678 0ac6 1946     		mov	r1, r3
+ 2679 0ac8 5320     		movs	r0, #83
+ 2680 0aca FFF7FEFF 		bl	ili9320_WriteRegister
+ 2681 0ace 00BF     		nop
+ 2682 0ad0 0C37     		adds	r7, r7, #12
+ 2683 0ad2 BD46     		mov	sp, r7
+ 2684              		@ sp needed
+ 2685 0ad4 90BD     		pop	{r4, r7, pc}
+ 2687              		.align	1
+ 2688              		.global	ili9320_Clear
+ 2689              		.syntax unified
+ 2690              		.thumb
+ 2691              		.thumb_func
+ 2692              		.fpu softvfp
+ 2694              	ili9320_Clear:
+ 2695              		@ args = 0, pretend = 0, frame = 16
+ 2696              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2697 0ad6 80B5     		push	{r7, lr}
+ 2698 0ad8 84B0     		sub	sp, sp, #16
+ 2699 0ada 00AF     		add	r7, sp, #0
+ 2700 0adc 0346     		mov	r3, r0
+ 2701 0ade FB80     		strh	r3, [r7, #6]	@ movhi
+ 2702 0ae0 0021     		movs	r1, #0
+ 2703 0ae2 0020     		movs	r0, #0
+ 2704 0ae4 FFF7FEFF 		bl	ili9320_SetCursor
+ 2705 0ae8 144B     		ldr	r3, .L72
+ 2706 0aea 4FF48072 		mov	r2, #256
+ 2707 0aee 1A60     		str	r2, [r3]
+ 2708 0af0 2220     		movs	r0, #34
+ 2709 0af2 FFF7FEFF 		bl	ili9320_WriteIndex
+ 2710 0af6 124B     		ldr	r3, .L72+4
+ 2711 0af8 4FF40072 		mov	r2, #512
+ 2712 0afc 1A60     		str	r2, [r3]
+ 2713 0afe 0023     		movs	r3, #0
+ 2714 0b00 FB60     		str	r3, [r7, #12]
+ 2715 0b02 0EE0     		b	.L70
+ 2716              	.L71:
+ 2717 0b04 FB88     		ldrh	r3, [r7, #6]
+ 2718 0b06 1846     		mov	r0, r3
+ 2719 0b08 FFF7FEFF 		bl	ili9320_WriteData
+ 2720 0b0c 0B4B     		ldr	r3, .L72
+ 2721 0b0e 4FF48062 		mov	r2, #1024
+ 2722 0b12 1A60     		str	r2, [r3]
+ 2723 0b14 0A4B     		ldr	r3, .L72+4
+ 2724 0b16 4FF48062 		mov	r2, #1024
+ 2725 0b1a 1A60     		str	r2, [r3]
+ 2726 0b1c FB68     		ldr	r3, [r7, #12]
+ 2727 0b1e 0133     		adds	r3, r3, #1
+ 2728 0b20 FB60     		str	r3, [r7, #12]
+ 2729              	.L70:
+ 2730 0b22 FB68     		ldr	r3, [r7, #12]
+ 2731 0b24 B3F5963F 		cmp	r3, #76800
+ 2732 0b28 ECD3     		bcc	.L71
+ 2733 0b2a 054B     		ldr	r3, .L72+4
+ 2734 0b2c 4FF48072 		mov	r2, #256
+ 2735 0b30 1A60     		str	r2, [r3]
+ 2736 0b32 00BF     		nop
+ 2737 0b34 1037     		adds	r7, r7, #16
+ 2738 0b36 BD46     		mov	sp, r7
+ 2739              		@ sp needed
+ 2740 0b38 80BD     		pop	{r7, pc}
+ 2741              	.L73:
+ 2742 0b3a 00BF     		.align	2
+ 2743              	.L72:
+ 2744 0b3c 14100140 		.word	1073811476
+ 2745 0b40 10100140 		.word	1073811472
+ 2747              		.align	1
+ 2748              		.global	ili9320_GetPoint
+ 2749              		.syntax unified
+ 2750              		.thumb
+ 2751              		.thumb_func
+ 2752              		.fpu softvfp
+ 2754              	ili9320_GetPoint:
+ 2755              		@ args = 0, pretend = 0, frame = 16
+ 2756              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2757 0b44 80B5     		push	{r7, lr}
+ 2758 0b46 84B0     		sub	sp, sp, #16
+ 2759 0b48 00AF     		add	r7, sp, #0
+ 2760 0b4a 0346     		mov	r3, r0
+ 2761 0b4c 0A46     		mov	r2, r1
+ 2762 0b4e FB80     		strh	r3, [r7, #6]	@ movhi
+ 2763 0b50 1346     		mov	r3, r2	@ movhi
+ 2764 0b52 BB80     		strh	r3, [r7, #4]	@ movhi
+ 2765 0b54 BA88     		ldrh	r2, [r7, #4]
+ 2766 0b56 FB88     		ldrh	r3, [r7, #6]
+ 2767 0b58 1146     		mov	r1, r2
+ 2768 0b5a 1846     		mov	r0, r3
+ 2769 0b5c FFF7FEFF 		bl	ili9320_SetCursor
+ 2770 0b60 1C4B     		ldr	r3, .L77
+ 2771 0b62 4FF48072 		mov	r2, #256
+ 2772 0b66 1A60     		str	r2, [r3]
+ 2773 0b68 2220     		movs	r0, #34
+ 2774 0b6a FFF7FEFF 		bl	ili9320_WriteIndex
+ 2775 0b6e 194B     		ldr	r3, .L77
+ 2776 0b70 4FF40062 		mov	r2, #2048
+ 2777 0b74 1A60     		str	r2, [r3]
+ 2778 0b76 FFF7FEFF 		bl	ili9320_ReadData
+ 2779 0b7a 0346     		mov	r3, r0
+ 2780 0b7c FB81     		strh	r3, [r7, #14]	@ movhi
+ 2781 0b7e 164B     		ldr	r3, .L77+4
+ 2782 0b80 4FF40062 		mov	r2, #2048
+ 2783 0b84 1A60     		str	r2, [r3]
+ 2784 0b86 134B     		ldr	r3, .L77
+ 2785 0b88 4FF40062 		mov	r2, #2048
+ 2786 0b8c 1A60     		str	r2, [r3]
+ 2787 0b8e FFF7FEFF 		bl	ili9320_ReadData
+ 2788 0b92 0346     		mov	r3, r0
+ 2789 0b94 FB81     		strh	r3, [r7, #14]	@ movhi
+ 2790 0b96 104B     		ldr	r3, .L77+4
+ 2791 0b98 4FF40062 		mov	r2, #2048
+ 2792 0b9c 1A60     		str	r2, [r3]
+ 2793 0b9e 0E4B     		ldr	r3, .L77+4
+ 2794 0ba0 4FF48072 		mov	r2, #256
+ 2795 0ba4 1A60     		str	r2, [r3]
+ 2796 0ba6 0D4B     		ldr	r3, .L77+8
+ 2797 0ba8 1B88     		ldrh	r3, [r3]
+ 2798 0baa 47F28372 		movw	r2, #30595
+ 2799 0bae 9342     		cmp	r3, r2
+ 2800 0bb0 0BD0     		beq	.L75
+ 2801 0bb2 0A4B     		ldr	r3, .L77+8
+ 2802 0bb4 1B88     		ldrh	r3, [r3]
+ 2803 0bb6 44F23152 		movw	r2, #17713
+ 2804 0bba 9342     		cmp	r3, r2
+ 2805 0bbc 05D0     		beq	.L75
+ 2806 0bbe FB89     		ldrh	r3, [r7, #14]
+ 2807 0bc0 1846     		mov	r0, r3
+ 2808 0bc2 FFF7FEFF 		bl	ili9320_BGR2RGB
+ 2809 0bc6 0346     		mov	r3, r0
+ 2810 0bc8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 2811              	.L75:
+ 2812 0bca FB89     		ldrh	r3, [r7, #14]
+ 2813 0bcc 1846     		mov	r0, r3
+ 2814 0bce 1037     		adds	r7, r7, #16
+ 2815 0bd0 BD46     		mov	sp, r7
+ 2816              		@ sp needed
+ 2817 0bd2 80BD     		pop	{r7, pc}
+ 2818              	.L78:
+ 2819              		.align	2
+ 2820              	.L77:
+ 2821 0bd4 14100140 		.word	1073811476
+ 2822 0bd8 10100140 		.word	1073811472
+ 2823 0bdc 00000000 		.word	DeviceCode
+ 2825              		.align	1
+ 2826              		.global	ili9320_SetPoint
+ 2827              		.syntax unified
+ 2828              		.thumb
+ 2829              		.thumb_func
+ 2830              		.fpu softvfp
+ 2832              	ili9320_SetPoint:
+ 2833              		@ args = 0, pretend = 0, frame = 8
+ 2834              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2835 0be0 80B5     		push	{r7, lr}
+ 2836 0be2 82B0     		sub	sp, sp, #8
+ 2837 0be4 00AF     		add	r7, sp, #0
+ 2838 0be6 0346     		mov	r3, r0
+ 2839 0be8 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2840 0bea 0B46     		mov	r3, r1	@ movhi
+ 2841 0bec BB80     		strh	r3, [r7, #4]	@ movhi
+ 2842 0bee 1346     		mov	r3, r2	@ movhi
+ 2843 0bf0 7B80     		strh	r3, [r7, #2]	@ movhi
+ 2844 0bf2 FB88     		ldrh	r3, [r7, #6]
+ 2845 0bf4 B3F5A07F 		cmp	r3, #320
+ 2846 0bf8 24D2     		bcs	.L83
+ 2847 0bfa BB88     		ldrh	r3, [r7, #4]
+ 2848 0bfc EF2B     		cmp	r3, #239
+ 2849 0bfe 21D8     		bhi	.L83
+ 2850 0c00 BA88     		ldrh	r2, [r7, #4]
+ 2851 0c02 FB88     		ldrh	r3, [r7, #6]
+ 2852 0c04 1146     		mov	r1, r2
+ 2853 0c06 1846     		mov	r0, r3
+ 2854 0c08 FFF7FEFF 		bl	ili9320_SetCursor
+ 2855 0c0c 0F4B     		ldr	r3, .L84
+ 2856 0c0e 4FF48072 		mov	r2, #256
+ 2857 0c12 1A60     		str	r2, [r3]
+ 2858 0c14 2220     		movs	r0, #34
+ 2859 0c16 FFF7FEFF 		bl	ili9320_WriteIndex
+ 2860 0c1a 0D4B     		ldr	r3, .L84+4
+ 2861 0c1c 4FF40072 		mov	r2, #512
+ 2862 0c20 1A60     		str	r2, [r3]
+ 2863 0c22 7B88     		ldrh	r3, [r7, #2]
+ 2864 0c24 1846     		mov	r0, r3
+ 2865 0c26 FFF7FEFF 		bl	ili9320_WriteData
+ 2866 0c2a 084B     		ldr	r3, .L84
+ 2867 0c2c 4FF48062 		mov	r2, #1024
+ 2868 0c30 1A60     		str	r2, [r3]
+ 2869 0c32 074B     		ldr	r3, .L84+4
+ 2870 0c34 4FF48062 		mov	r2, #1024
+ 2871 0c38 1A60     		str	r2, [r3]
+ 2872 0c3a 054B     		ldr	r3, .L84+4
+ 2873 0c3c 4FF48072 		mov	r2, #256
+ 2874 0c40 1A60     		str	r2, [r3]
+ 2875 0c42 00E0     		b	.L79
+ 2876              	.L83:
+ 2877 0c44 00BF     		nop
+ 2878              	.L79:
+ 2879 0c46 0837     		adds	r7, r7, #8
+ 2880 0c48 BD46     		mov	sp, r7
+ 2881              		@ sp needed
+ 2882 0c4a 80BD     		pop	{r7, pc}
+ 2883              	.L85:
+ 2884              		.align	2
+ 2885              	.L84:
+ 2886 0c4c 14100140 		.word	1073811476
+ 2887 0c50 10100140 		.word	1073811472
+ 2889              		.align	1
+ 2890              		.global	ili9320_DrawPicture
+ 2891              		.syntax unified
+ 2892              		.thumb
+ 2893              		.thumb_func
+ 2894              		.fpu softvfp
+ 2896              	ili9320_DrawPicture:
+ 2897              		@ args = 4, pretend = 0, frame = 24
+ 2898              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2899 0c54 90B5     		push	{r4, r7, lr}
+ 2900 0c56 87B0     		sub	sp, sp, #28
+ 2901 0c58 00AF     		add	r7, sp, #0
+ 2902 0c5a 0446     		mov	r4, r0
+ 2903 0c5c 0846     		mov	r0, r1
+ 2904 0c5e 1146     		mov	r1, r2
+ 2905 0c60 1A46     		mov	r2, r3
+ 2906 0c62 2346     		mov	r3, r4	@ movhi
+ 2907 0c64 FB80     		strh	r3, [r7, #6]	@ movhi
+ 2908 0c66 0346     		mov	r3, r0	@ movhi
+ 2909 0c68 BB80     		strh	r3, [r7, #4]	@ movhi
+ 2910 0c6a 0B46     		mov	r3, r1	@ movhi
+ 2911 0c6c 7B80     		strh	r3, [r7, #2]	@ movhi
+ 2912 0c6e 1346     		mov	r3, r2	@ movhi
+ 2913 0c70 3B80     		strh	r3, [r7]	@ movhi
+ 2914 0c72 0023     		movs	r3, #0
+ 2915 0c74 7B61     		str	r3, [r7, #20]
+ 2916 0c76 0023     		movs	r3, #0
+ 2917 0c78 3B61     		str	r3, [r7, #16]
+ 2918 0c7a 37E0     		b	.L87
+ 2919              	.L90:
+ 2920 0c7c 7B69     		ldr	r3, [r7, #20]
+ 2921 0c7e 9AB2     		uxth	r2, r3
+ 2922 0c80 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 2923 0c82 1344     		add	r3, r3, r2
+ 2924 0c84 9BB2     		uxth	r3, r3
+ 2925 0c86 BA88     		ldrh	r2, [r7, #4]
+ 2926 0c88 1146     		mov	r1, r2
+ 2927 0c8a 1846     		mov	r0, r3
+ 2928 0c8c FFF7FEFF 		bl	ili9320_SetCursor
+ 2929 0c90 1A4B     		ldr	r3, .L91
+ 2930 0c92 4FF48072 		mov	r2, #256
+ 2931 0c96 1A60     		str	r2, [r3]
+ 2932 0c98 2220     		movs	r0, #34
+ 2933 0c9a FFF7FEFF 		bl	ili9320_WriteIndex
+ 2934 0c9e 184B     		ldr	r3, .L91+4
+ 2935 0ca0 4FF40072 		mov	r2, #512
+ 2936 0ca4 1A60     		str	r2, [r3]
+ 2937 0ca6 0023     		movs	r3, #0
+ 2938 0ca8 FB60     		str	r3, [r7, #12]
+ 2939 0caa 14E0     		b	.L88
+ 2940              	.L89:
+ 2941 0cac 3B69     		ldr	r3, [r7, #16]
+ 2942 0cae 5A1C     		adds	r2, r3, #1
+ 2943 0cb0 3A61     		str	r2, [r7, #16]
+ 2944 0cb2 5B00     		lsls	r3, r3, #1
+ 2945 0cb4 BA6A     		ldr	r2, [r7, #40]
+ 2946 0cb6 1344     		add	r3, r3, r2
+ 2947 0cb8 1B88     		ldrh	r3, [r3]
+ 2948 0cba 1846     		mov	r0, r3
+ 2949 0cbc FFF7FEFF 		bl	ili9320_WriteData
+ 2950 0cc0 0E4B     		ldr	r3, .L91
+ 2951 0cc2 4FF48062 		mov	r2, #1024
+ 2952 0cc6 1A60     		str	r2, [r3]
+ 2953 0cc8 0D4B     		ldr	r3, .L91+4
+ 2954 0cca 4FF48062 		mov	r2, #1024
+ 2955 0cce 1A60     		str	r2, [r3]
+ 2956 0cd0 FB68     		ldr	r3, [r7, #12]
+ 2957 0cd2 0133     		adds	r3, r3, #1
+ 2958 0cd4 FB60     		str	r3, [r7, #12]
+ 2959              	.L88:
+ 2960 0cd6 3B88     		ldrh	r3, [r7]
+ 2961 0cd8 FA68     		ldr	r2, [r7, #12]
+ 2962 0cda 9A42     		cmp	r2, r3
+ 2963 0cdc E6DB     		blt	.L89
+ 2964 0cde 084B     		ldr	r3, .L91+4
+ 2965 0ce0 4FF48072 		mov	r2, #256
+ 2966 0ce4 1A60     		str	r2, [r3]
+ 2967 0ce6 7B69     		ldr	r3, [r7, #20]
+ 2968 0ce8 0133     		adds	r3, r3, #1
+ 2969 0cea 7B61     		str	r3, [r7, #20]
+ 2970              	.L87:
+ 2971 0cec 7B88     		ldrh	r3, [r7, #2]
+ 2972 0cee 7A69     		ldr	r2, [r7, #20]
+ 2973 0cf0 9A42     		cmp	r2, r3
+ 2974 0cf2 C3DB     		blt	.L90
+ 2975 0cf4 00BF     		nop
+ 2976 0cf6 1C37     		adds	r7, r7, #28
+ 2977 0cf8 BD46     		mov	sp, r7
+ 2978              		@ sp needed
+ 2979 0cfa 90BD     		pop	{r4, r7, pc}
+ 2980              	.L92:
+ 2981              		.align	2
+ 2982              	.L91:
+ 2983 0cfc 14100140 		.word	1073811476
+ 2984 0d00 10100140 		.word	1073811472
+ 2986              		.align	1
+ 2987              		.global	ili9320_VLine
+ 2988              		.syntax unified
+ 2989              		.thumb
+ 2990              		.thumb_func
+ 2991              		.fpu softvfp
+ 2993              	ili9320_VLine:
+ 2994              		@ args = 0, pretend = 0, frame = 16
+ 2995              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2996 0d04 90B5     		push	{r4, r7, lr}
+ 2997 0d06 85B0     		sub	sp, sp, #20
+ 2998 0d08 00AF     		add	r7, sp, #0
+ 2999 0d0a 0446     		mov	r4, r0
+ 3000 0d0c 0846     		mov	r0, r1
+ 3001 0d0e 1146     		mov	r1, r2
+ 3002 0d10 1A46     		mov	r2, r3
+ 3003 0d12 2346     		mov	r3, r4	@ movhi
+ 3004 0d14 FB80     		strh	r3, [r7, #6]	@ movhi
+ 3005 0d16 0346     		mov	r3, r0	@ movhi
+ 3006 0d18 BB80     		strh	r3, [r7, #4]	@ movhi
+ 3007 0d1a 0B46     		mov	r3, r1	@ movhi
+ 3008 0d1c 7B80     		strh	r3, [r7, #2]	@ movhi
+ 3009 0d1e 1346     		mov	r3, r2	@ movhi
+ 3010 0d20 3B80     		strh	r3, [r7]	@ movhi
+ 3011 0d22 BA88     		ldrh	r2, [r7, #4]
+ 3012 0d24 FB88     		ldrh	r3, [r7, #6]
+ 3013 0d26 1146     		mov	r1, r2
+ 3014 0d28 1846     		mov	r0, r3
+ 3015 0d2a FFF7FEFF 		bl	ili9320_SetCursor
+ 3016 0d2e 144B     		ldr	r3, .L96
+ 3017 0d30 4FF48072 		mov	r2, #256
+ 3018 0d34 1A60     		str	r2, [r3]
+ 3019 0d36 2220     		movs	r0, #34
+ 3020 0d38 FFF7FEFF 		bl	ili9320_WriteIndex
+ 3021 0d3c 114B     		ldr	r3, .L96+4
+ 3022 0d3e 4FF40072 		mov	r2, #512
+ 3023 0d42 1A60     		str	r2, [r3]
+ 3024 0d44 0023     		movs	r3, #0
+ 3025 0d46 FB60     		str	r3, [r7, #12]
+ 3026 0d48 0EE0     		b	.L94
+ 3027              	.L95:
+ 3028 0d4a 3B88     		ldrh	r3, [r7]
+ 3029 0d4c 1846     		mov	r0, r3
+ 3030 0d4e FFF7FEFF 		bl	ili9320_WriteData
+ 3031 0d52 0B4B     		ldr	r3, .L96
+ 3032 0d54 4FF48062 		mov	r2, #1024
+ 3033 0d58 1A60     		str	r2, [r3]
+ 3034 0d5a 0A4B     		ldr	r3, .L96+4
+ 3035 0d5c 4FF48062 		mov	r2, #1024
+ 3036 0d60 1A60     		str	r2, [r3]
+ 3037 0d62 FB68     		ldr	r3, [r7, #12]
+ 3038 0d64 0133     		adds	r3, r3, #1
+ 3039 0d66 FB60     		str	r3, [r7, #12]
+ 3040              	.L94:
+ 3041 0d68 7B88     		ldrh	r3, [r7, #2]
+ 3042 0d6a FA68     		ldr	r2, [r7, #12]
+ 3043 0d6c 9A42     		cmp	r2, r3
+ 3044 0d6e ECDB     		blt	.L95
+ 3045 0d70 044B     		ldr	r3, .L96+4
+ 3046 0d72 4FF48072 		mov	r2, #256
+ 3047 0d76 1A60     		str	r2, [r3]
+ 3048 0d78 00BF     		nop
+ 3049 0d7a 1437     		adds	r7, r7, #20
+ 3050 0d7c BD46     		mov	sp, r7
+ 3051              		@ sp needed
+ 3052 0d7e 90BD     		pop	{r4, r7, pc}
+ 3053              	.L97:
+ 3054              		.align	2
+ 3055              	.L96:
+ 3056 0d80 14100140 		.word	1073811476
+ 3057 0d84 10100140 		.word	1073811472
+ 3059              		.align	1
+ 3060              		.global	ili9320_PutChar
+ 3061              		.syntax unified
+ 3062              		.thumb
+ 3063              		.thumb_func
+ 3064              		.fpu softvfp
+ 3066              	ili9320_PutChar:
+ 3067              		@ args = 4, pretend = 0, frame = 16
+ 3068              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3069 0d88 90B5     		push	{r4, r7, lr}
+ 3070 0d8a 85B0     		sub	sp, sp, #20
+ 3071 0d8c 00AF     		add	r7, sp, #0
+ 3072 0d8e 0446     		mov	r4, r0
+ 3073 0d90 0846     		mov	r0, r1
+ 3074 0d92 1146     		mov	r1, r2
+ 3075 0d94 1A46     		mov	r2, r3
+ 3076 0d96 2346     		mov	r3, r4	@ movhi
+ 3077 0d98 FB80     		strh	r3, [r7, #6]	@ movhi
+ 3078 0d9a 0346     		mov	r3, r0	@ movhi
+ 3079 0d9c BB80     		strh	r3, [r7, #4]	@ movhi
+ 3080 0d9e 0B46     		mov	r3, r1
+ 3081 0da0 FB70     		strb	r3, [r7, #3]
+ 3082 0da2 1346     		mov	r3, r2	@ movhi
+ 3083 0da4 3B80     		strh	r3, [r7]	@ movhi
+ 3084 0da6 0023     		movs	r3, #0
+ 3085 0da8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 3086 0daa 0023     		movs	r3, #0
+ 3087 0dac BB81     		strh	r3, [r7, #12]	@ movhi
+ 3088 0dae 0023     		movs	r3, #0
+ 3089 0db0 FB72     		strb	r3, [r7, #11]
+ 3090 0db2 0023     		movs	r3, #0
+ 3091 0db4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 3092 0db6 36E0     		b	.L99
+ 3093              	.L104:
+ 3094 0db8 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3095 0dba 203B     		subs	r3, r3, #32
+ 3096 0dbc 1A01     		lsls	r2, r3, #4
+ 3097 0dbe FB89     		ldrh	r3, [r7, #14]
+ 3098 0dc0 1344     		add	r3, r3, r2
+ 3099 0dc2 1C4A     		ldr	r2, .L105
+ 3100 0dc4 D35C     		ldrb	r3, [r2, r3]
+ 3101 0dc6 FB72     		strb	r3, [r7, #11]
+ 3102 0dc8 0023     		movs	r3, #0
+ 3103 0dca BB81     		strh	r3, [r7, #12]	@ movhi
+ 3104 0dcc 25E0     		b	.L100
+ 3105              	.L103:
+ 3106 0dce FA7A     		ldrb	r2, [r7, #11]	@ zero_extendqisi2
+ 3107 0dd0 BB89     		ldrh	r3, [r7, #12]
+ 3108 0dd2 C3F10703 		rsb	r3, r3, #7
+ 3109 0dd6 42FA03F3 		asr	r3, r2, r3
+ 3110 0dda 03F00103 		and	r3, r3, #1
+ 3111 0dde 002B     		cmp	r3, #0
+ 3112 0de0 0CD0     		beq	.L101
+ 3113 0de2 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 3114 0de4 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 3115 0de6 1344     		add	r3, r3, r2
+ 3116 0de8 98B2     		uxth	r0, r3
+ 3117 0dea BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 3118 0dec FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 3119 0dee 1344     		add	r3, r3, r2
+ 3120 0df0 9BB2     		uxth	r3, r3
+ 3121 0df2 3A88     		ldrh	r2, [r7]
+ 3122 0df4 1946     		mov	r1, r3
+ 3123 0df6 FFF7FEFF 		bl	ili9320_SetPoint
+ 3124 0dfa 0BE0     		b	.L102
+ 3125              	.L101:
+ 3126 0dfc FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 3127 0dfe BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 3128 0e00 1344     		add	r3, r3, r2
+ 3129 0e02 98B2     		uxth	r0, r3
+ 3130 0e04 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 3131 0e06 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 3132 0e08 1344     		add	r3, r3, r2
+ 3133 0e0a 9BB2     		uxth	r3, r3
+ 3134 0e0c 3A8C     		ldrh	r2, [r7, #32]
+ 3135 0e0e 1946     		mov	r1, r3
+ 3136 0e10 FFF7FEFF 		bl	ili9320_SetPoint
+ 3137              	.L102:
+ 3138 0e14 BB89     		ldrh	r3, [r7, #12]
+ 3139 0e16 0133     		adds	r3, r3, #1
+ 3140 0e18 BB81     		strh	r3, [r7, #12]	@ movhi
+ 3141              	.L100:
+ 3142 0e1a BB89     		ldrh	r3, [r7, #12]
+ 3143 0e1c 072B     		cmp	r3, #7
+ 3144 0e1e D6D9     		bls	.L103
+ 3145 0e20 FB89     		ldrh	r3, [r7, #14]
+ 3146 0e22 0133     		adds	r3, r3, #1
+ 3147 0e24 FB81     		strh	r3, [r7, #14]	@ movhi
+ 3148              	.L99:
+ 3149 0e26 FB89     		ldrh	r3, [r7, #14]
+ 3150 0e28 0F2B     		cmp	r3, #15
+ 3151 0e2a C5D9     		bls	.L104
+ 3152 0e2c 00BF     		nop
+ 3153 0e2e 1437     		adds	r7, r7, #20
+ 3154 0e30 BD46     		mov	sp, r7
+ 3155              		@ sp needed
+ 3156 0e32 90BD     		pop	{r4, r7, pc}
+ 3157              	.L106:
+ 3158              		.align	2
+ 3159              	.L105:
+ 3160 0e34 00000000 		.word	ascii_8x16
+ 3162              		.align	1
+ 3163              		.global	ili9320_Test
+ 3164              		.syntax unified
+ 3165              		.thumb
+ 3166              		.thumb_func
+ 3167              		.fpu softvfp
+ 3169              	ili9320_Test:
+ 3170              		@ args = 0, pretend = 0, frame = 8
+ 3171              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3172 0e38 80B5     		push	{r7, lr}
+ 3173 0e3a 82B0     		sub	sp, sp, #8
+ 3174 0e3c 00AF     		add	r7, sp, #0
+ 3175 0e3e 0021     		movs	r1, #0
+ 3176 0e40 0020     		movs	r0, #0
+ 3177 0e42 FFF7FEFF 		bl	ili9320_SetCursor
+ 3178 0e46 0021     		movs	r1, #0
+ 3179 0e48 5020     		movs	r0, #80
+ 3180 0e4a FFF7FEFF 		bl	ili9320_WriteRegister
+ 3181 0e4e EF21     		movs	r1, #239
+ 3182 0e50 5120     		movs	r0, #81
+ 3183 0e52 FFF7FEFF 		bl	ili9320_WriteRegister
+ 3184 0e56 0021     		movs	r1, #0
+ 3185 0e58 5220     		movs	r0, #82
+ 3186 0e5a FFF7FEFF 		bl	ili9320_WriteRegister
+ 3187 0e5e 40F23F11 		movw	r1, #319
+ 3188 0e62 5320     		movs	r0, #83
+ 3189 0e64 FFF7FEFF 		bl	ili9320_WriteRegister
+ 3190 0e68 B04B     		ldr	r3, .L132
+ 3191 0e6a 4FF48072 		mov	r2, #256
+ 3192 0e6e 1A60     		str	r2, [r3]
+ 3193 0e70 2220     		movs	r0, #34
+ 3194 0e72 FFF7FEFF 		bl	ili9320_WriteIndex
+ 3195 0e76 AE4B     		ldr	r3, .L132+4
+ 3196 0e78 4FF40072 		mov	r2, #512
+ 3197 0e7c 1A60     		str	r2, [r3]
+ 3198 0e7e 0023     		movs	r3, #0
+ 3199 0e80 7B71     		strb	r3, [r7, #5]
+ 3200 0e82 0023     		movs	r3, #0
+ 3201 0e84 3B71     		strb	r3, [r7, #4]
+ 3202 0e86 0023     		movs	r3, #0
+ 3203 0e88 FB70     		strb	r3, [r7, #3]
+ 3204 0e8a 0023     		movs	r3, #0
+ 3205 0e8c BB71     		strb	r3, [r7, #6]
+ 3206 0e8e 26E0     		b	.L108
+ 3207              	.L111:
+ 3208 0e90 0023     		movs	r3, #0
+ 3209 0e92 FB71     		strb	r3, [r7, #7]
+ 3210 0e94 1DE0     		b	.L109
+ 3211              	.L110:
+ 3212 0e96 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3213 0e98 DB08     		lsrs	r3, r3, #3
+ 3214 0e9a 7B71     		strb	r3, [r7, #5]
+ 3215 0e9c 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 3216 0e9e DB02     		lsls	r3, r3, #11
+ 3217 0ea0 1AB2     		sxth	r2, r3
+ 3218 0ea2 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 3219 0ea4 5B01     		lsls	r3, r3, #5
+ 3220 0ea6 1BB2     		sxth	r3, r3
+ 3221 0ea8 1343     		orrs	r3, r3, r2
+ 3222 0eaa 1AB2     		sxth	r2, r3
+ 3223 0eac FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3224 0eae 1BB2     		sxth	r3, r3
+ 3225 0eb0 1343     		orrs	r3, r3, r2
+ 3226 0eb2 1BB2     		sxth	r3, r3
+ 3227 0eb4 9BB2     		uxth	r3, r3
+ 3228 0eb6 1846     		mov	r0, r3
+ 3229 0eb8 FFF7FEFF 		bl	ili9320_WriteData
+ 3230 0ebc 9B4B     		ldr	r3, .L132
+ 3231 0ebe 4FF48062 		mov	r2, #1024
+ 3232 0ec2 1A60     		str	r2, [r3]
+ 3233 0ec4 9A4B     		ldr	r3, .L132+4
+ 3234 0ec6 4FF48062 		mov	r2, #1024
+ 3235 0eca 1A60     		str	r2, [r3]
+ 3236 0ecc FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3237 0ece 0133     		adds	r3, r3, #1
+ 3238 0ed0 FB71     		strb	r3, [r7, #7]
+ 3239              	.L109:
+ 3240 0ed2 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3241 0ed4 EF2B     		cmp	r3, #239
+ 3242 0ed6 DED9     		bls	.L110
+ 3243 0ed8 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3244 0eda 0133     		adds	r3, r3, #1
+ 3245 0edc BB71     		strb	r3, [r7, #6]
+ 3246              	.L108:
+ 3247 0ede BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3248 0ee0 312B     		cmp	r3, #49
+ 3249 0ee2 D5D9     		bls	.L111
+ 3250 0ee4 1F23     		movs	r3, #31
+ 3251 0ee6 7B71     		strb	r3, [r7, #5]
+ 3252 0ee8 3F23     		movs	r3, #63
+ 3253 0eea 3B71     		strb	r3, [r7, #4]
+ 3254 0eec 1F23     		movs	r3, #31
+ 3255 0eee FB70     		strb	r3, [r7, #3]
+ 3256 0ef0 0023     		movs	r3, #0
+ 3257 0ef2 BB71     		strb	r3, [r7, #6]
+ 3258 0ef4 2FE0     		b	.L112
+ 3259              	.L115:
+ 3260 0ef6 0023     		movs	r3, #0
+ 3261 0ef8 FB71     		strb	r3, [r7, #7]
+ 3262 0efa 26E0     		b	.L113
+ 3263              	.L114:
+ 3264 0efc FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3265 0efe 9B08     		lsrs	r3, r3, #2
+ 3266 0f00 DBB2     		uxtb	r3, r3
+ 3267 0f02 C3F13F03 		rsb	r3, r3, #63
+ 3268 0f06 3B71     		strb	r3, [r7, #4]
+ 3269 0f08 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3270 0f0a DB08     		lsrs	r3, r3, #3
+ 3271 0f0c DBB2     		uxtb	r3, r3
+ 3272 0f0e C3F11F03 		rsb	r3, r3, #31
+ 3273 0f12 FB70     		strb	r3, [r7, #3]
+ 3274 0f14 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 3275 0f16 DB02     		lsls	r3, r3, #11
+ 3276 0f18 1AB2     		sxth	r2, r3
+ 3277 0f1a 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 3278 0f1c 5B01     		lsls	r3, r3, #5
+ 3279 0f1e 1BB2     		sxth	r3, r3
+ 3280 0f20 1343     		orrs	r3, r3, r2
+ 3281 0f22 1AB2     		sxth	r2, r3
+ 3282 0f24 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3283 0f26 1BB2     		sxth	r3, r3
+ 3284 0f28 1343     		orrs	r3, r3, r2
+ 3285 0f2a 1BB2     		sxth	r3, r3
+ 3286 0f2c 9BB2     		uxth	r3, r3
+ 3287 0f2e 1846     		mov	r0, r3
+ 3288 0f30 FFF7FEFF 		bl	ili9320_WriteData
+ 3289 0f34 7D4B     		ldr	r3, .L132
+ 3290 0f36 4FF48062 		mov	r2, #1024
+ 3291 0f3a 1A60     		str	r2, [r3]
+ 3292 0f3c 7C4B     		ldr	r3, .L132+4
+ 3293 0f3e 4FF48062 		mov	r2, #1024
+ 3294 0f42 1A60     		str	r2, [r3]
+ 3295 0f44 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3296 0f46 0133     		adds	r3, r3, #1
+ 3297 0f48 FB71     		strb	r3, [r7, #7]
+ 3298              	.L113:
+ 3299 0f4a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3300 0f4c EF2B     		cmp	r3, #239
+ 3301 0f4e D5D9     		bls	.L114
+ 3302 0f50 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3303 0f52 0133     		adds	r3, r3, #1
+ 3304 0f54 BB71     		strb	r3, [r7, #6]
+ 3305              	.L112:
+ 3306 0f56 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3307 0f58 312B     		cmp	r3, #49
+ 3308 0f5a CCD9     		bls	.L115
+ 3309 0f5c 0023     		movs	r3, #0
+ 3310 0f5e 7B71     		strb	r3, [r7, #5]
+ 3311 0f60 0023     		movs	r3, #0
+ 3312 0f62 3B71     		strb	r3, [r7, #4]
+ 3313 0f64 0023     		movs	r3, #0
+ 3314 0f66 FB70     		strb	r3, [r7, #3]
+ 3315 0f68 0023     		movs	r3, #0
+ 3316 0f6a BB71     		strb	r3, [r7, #6]
+ 3317 0f6c 26E0     		b	.L116
+ 3318              	.L119:
+ 3319 0f6e 0023     		movs	r3, #0
+ 3320 0f70 FB71     		strb	r3, [r7, #7]
+ 3321 0f72 1DE0     		b	.L117
+ 3322              	.L118:
+ 3323 0f74 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3324 0f76 9B08     		lsrs	r3, r3, #2
+ 3325 0f78 3B71     		strb	r3, [r7, #4]
+ 3326 0f7a 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 3327 0f7c DB02     		lsls	r3, r3, #11
+ 3328 0f7e 1AB2     		sxth	r2, r3
+ 3329 0f80 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 3330 0f82 5B01     		lsls	r3, r3, #5
+ 3331 0f84 1BB2     		sxth	r3, r3
+ 3332 0f86 1343     		orrs	r3, r3, r2
+ 3333 0f88 1AB2     		sxth	r2, r3
+ 3334 0f8a FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3335 0f8c 1BB2     		sxth	r3, r3
+ 3336 0f8e 1343     		orrs	r3, r3, r2
+ 3337 0f90 1BB2     		sxth	r3, r3
+ 3338 0f92 9BB2     		uxth	r3, r3
+ 3339 0f94 1846     		mov	r0, r3
+ 3340 0f96 FFF7FEFF 		bl	ili9320_WriteData
+ 3341 0f9a 644B     		ldr	r3, .L132
+ 3342 0f9c 4FF48062 		mov	r2, #1024
+ 3343 0fa0 1A60     		str	r2, [r3]
+ 3344 0fa2 634B     		ldr	r3, .L132+4
+ 3345 0fa4 4FF48062 		mov	r2, #1024
+ 3346 0fa8 1A60     		str	r2, [r3]
+ 3347 0faa FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3348 0fac 0133     		adds	r3, r3, #1
+ 3349 0fae FB71     		strb	r3, [r7, #7]
+ 3350              	.L117:
+ 3351 0fb0 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3352 0fb2 EF2B     		cmp	r3, #239
+ 3353 0fb4 DED9     		bls	.L118
+ 3354 0fb6 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3355 0fb8 0133     		adds	r3, r3, #1
+ 3356 0fba BB71     		strb	r3, [r7, #6]
+ 3357              	.L116:
+ 3358 0fbc BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3359 0fbe 312B     		cmp	r3, #49
+ 3360 0fc0 D5D9     		bls	.L119
+ 3361 0fc2 1F23     		movs	r3, #31
+ 3362 0fc4 7B71     		strb	r3, [r7, #5]
+ 3363 0fc6 3F23     		movs	r3, #63
+ 3364 0fc8 3B71     		strb	r3, [r7, #4]
+ 3365 0fca 1F23     		movs	r3, #31
+ 3366 0fcc FB70     		strb	r3, [r7, #3]
+ 3367 0fce 0023     		movs	r3, #0
+ 3368 0fd0 BB71     		strb	r3, [r7, #6]
+ 3369 0fd2 2FE0     		b	.L120
+ 3370              	.L123:
+ 3371 0fd4 0023     		movs	r3, #0
+ 3372 0fd6 FB71     		strb	r3, [r7, #7]
+ 3373 0fd8 26E0     		b	.L121
+ 3374              	.L122:
+ 3375 0fda FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3376 0fdc DB08     		lsrs	r3, r3, #3
+ 3377 0fde DBB2     		uxtb	r3, r3
+ 3378 0fe0 C3F11F03 		rsb	r3, r3, #31
+ 3379 0fe4 7B71     		strb	r3, [r7, #5]
+ 3380 0fe6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3381 0fe8 DB08     		lsrs	r3, r3, #3
+ 3382 0fea DBB2     		uxtb	r3, r3
+ 3383 0fec C3F11F03 		rsb	r3, r3, #31
+ 3384 0ff0 FB70     		strb	r3, [r7, #3]
+ 3385 0ff2 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 3386 0ff4 DB02     		lsls	r3, r3, #11
+ 3387 0ff6 1AB2     		sxth	r2, r3
+ 3388 0ff8 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 3389 0ffa 5B01     		lsls	r3, r3, #5
+ 3390 0ffc 1BB2     		sxth	r3, r3
+ 3391 0ffe 1343     		orrs	r3, r3, r2
+ 3392 1000 1AB2     		sxth	r2, r3
+ 3393 1002 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3394 1004 1BB2     		sxth	r3, r3
+ 3395 1006 1343     		orrs	r3, r3, r2
+ 3396 1008 1BB2     		sxth	r3, r3
+ 3397 100a 9BB2     		uxth	r3, r3
+ 3398 100c 1846     		mov	r0, r3
+ 3399 100e FFF7FEFF 		bl	ili9320_WriteData
+ 3400 1012 464B     		ldr	r3, .L132
+ 3401 1014 4FF48062 		mov	r2, #1024
+ 3402 1018 1A60     		str	r2, [r3]
+ 3403 101a 454B     		ldr	r3, .L132+4
+ 3404 101c 4FF48062 		mov	r2, #1024
+ 3405 1020 1A60     		str	r2, [r3]
+ 3406 1022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3407 1024 0133     		adds	r3, r3, #1
+ 3408 1026 FB71     		strb	r3, [r7, #7]
+ 3409              	.L121:
+ 3410 1028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3411 102a EF2B     		cmp	r3, #239
+ 3412 102c D5D9     		bls	.L122
+ 3413 102e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3414 1030 0133     		adds	r3, r3, #1
+ 3415 1032 BB71     		strb	r3, [r7, #6]
+ 3416              	.L120:
+ 3417 1034 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3418 1036 312B     		cmp	r3, #49
+ 3419 1038 CCD9     		bls	.L123
+ 3420 103a 0023     		movs	r3, #0
+ 3421 103c 7B71     		strb	r3, [r7, #5]
+ 3422 103e 0023     		movs	r3, #0
+ 3423 1040 3B71     		strb	r3, [r7, #4]
+ 3424 1042 0023     		movs	r3, #0
+ 3425 1044 FB70     		strb	r3, [r7, #3]
+ 3426 1046 0023     		movs	r3, #0
+ 3427 1048 BB71     		strb	r3, [r7, #6]
+ 3428 104a 26E0     		b	.L124
+ 3429              	.L127:
+ 3430 104c 0023     		movs	r3, #0
+ 3431 104e FB71     		strb	r3, [r7, #7]
+ 3432 1050 1DE0     		b	.L125
+ 3433              	.L126:
+ 3434 1052 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3435 1054 DB08     		lsrs	r3, r3, #3
+ 3436 1056 FB70     		strb	r3, [r7, #3]
+ 3437 1058 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 3438 105a DB02     		lsls	r3, r3, #11
+ 3439 105c 1AB2     		sxth	r2, r3
+ 3440 105e 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 3441 1060 5B01     		lsls	r3, r3, #5
+ 3442 1062 1BB2     		sxth	r3, r3
+ 3443 1064 1343     		orrs	r3, r3, r2
+ 3444 1066 1AB2     		sxth	r2, r3
+ 3445 1068 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3446 106a 1BB2     		sxth	r3, r3
+ 3447 106c 1343     		orrs	r3, r3, r2
+ 3448 106e 1BB2     		sxth	r3, r3
+ 3449 1070 9BB2     		uxth	r3, r3
+ 3450 1072 1846     		mov	r0, r3
+ 3451 1074 FFF7FEFF 		bl	ili9320_WriteData
+ 3452 1078 2C4B     		ldr	r3, .L132
+ 3453 107a 4FF48062 		mov	r2, #1024
+ 3454 107e 1A60     		str	r2, [r3]
+ 3455 1080 2B4B     		ldr	r3, .L132+4
+ 3456 1082 4FF48062 		mov	r2, #1024
+ 3457 1086 1A60     		str	r2, [r3]
+ 3458 1088 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3459 108a 0133     		adds	r3, r3, #1
+ 3460 108c FB71     		strb	r3, [r7, #7]
+ 3461              	.L125:
+ 3462 108e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3463 1090 EF2B     		cmp	r3, #239
+ 3464 1092 DED9     		bls	.L126
+ 3465 1094 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3466 1096 0133     		adds	r3, r3, #1
+ 3467 1098 BB71     		strb	r3, [r7, #6]
+ 3468              	.L124:
+ 3469 109a BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3470 109c 3B2B     		cmp	r3, #59
+ 3471 109e D5D9     		bls	.L127
+ 3472 10a0 0023     		movs	r3, #0
+ 3473 10a2 FB70     		strb	r3, [r7, #3]
+ 3474 10a4 1F23     		movs	r3, #31
+ 3475 10a6 7B71     		strb	r3, [r7, #5]
+ 3476 10a8 3F23     		movs	r3, #63
+ 3477 10aa 3B71     		strb	r3, [r7, #4]
+ 3478 10ac 1F23     		movs	r3, #31
+ 3479 10ae FB70     		strb	r3, [r7, #3]
+ 3480 10b0 0023     		movs	r3, #0
+ 3481 10b2 BB71     		strb	r3, [r7, #6]
+ 3482 10b4 2FE0     		b	.L128
+ 3483              	.L131:
+ 3484 10b6 0023     		movs	r3, #0
+ 3485 10b8 FB71     		strb	r3, [r7, #7]
+ 3486 10ba 26E0     		b	.L129
+ 3487              	.L130:
+ 3488 10bc FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3489 10be 9B08     		lsrs	r3, r3, #2
+ 3490 10c0 DBB2     		uxtb	r3, r3
+ 3491 10c2 C3F13F03 		rsb	r3, r3, #63
+ 3492 10c6 3B71     		strb	r3, [r7, #4]
+ 3493 10c8 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3494 10ca DB08     		lsrs	r3, r3, #3
+ 3495 10cc DBB2     		uxtb	r3, r3
+ 3496 10ce C3F11F03 		rsb	r3, r3, #31
+ 3497 10d2 7B71     		strb	r3, [r7, #5]
+ 3498 10d4 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 3499 10d6 DB02     		lsls	r3, r3, #11
+ 3500 10d8 1AB2     		sxth	r2, r3
+ 3501 10da 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 3502 10dc 5B01     		lsls	r3, r3, #5
+ 3503 10de 1BB2     		sxth	r3, r3
+ 3504 10e0 1343     		orrs	r3, r3, r2
+ 3505 10e2 1AB2     		sxth	r2, r3
+ 3506 10e4 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 3507 10e6 1BB2     		sxth	r3, r3
+ 3508 10e8 1343     		orrs	r3, r3, r2
+ 3509 10ea 1BB2     		sxth	r3, r3
+ 3510 10ec 9BB2     		uxth	r3, r3
+ 3511 10ee 1846     		mov	r0, r3
+ 3512 10f0 FFF7FEFF 		bl	ili9320_WriteData
+ 3513 10f4 0D4B     		ldr	r3, .L132
+ 3514 10f6 4FF48062 		mov	r2, #1024
+ 3515 10fa 1A60     		str	r2, [r3]
+ 3516 10fc 0C4B     		ldr	r3, .L132+4
+ 3517 10fe 4FF48062 		mov	r2, #1024
+ 3518 1102 1A60     		str	r2, [r3]
+ 3519 1104 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3520 1106 0133     		adds	r3, r3, #1
+ 3521 1108 FB71     		strb	r3, [r7, #7]
+ 3522              	.L129:
+ 3523 110a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3524 110c EF2B     		cmp	r3, #239
+ 3525 110e D5D9     		bls	.L130
+ 3526 1110 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3527 1112 0133     		adds	r3, r3, #1
+ 3528 1114 BB71     		strb	r3, [r7, #6]
+ 3529              	.L128:
+ 3530 1116 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 3531 1118 3B2B     		cmp	r3, #59
+ 3532 111a CCD9     		bls	.L131
+ 3533 111c 044B     		ldr	r3, .L132+4
+ 3534 111e 4FF48072 		mov	r2, #256
+ 3535 1122 1A60     		str	r2, [r3]
+ 3536 1124 00BF     		nop
+ 3537 1126 0837     		adds	r7, r7, #8
+ 3538 1128 BD46     		mov	sp, r7
+ 3539              		@ sp needed
+ 3540 112a 80BD     		pop	{r7, pc}
+ 3541              	.L133:
+ 3542              		.align	2
+ 3543              	.L132:
+ 3544 112c 14100140 		.word	1073811476
+ 3545 1130 10100140 		.word	1073811472
+ 3547              		.align	1
+ 3548              		.global	ili9320_BGR2RGB
+ 3549              		.syntax unified
+ 3550              		.thumb
+ 3551              		.thumb_func
+ 3552              		.fpu softvfp
+ 3554              	ili9320_BGR2RGB:
+ 3555              		@ args = 0, pretend = 0, frame = 16
+ 3556              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3557              		@ link register save eliminated.
+ 3558 1134 80B4     		push	{r7}
+ 3559 1136 85B0     		sub	sp, sp, #20
+ 3560 1138 00AF     		add	r7, sp, #0
+ 3561 113a 0346     		mov	r3, r0
+ 3562 113c FB80     		strh	r3, [r7, #6]	@ movhi
+ 3563 113e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 3564 1140 03F01F03 		and	r3, r3, #31
+ 3565 1144 FB81     		strh	r3, [r7, #14]	@ movhi
+ 3566 1146 FB88     		ldrh	r3, [r7, #6]
+ 3567 1148 5B09     		lsrs	r3, r3, #5
+ 3568 114a 9BB2     		uxth	r3, r3
+ 3569 114c 03F03F03 		and	r3, r3, #63
+ 3570 1150 BB81     		strh	r3, [r7, #12]	@ movhi
+ 3571 1152 FB88     		ldrh	r3, [r7, #6]
+ 3572 1154 DB0A     		lsrs	r3, r3, #11
+ 3573 1156 7B81     		strh	r3, [r7, #10]	@ movhi
+ 3574 1158 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 3575 115a DB02     		lsls	r3, r3, #11
+ 3576 115c 9AB2     		uxth	r2, r3
+ 3577 115e BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 3578 1160 5B01     		lsls	r3, r3, #5
+ 3579 1162 9BB2     		uxth	r3, r3
+ 3580 1164 1344     		add	r3, r3, r2
+ 3581 1166 9AB2     		uxth	r2, r3
+ 3582 1168 7B89     		ldrh	r3, [r7, #10]	@ movhi
+ 3583 116a 1344     		add	r3, r3, r2
+ 3584 116c 3B81     		strh	r3, [r7, #8]	@ movhi
+ 3585 116e 3B89     		ldrh	r3, [r7, #8]
+ 3586 1170 1846     		mov	r0, r3
+ 3587 1172 1437     		adds	r7, r7, #20
+ 3588 1174 BD46     		mov	sp, r7
+ 3589              		@ sp needed
+ 3590 1176 80BC     		pop	{r7}
+ 3591 1178 7047     		bx	lr
+ 3593              		.align	1
+ 3594              		.global	ili9320_WriteIndex
+ 3595              		.syntax unified
+ 3596              		.thumb
+ 3597              		.thumb_func
+ 3598              		.fpu softvfp
+ 3600              	ili9320_WriteIndex:
+ 3601              		@ args = 0, pretend = 0, frame = 8
+ 3602              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3603 117a 80B5     		push	{r7, lr}
+ 3604 117c 82B0     		sub	sp, sp, #8
+ 3605 117e 00AF     		add	r7, sp, #0
+ 3606 1180 0346     		mov	r3, r0
+ 3607 1182 FB80     		strh	r3, [r7, #6]	@ movhi
+ 3608 1184 0D4B     		ldr	r3, .L137
+ 3609 1186 4FF40072 		mov	r2, #512
+ 3610 118a 1A60     		str	r2, [r3]
+ 3611 118c 0C4B     		ldr	r3, .L137+4
+ 3612 118e 4FF40062 		mov	r2, #2048
+ 3613 1192 1A60     		str	r2, [r3]
+ 3614 1194 FB88     		ldrh	r3, [r7, #6]
+ 3615 1196 1846     		mov	r0, r3
+ 3616 1198 FFF7FEFF 		bl	ili9320_WriteData
+ 3617 119c 074B     		ldr	r3, .L137
+ 3618 119e 4FF48062 		mov	r2, #1024
+ 3619 11a2 1A60     		str	r2, [r3]
+ 3620 11a4 064B     		ldr	r3, .L137+4
+ 3621 11a6 4FF48062 		mov	r2, #1024
+ 3622 11aa 1A60     		str	r2, [r3]
+ 3623 11ac 044B     		ldr	r3, .L137+4
+ 3624 11ae 4FF40072 		mov	r2, #512
+ 3625 11b2 1A60     		str	r2, [r3]
+ 3626 11b4 00BF     		nop
+ 3627 11b6 0837     		adds	r7, r7, #8
+ 3628 11b8 BD46     		mov	sp, r7
+ 3629              		@ sp needed
+ 3630 11ba 80BD     		pop	{r7, pc}
+ 3631              	.L138:
+ 3632              		.align	2
+ 3633              	.L137:
+ 3634 11bc 14100140 		.word	1073811476
+ 3635 11c0 10100140 		.word	1073811472
+ 3637              		.align	1
+ 3638              		.global	ili9320_WriteData
+ 3639              		.syntax unified
+ 3640              		.thumb
+ 3641              		.thumb_func
+ 3642              		.fpu softvfp
+ 3644              	ili9320_WriteData:
+ 3645              		@ args = 0, pretend = 0, frame = 8
+ 3646              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3647              		@ link register save eliminated.
+ 3648 11c4 80B4     		push	{r7}
+ 3649 11c6 83B0     		sub	sp, sp, #12
+ 3650 11c8 00AF     		add	r7, sp, #0
+ 3651 11ca 0346     		mov	r3, r0
+ 3652 11cc FB80     		strh	r3, [r7, #6]	@ movhi
+ 3653 11ce 0B4B     		ldr	r3, .L140
+ 3654 11d0 DB68     		ldr	r3, [r3, #12]
+ 3655 11d2 03F47F42 		and	r2, r3, #65280
+ 3656 11d6 FB88     		ldrh	r3, [r7, #6]
+ 3657 11d8 DBB2     		uxtb	r3, r3
+ 3658 11da 0849     		ldr	r1, .L140
+ 3659 11dc 1343     		orrs	r3, r3, r2
+ 3660 11de CB60     		str	r3, [r1, #12]
+ 3661 11e0 074B     		ldr	r3, .L140+4
+ 3662 11e2 DB68     		ldr	r3, [r3, #12]
+ 3663 11e4 DAB2     		uxtb	r2, r3
+ 3664 11e6 FB88     		ldrh	r3, [r7, #6]
+ 3665 11e8 03F47F43 		and	r3, r3, #65280
+ 3666 11ec 0449     		ldr	r1, .L140+4
+ 3667 11ee 1343     		orrs	r3, r3, r2
+ 3668 11f0 CB60     		str	r3, [r1, #12]
+ 3669 11f2 00BF     		nop
+ 3670 11f4 0C37     		adds	r7, r7, #12
+ 3671 11f6 BD46     		mov	sp, r7
+ 3672              		@ sp needed
+ 3673 11f8 80BC     		pop	{r7}
+ 3674 11fa 7047     		bx	lr
+ 3675              	.L141:
+ 3676              		.align	2
+ 3677              	.L140:
+ 3678 11fc 00100140 		.word	1073811456
+ 3679 1200 000C0140 		.word	1073810432
+ 3681              		.align	1
+ 3682              		.global	ili9320_ReadData
+ 3683              		.syntax unified
+ 3684              		.thumb
+ 3685              		.thumb_func
+ 3686              		.fpu softvfp
+ 3688              	ili9320_ReadData:
+ 3689              		@ args = 0, pretend = 0, frame = 8
+ 3690              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3691              		@ link register save eliminated.
+ 3692 1204 80B4     		push	{r7}
+ 3693 1206 83B0     		sub	sp, sp, #12
+ 3694 1208 00AF     		add	r7, sp, #0
+ 3695 120a 154B     		ldr	r3, .L144
+ 3696 120c 5B68     		ldr	r3, [r3, #4]
+ 3697 120e 144B     		ldr	r3, .L144
+ 3698 1210 4FF04432 		mov	r2, #1145324612
+ 3699 1214 5A60     		str	r2, [r3, #4]
+ 3700 1216 134B     		ldr	r3, .L144+4
+ 3701 1218 1B68     		ldr	r3, [r3]
+ 3702 121a 124B     		ldr	r3, .L144+4
+ 3703 121c 4FF04432 		mov	r2, #1145324612
+ 3704 1220 1A60     		str	r2, [r3]
+ 3705 1222 0F4B     		ldr	r3, .L144
+ 3706 1224 9B68     		ldr	r3, [r3, #8]
+ 3707 1226 9BB2     		uxth	r3, r3
+ 3708 1228 23F0FF03 		bic	r3, r3, #255
+ 3709 122c 9AB2     		uxth	r2, r3
+ 3710 122e 0D4B     		ldr	r3, .L144+4
+ 3711 1230 9B68     		ldr	r3, [r3, #8]
+ 3712 1232 9BB2     		uxth	r3, r3
+ 3713 1234 DBB2     		uxtb	r3, r3
+ 3714 1236 9BB2     		uxth	r3, r3
+ 3715 1238 1343     		orrs	r3, r3, r2
+ 3716 123a FB80     		strh	r3, [r7, #6]	@ movhi
+ 3717 123c 084B     		ldr	r3, .L144
+ 3718 123e 5B68     		ldr	r3, [r3, #4]
+ 3719 1240 074B     		ldr	r3, .L144
+ 3720 1242 4FF03332 		mov	r2, #858993459
+ 3721 1246 5A60     		str	r2, [r3, #4]
+ 3722 1248 064B     		ldr	r3, .L144+4
+ 3723 124a 1B68     		ldr	r3, [r3]
+ 3724 124c 054B     		ldr	r3, .L144+4
+ 3725 124e 4FF03332 		mov	r2, #858993459
+ 3726 1252 1A60     		str	r2, [r3]
+ 3727 1254 FB88     		ldrh	r3, [r7, #6]
+ 3728 1256 1846     		mov	r0, r3
+ 3729 1258 0C37     		adds	r7, r7, #12
+ 3730 125a BD46     		mov	sp, r7
+ 3731              		@ sp needed
+ 3732 125c 80BC     		pop	{r7}
+ 3733 125e 7047     		bx	lr
+ 3734              	.L145:
+ 3735              		.align	2
+ 3736              	.L144:
+ 3737 1260 000C0140 		.word	1073810432
+ 3738 1264 00100140 		.word	1073811456
+ 3740              		.align	1
+ 3741              		.global	ili9320_ReadRegister
+ 3742              		.syntax unified
+ 3743              		.thumb
+ 3744              		.thumb_func
+ 3745              		.fpu softvfp
+ 3747              	ili9320_ReadRegister:
+ 3748              		@ args = 0, pretend = 0, frame = 8
+ 3749              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3750 1268 80B5     		push	{r7, lr}
+ 3751 126a 82B0     		sub	sp, sp, #8
+ 3752 126c 00AF     		add	r7, sp, #0
+ 3753 126e 0346     		mov	r3, r0
+ 3754 1270 FB80     		strh	r3, [r7, #6]	@ movhi
+ 3755 1272 0E4B     		ldr	r3, .L148
+ 3756 1274 4FF48072 		mov	r2, #256
+ 3757 1278 1A60     		str	r2, [r3]
+ 3758 127a FB88     		ldrh	r3, [r7, #6]
+ 3759 127c 1846     		mov	r0, r3
+ 3760 127e FFF7FEFF 		bl	ili9320_WriteIndex
+ 3761 1282 0A4B     		ldr	r3, .L148
+ 3762 1284 4FF40062 		mov	r2, #2048
+ 3763 1288 1A60     		str	r2, [r3]
+ 3764 128a FFF7FEFF 		bl	ili9320_ReadData
+ 3765 128e 0346     		mov	r3, r0
+ 3766 1290 FB80     		strh	r3, [r7, #6]	@ movhi
+ 3767 1292 074B     		ldr	r3, .L148+4
+ 3768 1294 4FF40062 		mov	r2, #2048
+ 3769 1298 1A60     		str	r2, [r3]
+ 3770 129a 054B     		ldr	r3, .L148+4
+ 3771 129c 4FF48072 		mov	r2, #256
+ 3772 12a0 1A60     		str	r2, [r3]
+ 3773 12a2 FB88     		ldrh	r3, [r7, #6]
+ 3774 12a4 1846     		mov	r0, r3
+ 3775 12a6 0837     		adds	r7, r7, #8
+ 3776 12a8 BD46     		mov	sp, r7
+ 3777              		@ sp needed
+ 3778 12aa 80BD     		pop	{r7, pc}
+ 3779              	.L149:
+ 3780              		.align	2
+ 3781              	.L148:
+ 3782 12ac 14100140 		.word	1073811476
+ 3783 12b0 10100140 		.word	1073811472
+ 3785              		.align	1
+ 3786              		.global	ili9320_WriteRegister
+ 3787              		.syntax unified
+ 3788              		.thumb
+ 3789              		.thumb_func
+ 3790              		.fpu softvfp
+ 3792              	ili9320_WriteRegister:
+ 3793              		@ args = 0, pretend = 0, frame = 8
+ 3794              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3795 12b4 80B5     		push	{r7, lr}
+ 3796 12b6 82B0     		sub	sp, sp, #8
+ 3797 12b8 00AF     		add	r7, sp, #0
+ 3798 12ba 0346     		mov	r3, r0
+ 3799 12bc 0A46     		mov	r2, r1
+ 3800 12be FB80     		strh	r3, [r7, #6]	@ movhi
+ 3801 12c0 1346     		mov	r3, r2	@ movhi
+ 3802 12c2 BB80     		strh	r3, [r7, #4]	@ movhi
+ 3803 12c4 174B     		ldr	r3, .L151
+ 3804 12c6 4FF48072 		mov	r2, #256
+ 3805 12ca 1A60     		str	r2, [r3]
+ 3806 12cc 154B     		ldr	r3, .L151
+ 3807 12ce 4FF40072 		mov	r2, #512
+ 3808 12d2 1A60     		str	r2, [r3]
+ 3809 12d4 144B     		ldr	r3, .L151+4
+ 3810 12d6 4FF40062 		mov	r2, #2048
+ 3811 12da 1A60     		str	r2, [r3]
+ 3812 12dc FB88     		ldrh	r3, [r7, #6]
+ 3813 12de 1846     		mov	r0, r3
+ 3814 12e0 FFF7FEFF 		bl	ili9320_WriteData
+ 3815 12e4 0F4B     		ldr	r3, .L151
+ 3816 12e6 4FF48062 		mov	r2, #1024
+ 3817 12ea 1A60     		str	r2, [r3]
+ 3818 12ec 0E4B     		ldr	r3, .L151+4
+ 3819 12ee 4FF48062 		mov	r2, #1024
+ 3820 12f2 1A60     		str	r2, [r3]
+ 3821 12f4 0C4B     		ldr	r3, .L151+4
+ 3822 12f6 4FF40072 		mov	r2, #512
+ 3823 12fa 1A60     		str	r2, [r3]
+ 3824 12fc BB88     		ldrh	r3, [r7, #4]
+ 3825 12fe 1846     		mov	r0, r3
+ 3826 1300 FFF7FEFF 		bl	ili9320_WriteData
+ 3827 1304 074B     		ldr	r3, .L151
+ 3828 1306 4FF48062 		mov	r2, #1024
+ 3829 130a 1A60     		str	r2, [r3]
+ 3830 130c 064B     		ldr	r3, .L151+4
+ 3831 130e 4FF48062 		mov	r2, #1024
+ 3832 1312 1A60     		str	r2, [r3]
+ 3833 1314 044B     		ldr	r3, .L151+4
+ 3834 1316 4FF48072 		mov	r2, #256
+ 3835 131a 1A60     		str	r2, [r3]
+ 3836 131c 00BF     		nop
+ 3837 131e 0837     		adds	r7, r7, #8
+ 3838 1320 BD46     		mov	sp, r7
+ 3839              		@ sp needed
+ 3840 1322 80BD     		pop	{r7, pc}
+ 3841              	.L152:
+ 3842              		.align	2
+ 3843              	.L151:
+ 3844 1324 14100140 		.word	1073811476
+ 3845 1328 10100140 		.word	1073811472
+ 3847              		.align	1
+ 3848              		.global	ili9320_Reset
+ 3849              		.syntax unified
+ 3850              		.thumb
+ 3851              		.thumb_func
+ 3852              		.fpu softvfp
+ 3854              	ili9320_Reset:
+ 3855              		@ args = 0, pretend = 0, frame = 0
+ 3856              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3857              		@ link register save eliminated.
+ 3858 132c 80B4     		push	{r7}
+ 3859 132e 00AF     		add	r7, sp, #0
+ 3860 1330 00BF     		nop
+ 3861 1332 BD46     		mov	sp, r7
+ 3862              		@ sp needed
+ 3863 1334 80BC     		pop	{r7}
+ 3864 1336 7047     		bx	lr
+ 3866              		.align	1
+ 3867              		.global	ili9320_BackLight
+ 3868              		.syntax unified
+ 3869              		.thumb
+ 3870              		.thumb_func
+ 3871              		.fpu softvfp
+ 3873              	ili9320_BackLight:
+ 3874              		@ args = 0, pretend = 0, frame = 8
+ 3875              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3876              		@ link register save eliminated.
+ 3877 1338 80B4     		push	{r7}
+ 3878 133a 83B0     		sub	sp, sp, #12
+ 3879 133c 00AF     		add	r7, sp, #0
+ 3880 133e 0346     		mov	r3, r0
+ 3881 1340 FB71     		strb	r3, [r7, #7]
+ 3882 1342 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 3883 1344 002B     		cmp	r3, #0
+ 3884 1346 04D0     		beq	.L155
+ 3885 1348 064B     		ldr	r3, .L158
+ 3886 134a 4FF48052 		mov	r2, #4096
+ 3887 134e 1A60     		str	r2, [r3]
+ 3888 1350 03E0     		b	.L157
+ 3889              	.L155:
+ 3890 1352 054B     		ldr	r3, .L158+4
+ 3891 1354 4FF48052 		mov	r2, #4096
+ 3892 1358 1A60     		str	r2, [r3]
+ 3893              	.L157:
+ 3894 135a 00BF     		nop
+ 3895 135c 0C37     		adds	r7, r7, #12
+ 3896 135e BD46     		mov	sp, r7
+ 3897              		@ sp needed
+ 3898 1360 80BC     		pop	{r7}
+ 3899 1362 7047     		bx	lr
+ 3900              	.L159:
+ 3901              		.align	2
+ 3902              	.L158:
+ 3903 1364 10100140 		.word	1073811472
+ 3904 1368 14100140 		.word	1073811476
+ 3906              		.align	1
+ 3907              		.global	ili9320_Delay
+ 3908              		.syntax unified
+ 3909              		.thumb
+ 3910              		.thumb_func
+ 3911              		.fpu softvfp
+ 3913              	ili9320_Delay:
+ 3914              		@ args = 0, pretend = 0, frame = 8
+ 3915              		@ frame_needed = 1, uses_anonymous_args = 0
+ 3916              		@ link register save eliminated.
+ 3917 136c 80B4     		push	{r7}
+ 3918 136e 83B0     		sub	sp, sp, #12
+ 3919 1370 00AF     		add	r7, sp, #0
+ 3920 1372 7860     		str	r0, [r7, #4]
+ 3921 1374 02E0     		b	.L161
+ 3922              	.L162:
+ 3923 1376 7B68     		ldr	r3, [r7, #4]
+ 3924 1378 013B     		subs	r3, r3, #1
+ 3925 137a 7B60     		str	r3, [r7, #4]
+ 3926              	.L161:
+ 3927 137c 7B68     		ldr	r3, [r7, #4]
+ 3928 137e 002B     		cmp	r3, #0
+ 3929 1380 F9D1     		bne	.L162
+ 3930 1382 00BF     		nop
+ 3931 1384 0C37     		adds	r7, r7, #12
+ 3932 1386 BD46     		mov	sp, r7
+ 3933              		@ sp needed
+ 3934 1388 80BC     		pop	{r7}
+ 3935 138a 7047     		bx	lr
+ 3937              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ili9320.c
+     /tmp/ccUwmSMp.s:17     .rodata:0000000000000000 ascii_8x16
+     /tmp/ccUwmSMp.s:14     .rodata:0000000000000000 $d
+                            *COM*:0000000000000002 DeviceCode
+     /tmp/ccUwmSMp.s:1556   .text:0000000000000000 $t
+     /tmp/ccUwmSMp.s:1563   .text:0000000000000000 Lcd_Configuration
+     /tmp/ccUwmSMp.s:1602   .text:000000000000004c $d
+     /tmp/ccUwmSMp.s:1605   .text:0000000000000054 $t
+     /tmp/ccUwmSMp.s:1612   .text:0000000000000054 ili9320_Initializtion
+     /tmp/ccUwmSMp.s:3644   .text:00000000000011c4 ili9320_WriteData
+     /tmp/ccUwmSMp.s:3792   .text:00000000000012b4 ili9320_WriteRegister
+     /tmp/ccUwmSMp.s:3913   .text:000000000000136c ili9320_Delay
+     /tmp/ccUwmSMp.s:3747   .text:0000000000001268 ili9320_ReadRegister
+     /tmp/ccUwmSMp.s:1938   .text:000000000000032c $d
+     /tmp/ccUwmSMp.s:1941   .text:0000000000000334 $t
+     /tmp/ccUwmSMp.s:2280   .text:00000000000006c8 $d
+     /tmp/ccUwmSMp.s:2282   .text:00000000000006cc $t
+     /tmp/ccUwmSMp.s:2694   .text:0000000000000ad6 ili9320_Clear
+     /tmp/ccUwmSMp.s:2560   .text:00000000000009f4 $d
+     /tmp/ccUwmSMp.s:2562   .text:00000000000009f8 $t
+     /tmp/ccUwmSMp.s:2569   .text:00000000000009f8 ili9320_SetCursor
+     /tmp/ccUwmSMp.s:2633   .text:0000000000000a78 $d
+     /tmp/ccUwmSMp.s:2635   .text:0000000000000a7c $t
+     /tmp/ccUwmSMp.s:2642   .text:0000000000000a7c ili9320_SetWindows
+     /tmp/ccUwmSMp.s:3600   .text:000000000000117a ili9320_WriteIndex
+     /tmp/ccUwmSMp.s:2744   .text:0000000000000b3c $d
+     /tmp/ccUwmSMp.s:2747   .text:0000000000000b44 $t
+     /tmp/ccUwmSMp.s:2754   .text:0000000000000b44 ili9320_GetPoint
+     /tmp/ccUwmSMp.s:3688   .text:0000000000001204 ili9320_ReadData
+     /tmp/ccUwmSMp.s:3554   .text:0000000000001134 ili9320_BGR2RGB
+     /tmp/ccUwmSMp.s:2821   .text:0000000000000bd4 $d
+     /tmp/ccUwmSMp.s:2825   .text:0000000000000be0 $t
+     /tmp/ccUwmSMp.s:2832   .text:0000000000000be0 ili9320_SetPoint
+     /tmp/ccUwmSMp.s:2886   .text:0000000000000c4c $d
+     /tmp/ccUwmSMp.s:2889   .text:0000000000000c54 $t
+     /tmp/ccUwmSMp.s:2896   .text:0000000000000c54 ili9320_DrawPicture
+     /tmp/ccUwmSMp.s:2983   .text:0000000000000cfc $d
+     /tmp/ccUwmSMp.s:2986   .text:0000000000000d04 $t
+     /tmp/ccUwmSMp.s:2993   .text:0000000000000d04 ili9320_VLine
+     /tmp/ccUwmSMp.s:3056   .text:0000000000000d80 $d
+     /tmp/ccUwmSMp.s:3059   .text:0000000000000d88 $t
+     /tmp/ccUwmSMp.s:3066   .text:0000000000000d88 ili9320_PutChar
+     /tmp/ccUwmSMp.s:3160   .text:0000000000000e34 $d
+     /tmp/ccUwmSMp.s:3162   .text:0000000000000e38 $t
+     /tmp/ccUwmSMp.s:3169   .text:0000000000000e38 ili9320_Test
+     /tmp/ccUwmSMp.s:3544   .text:000000000000112c $d
+     /tmp/ccUwmSMp.s:3547   .text:0000000000001134 $t
+     /tmp/ccUwmSMp.s:3634   .text:00000000000011bc $d
+     /tmp/ccUwmSMp.s:3637   .text:00000000000011c4 $t
+     /tmp/ccUwmSMp.s:3678   .text:00000000000011fc $d
+     /tmp/ccUwmSMp.s:3681   .text:0000000000001204 $t
+     /tmp/ccUwmSMp.s:3737   .text:0000000000001260 $d
+     /tmp/ccUwmSMp.s:3740   .text:0000000000001268 $t
+     /tmp/ccUwmSMp.s:3782   .text:00000000000012ac $d
+     /tmp/ccUwmSMp.s:3785   .text:00000000000012b4 $t
+     /tmp/ccUwmSMp.s:3844   .text:0000000000001324 $d
+     /tmp/ccUwmSMp.s:3847   .text:000000000000132c $t
+     /tmp/ccUwmSMp.s:3854   .text:000000000000132c ili9320_Reset
+     /tmp/ccUwmSMp.s:3873   .text:0000000000001338 ili9320_BackLight
+     /tmp/ccUwmSMp.s:3903   .text:0000000000001364 $d
+     /tmp/ccUwmSMp.s:3906   .text:000000000000136c $t
+
+UNDEFINED SYMBOLS
+RCC_APB2PeriphClockCmd
+GPIO_Init
