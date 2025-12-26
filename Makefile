@@ -8,16 +8,20 @@ BUILD_DIR = build
 # Docker run command with current directory mounted
 DOCKER_RUN = docker run --rm -v $(CURDIR):/workspace -w /workspace $(DOCKER_IMAGE)
 
-.PHONY: all build clean flash docker-build
+.PHONY: all clean flash docker-build configure size
 
-all: build
+all: $(BUILD_DIR)/blink3.elf
 
-# Build firmware using Docker ARM toolchain
-build: $(BUILD_DIR)
-	$(DOCKER_RUN) sh -c "cd $(BUILD_DIR) && cmake .. && make"
-
+# Create build directory
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
+
+# Build firmware using Docker ARM toolchain
+$(BUILD_DIR)/blink3.elf: $(BUILD_DIR)
+	$(DOCKER_RUN) sh -c "cd $(BUILD_DIR) && cmake .. && make"
+
+# Alias for compatibility
+build: $(BUILD_DIR)/blink3.elf
 
 # Clean build artifacts
 clean:
@@ -28,7 +32,7 @@ docker-build:
 	docker build -t $(DOCKER_IMAGE) -f Dockerfile.toolchain .
 
 # Flash firmware to target via OpenOCD
-flash: build
+flash: $(BUILD_DIR)/blink3.elf
 	openocd -f openocd-olimex.cfg -c "program $(BUILD_DIR)/blink3.elf verify reset exit"
 
 # Run cmake configuration only
@@ -36,5 +40,5 @@ configure: $(BUILD_DIR)
 	$(DOCKER_RUN) sh -c "cd $(BUILD_DIR) && cmake .."
 
 # Show binary size
-size: build
+size: $(BUILD_DIR)/blink3.elf
 	$(DOCKER_RUN) arm-none-eabi-size $(BUILD_DIR)/blink3.elf
