@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker toolchain image
+        run: docker build -t arm-none-eabi-toolchain -f Dockerfile.toolchain .
+
+      - name: Build firmware
+        run: make build
+
+      - name: Show binary size
+        run: make size
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: |
+            build/blink3.elf
+            build/blink3.hex
+            build/blink3.bin
+          if-no-files-found: error
