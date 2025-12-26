@@ -18,7 +18,7 @@ $(BUILD_DIR):
 
 # Build firmware using Docker ARM toolchain
 $(BUILD_DIR)/blink3.elf: $(BUILD_DIR)
-	$(DOCKER_RUN) sh -c "cd $(BUILD_DIR) && cmake .. && make"
+	$(DOCKER_RUN) sh -c "mkdir -p $(BUILD_DIR) && cd $(BUILD_DIR) && cmake .. && make"
 
 # Alias for compatibility
 build: $(BUILD_DIR)/blink3.elf
